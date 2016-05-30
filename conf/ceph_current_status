@@ -1,0 +1,40 @@
+[global]
+    fsid = e534ebe0-262e-11e6-93b4-000c29a6fc42
+    pid_path = /var/run/ceph
+    auth_service_required = none
+    auth_cluster_required = none
+    auth_client_required = none
+    osd_objectstore = filestore
+    osd_pool_default_size = 2
+    public_network = 192.168.0.0/24
+    cluster_network = 192.168.0.0/24
+    mon_pg_warn_max_per_osd = 1000
+[mon]
+    mon_data = /var/lib/ceph/mon.$id
+[osd]
+    osd_data = /var/lib/ceph/mnt/osd-device-$id-data
+    osd_mkfs_type = xfs
+    osd_mount_options_xfs = rw,noatime,inode64,logbsize=256k
+[client]
+    rbd_cache = false
+[mon.ceph1]
+    host = ceph1
+    mon addr = 192.168.0.117
+[osd.0]
+    host = ceph1
+    public addr = 192.168.0.117
+    cluster addr = 192.168.0.117
+    osd journal = /dev/sdb1
+    devs = /dev/sdb2
+[osd.1]
+    host = ceph1
+    public addr = 192.168.0.117
+    cluster addr = 192.168.0.117
+    osd journal = /dev/sdc1
+    devs = /dev/sdc2
+[osd.2]
+    host = ceph1
+    public addr = 192.168.0.117
+    cluster addr = 192.168.0.117
+    osd journal = /dev/sdd1
+    devs = /dev/sdd2

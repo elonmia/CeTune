@@ -1,0 +1,11 @@
+testjob1:
+  workstages: benchmark
+  version: "hammer"
+  disk:
+    read_ahead_kb: 2048
+  pool:
+    rbd:
+      size: 2
+  analyzer: all,   
+  global:
+    mon_pg_warn_max_per_osd: 1000

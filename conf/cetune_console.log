@@ -1,0 +1,93 @@
+
+[2016-05-30T14:22:32.043533][LOG]: Check ceph version, reinstall ceph if necessary
+[2016-05-30T14:22:33.709911][LOG]: Apply osd and mon tuning to ceph.conf
+[2016-05-30T14:22:33.738101][WARNING]: Current Cluster ceph.conf file not exists under CeTune/conf/
+[2016-05-30T14:22:33.739921][WARNING]: Found different configuration from conf/ceph_current_conf with your desired config : OrderedDict([('mon', {'ceph1': '192.168.0.117'}), ('osd', {'ceph1': {'cluster': '192.168.0.117', 'public': '192.168.0.117'}}), ('mds', {}), ('osd_num', 0), ('ceph1', ['/dev/sdb2:/dev/sdb1', '/dev/sdc2:/dev/sdc1', '/dev/sdd2:/dev/sdd1'])])
+[2016-05-30T14:22:33.745832][WARNING]: Current Cluster ceph.conf file not exists under CeTune/conf/
+[2016-05-30T14:22:33.789063][LOG]: Distribute ceph.conf
+[2016-05-30T14:22:34.978353][LOG]: Start to redeploy ceph
+[2016-05-30T14:22:34.987606][LOG]: ceph.conf file generated
+[2016-05-30T14:22:34.989212][LOG]: Shutting down mon daemon
+[2016-05-30T14:22:35.422271][LOG]: Shutting down osd daemon
+[2016-05-30T14:22:35.813540][LOG]: Killed ceph-mon, ceph-osd and cleaned mon dir
+[2016-05-30T14:22:35.815543][LOG]: Started to build mon daemon
+[2016-05-30T14:22:41.586117][LOG]: Builded mon.ceph1 daemon on ceph1
+[2016-05-30T14:22:41.588398][LOG]: Succeeded in building mon daemon
+[2016-05-30T14:22:41.590153][LOG]: Started to build osd daemon
+[2016-05-30T14:22:42.036912][LOG]: mkfs.xfs for /dev/sdb2 on ceph1
+[2016-05-30T14:22:43.550931][LOG]: start to build osd daemon for /dev/sdb2 on ceph1
+[2016-05-30T14:22:47.608503][LOG]: Builded osd.0 daemon on ceph1
+[2016-05-30T14:22:47.610717][LOG]: mkfs.xfs for /dev/sdc2 on ceph1
+[2016-05-30T14:22:50.377067][LOG]: start to build osd daemon for /dev/sdc2 on ceph1
+[2016-05-30T14:22:54.094771][LOG]: Builded osd.1 daemon on ceph1
+[2016-05-30T14:22:54.096584][LOG]: mkfs.xfs for /dev/sdd2 on ceph1
+[2016-05-30T14:22:55.799971][LOG]: start to build osd daemon for /dev/sdd2 on ceph1
+[2016-05-30T14:23:00.596113][LOG]: Builded osd.2 daemon on ceph1
+[2016-05-30T14:23:00.597896][LOG]: Succeeded in building osd daemon
+[2016-05-30T14:23:00.680973][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-05-30T14:23:04.600246][LOG]: Tuning [read_ahead_kb:2048] differs with current configuration, will apply
+[2016-05-30T14:23:04.602990][LOG]: Tuning[disk] is not same with current configuration
+[2016-05-30T14:23:04.604830][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-05-30T14:23:07.507509][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T14:23:11.121328][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T14:23:14.790305][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T14:23:18.434721][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T14:23:22.102177][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T14:23:25.761028][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T14:23:29.415930][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T14:23:33.338286][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T14:23:36.090628][WARNING]: Caught KeyboardInterrupt, exit
+[2016-05-30T15:09:21.958722][LOG]: start to run performance test
+[2016-05-30T15:09:21.958908][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-05-30T15:09:25.682308][LOG]: Tuning [pg_num:8194] differs with current configuration, will apply
+[2016-05-30T15:09:25.682604][LOG]: Tuning [ms_dispatch_throttle_bytes:1048576000] differs with current configuration, will apply
+[2016-05-30T15:09:25.682826][LOG]: Tuning [filestore_queue_max_ops:500] differs with current configuration, will apply
+[2016-05-30T15:09:25.683014][LOG]: Tuning[pool] is not same with current configuration
+[2016-05-30T15:09:25.683185][LOG]: Tuning[version] is not same with current configuration
+[2016-05-30T15:09:25.683698][LOG]: Tuning[global] is not same with current configuration
+[2016-05-30T15:09:25.684004][LOG]: Tuning[osd] is not same with current configuration
+[2016-05-30T15:09:25.684216][LOG]: delete ceph pool rbd
+[2016-05-30T15:09:27.020815][LOG]: create ceph pool rbd, pg_num is 8194
+[2016-05-30T15:09:30.139147][LOG]: set ceph pool rbd, size to 2
+[2016-05-30T15:09:33.739873][LOG]: Apply osd and mon tuning to ceph.conf
+[2016-05-30T15:09:33.748959][WARNING]: Found different configuration from conf/ceph_current_conf with your desired config : OrderedDict([('mon', {}), ('osd', {}), ('mds', {}), ('osd_num', 3)])
+[2016-05-30T15:09:33.750155][LOG]: Distribute ceph.conf
+[2016-05-30T15:09:37.378364][LOG]: Restart ceph cluster
+[2016-05-30T15:09:37.381589][LOG]: Shutting down mon daemon
+[2016-05-30T15:09:38.146775][LOG]: Shutting down osd daemon
+[2016-05-30T15:09:38.633490][LOG]: Starting mon daemon
+[2016-05-30T15:09:40.182005][LOG]: Started mon.ceph1 daemon on ceph1
+[2016-05-30T15:09:40.182216][LOG]: Starting osd daemon
+[2016-05-30T15:09:42.238339][LOG]: Started osd.0 daemon on ceph1
+[2016-05-30T15:09:43.014558][LOG]: Started osd.1 daemon on ceph1
+[2016-05-30T15:09:44.314848][LOG]: Started osd.2 daemon on ceph1
+[2016-05-30T15:09:45.666696][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T15:09:51.728911][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T15:09:58.598687][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T15:10:02.849515][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T15:10:08.348072][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T15:10:10.613155][WARNING]: Caught KeyboardInterrupt, exit
+[2016-05-30T15:16:50.397214][LOG]: start to run performance test
+[2016-05-30T15:16:50.397366][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-05-30T15:16:54.133380][LOG]: Tuning [ms_nocrc] not in configuration
+[2016-05-30T15:16:54.133548][LOG]: Tuning [osd_enable_op_tracker:False] differs with current configuration, will apply
+[2016-05-30T15:16:54.133728][LOG]: Tuning[version] is not same with current configuration
+[2016-05-30T15:16:54.133840][LOG]: Tuning[global] is not same with current configuration
+[2016-05-30T15:16:54.133946][LOG]: Tuning[osd] is not same with current configuration
+[2016-05-30T15:33:09.523435][LOG]: start to run performance test
+[2016-05-30T15:33:09.523699][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-05-30T15:33:13.173190][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-05-30T15:33:13.173331][LOG]: Tuning[version] is not same with current configuration
+[2016-05-30T15:37:30.146257][LOG]: start to run performance test
+[2016-05-30T15:37:30.146454][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-05-30T15:37:34.435965][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-05-30T15:37:34.436110][LOG]: Tuning[version] is not same with current configuration
+[2016-05-30T15:37:35.687700][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T15:37:39.373741][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T15:37:43.141343][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T15:37:47.366288][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-05-30T15:37:47.903714][WARNING]: Caught KeyboardInterrupt, exit
+[2016-05-30T15:45:48.460983][LOG]: start to run performance test
+[2016-05-30T15:45:48.461191][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-05-30T15:45:52.155405][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-05-30T15:45:52.155634][LOG]: Tuning[version] is not same with current configuration

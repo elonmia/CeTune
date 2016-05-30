@@ -1,0 +1,17 @@
+{
+    "testjob1": {
+        "disk": {
+            "read_ahead_kb": 2048
+        }, 
+        "global": {
+            "mon_pg_warn_max_per_osd": 1000
+        }, 
+        "workstages": "deploy", 
+        "analyzer": "all", 
+        "pool": {
+            "rbd": {
+                "size": 2
+            }
+        }
+    }
+}
