@@ -1,93 +1,379 @@
 
-[2016-05-30T14:22:32.043533][LOG]: Check ceph version, reinstall ceph if necessary
-[2016-05-30T14:22:33.709911][LOG]: Apply osd and mon tuning to ceph.conf
-[2016-05-30T14:22:33.738101][WARNING]: Current Cluster ceph.conf file not exists under CeTune/conf/
-[2016-05-30T14:22:33.739921][WARNING]: Found different configuration from conf/ceph_current_conf with your desired config : OrderedDict([('mon', {'ceph1': '192.168.0.117'}), ('osd', {'ceph1': {'cluster': '192.168.0.117', 'public': '192.168.0.117'}}), ('mds', {}), ('osd_num', 0), ('ceph1', ['/dev/sdb2:/dev/sdb1', '/dev/sdc2:/dev/sdc1', '/dev/sdd2:/dev/sdd1'])])
-[2016-05-30T14:22:33.745832][WARNING]: Current Cluster ceph.conf file not exists under CeTune/conf/
-[2016-05-30T14:22:33.789063][LOG]: Distribute ceph.conf
-[2016-05-30T14:22:34.978353][LOG]: Start to redeploy ceph
-[2016-05-30T14:22:34.987606][LOG]: ceph.conf file generated
-[2016-05-30T14:22:34.989212][LOG]: Shutting down mon daemon
-[2016-05-30T14:22:35.422271][LOG]: Shutting down osd daemon
-[2016-05-30T14:22:35.813540][LOG]: Killed ceph-mon, ceph-osd and cleaned mon dir
-[2016-05-30T14:22:35.815543][LOG]: Started to build mon daemon
-[2016-05-30T14:22:41.586117][LOG]: Builded mon.ceph1 daemon on ceph1
-[2016-05-30T14:22:41.588398][LOG]: Succeeded in building mon daemon
-[2016-05-30T14:22:41.590153][LOG]: Started to build osd daemon
-[2016-05-30T14:22:42.036912][LOG]: mkfs.xfs for /dev/sdb2 on ceph1
-[2016-05-30T14:22:43.550931][LOG]: start to build osd daemon for /dev/sdb2 on ceph1
-[2016-05-30T14:22:47.608503][LOG]: Builded osd.0 daemon on ceph1
-[2016-05-30T14:22:47.610717][LOG]: mkfs.xfs for /dev/sdc2 on ceph1
-[2016-05-30T14:22:50.377067][LOG]: start to build osd daemon for /dev/sdc2 on ceph1
-[2016-05-30T14:22:54.094771][LOG]: Builded osd.1 daemon on ceph1
-[2016-05-30T14:22:54.096584][LOG]: mkfs.xfs for /dev/sdd2 on ceph1
-[2016-05-30T14:22:55.799971][LOG]: start to build osd daemon for /dev/sdd2 on ceph1
-[2016-05-30T14:23:00.596113][LOG]: Builded osd.2 daemon on ceph1
-[2016-05-30T14:23:00.597896][LOG]: Succeeded in building osd daemon
-[2016-05-30T14:23:00.680973][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
-[2016-05-30T14:23:04.600246][LOG]: Tuning [read_ahead_kb:2048] differs with current configuration, will apply
-[2016-05-30T14:23:04.602990][LOG]: Tuning[disk] is not same with current configuration
-[2016-05-30T14:23:04.604830][LOG]: Tuning[analyzer] is not same with current configuration
-[2016-05-30T14:23:07.507509][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T14:23:11.121328][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T14:23:14.790305][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T14:23:18.434721][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T14:23:22.102177][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T14:23:25.761028][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T14:23:29.415930][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T14:23:33.338286][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T14:23:36.090628][WARNING]: Caught KeyboardInterrupt, exit
-[2016-05-30T15:09:21.958722][LOG]: start to run performance test
-[2016-05-30T15:09:21.958908][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
-[2016-05-30T15:09:25.682308][LOG]: Tuning [pg_num:8194] differs with current configuration, will apply
-[2016-05-30T15:09:25.682604][LOG]: Tuning [ms_dispatch_throttle_bytes:1048576000] differs with current configuration, will apply
-[2016-05-30T15:09:25.682826][LOG]: Tuning [filestore_queue_max_ops:500] differs with current configuration, will apply
-[2016-05-30T15:09:25.683014][LOG]: Tuning[pool] is not same with current configuration
-[2016-05-30T15:09:25.683185][LOG]: Tuning[version] is not same with current configuration
-[2016-05-30T15:09:25.683698][LOG]: Tuning[global] is not same with current configuration
-[2016-05-30T15:09:25.684004][LOG]: Tuning[osd] is not same with current configuration
-[2016-05-30T15:09:25.684216][LOG]: delete ceph pool rbd
-[2016-05-30T15:09:27.020815][LOG]: create ceph pool rbd, pg_num is 8194
-[2016-05-30T15:09:30.139147][LOG]: set ceph pool rbd, size to 2
-[2016-05-30T15:09:33.739873][LOG]: Apply osd and mon tuning to ceph.conf
-[2016-05-30T15:09:33.748959][WARNING]: Found different configuration from conf/ceph_current_conf with your desired config : OrderedDict([('mon', {}), ('osd', {}), ('mds', {}), ('osd_num', 3)])
-[2016-05-30T15:09:33.750155][LOG]: Distribute ceph.conf
-[2016-05-30T15:09:37.378364][LOG]: Restart ceph cluster
-[2016-05-30T15:09:37.381589][LOG]: Shutting down mon daemon
-[2016-05-30T15:09:38.146775][LOG]: Shutting down osd daemon
-[2016-05-30T15:09:38.633490][LOG]: Starting mon daemon
-[2016-05-30T15:09:40.182005][LOG]: Started mon.ceph1 daemon on ceph1
-[2016-05-30T15:09:40.182216][LOG]: Starting osd daemon
-[2016-05-30T15:09:42.238339][LOG]: Started osd.0 daemon on ceph1
-[2016-05-30T15:09:43.014558][LOG]: Started osd.1 daemon on ceph1
-[2016-05-30T15:09:44.314848][LOG]: Started osd.2 daemon on ceph1
-[2016-05-30T15:09:45.666696][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T15:09:51.728911][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T15:09:58.598687][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T15:10:02.849515][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T15:10:08.348072][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T15:10:10.613155][WARNING]: Caught KeyboardInterrupt, exit
-[2016-05-30T15:16:50.397214][LOG]: start to run performance test
-[2016-05-30T15:16:50.397366][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
-[2016-05-30T15:16:54.133380][LOG]: Tuning [ms_nocrc] not in configuration
-[2016-05-30T15:16:54.133548][LOG]: Tuning [osd_enable_op_tracker:False] differs with current configuration, will apply
-[2016-05-30T15:16:54.133728][LOG]: Tuning[version] is not same with current configuration
-[2016-05-30T15:16:54.133840][LOG]: Tuning[global] is not same with current configuration
-[2016-05-30T15:16:54.133946][LOG]: Tuning[osd] is not same with current configuration
-[2016-05-30T15:33:09.523435][LOG]: start to run performance test
-[2016-05-30T15:33:09.523699][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
-[2016-05-30T15:33:13.173190][LOG]: Tuning[analyzer] is not same with current configuration
-[2016-05-30T15:33:13.173331][LOG]: Tuning[version] is not same with current configuration
-[2016-05-30T15:37:30.146257][LOG]: start to run performance test
-[2016-05-30T15:37:30.146454][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
-[2016-05-30T15:37:34.435965][LOG]: Tuning[analyzer] is not same with current configuration
-[2016-05-30T15:37:34.436110][LOG]: Tuning[version] is not same with current configuration
-[2016-05-30T15:37:35.687700][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T15:37:39.373741][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T15:37:43.141343][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T15:37:47.366288][WARNING]: Applied tuning, waiting ceph to be healthy
-[2016-05-30T15:37:47.903714][WARNING]: Caught KeyboardInterrupt, exit
-[2016-05-30T15:45:48.460983][LOG]: start to run performance test
-[2016-05-30T15:45:48.461191][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
-[2016-05-30T15:45:52.155405][LOG]: Tuning[analyzer] is not same with current configuration
-[2016-05-30T15:45:52.155634][LOG]: Tuning[version] is not same with current configuration
+[2016-06-01T03:55:34.503679][LOG]: Check ceph version, reinstall ceph if necessary
+[2016-06-01T03:55:35.383134][LOG]: Apply osd and mon tuning to ceph.conf
+[2016-06-01T03:55:35.393445][WARNING]: Found different configuration from conf/ceph_current_conf with your desired config : OrderedDict([('mon', {}), ('osd', {}), ('mds', {}), ('osd_num', 6)])
+[2016-06-01T03:55:35.394920][LOG]: Distribute ceph.conf
+[2016-06-01T03:55:36.690232][LOG]: Start to redeploy ceph
+[2016-06-01T03:55:36.696006][LOG]: ceph.conf file generated
+[2016-06-01T03:55:36.696297][LOG]: Shutting down mon daemon
+[2016-06-01T03:55:36.859176][LOG]: Shutting down osd daemon
+[2016-06-01T03:55:37.225977][LOG]: Killed ceph-mon, ceph-osd and cleaned mon dir
+[2016-06-01T03:55:37.226173][LOG]: Started to build mon daemon
+[2016-06-01T03:55:41.048032][LOG]: Builded mon.node153 daemon on node153
+[2016-06-01T03:55:41.048219][LOG]: Succeeded in building mon daemon
+[2016-06-01T03:55:41.048360][LOG]: Started to build osd daemon
+[2016-06-01T03:55:43.000809][LOG]: mkfs.xfs for /dev/vdb2 on node153
+[2016-06-01T03:55:44.143124][LOG]: start to build osd daemon for /dev/vdb2 on node153
+[2016-06-01T03:55:47.600707][LOG]: Builded osd.0 daemon on node153
+[2016-06-01T03:55:47.601018][LOG]: mkfs.xfs for /dev/vdc2 on node153
+[2016-06-01T03:55:48.584569][LOG]: start to build osd daemon for /dev/vdc2 on node153
+[2016-06-01T03:55:53.220639][LOG]: Builded osd.1 daemon on node153
+[2016-06-01T03:55:53.220962][LOG]: mkfs.xfs for /dev/vdd2 on node153
+[2016-06-01T03:55:54.197089][LOG]: start to build osd daemon for /dev/vdd2 on node153
+[2016-06-01T03:55:57.884963][LOG]: Builded osd.2 daemon on node153
+[2016-06-01T03:55:57.885264][LOG]: mkfs.xfs for /dev/vdb2 on node154
+[2016-06-01T03:55:59.749500][LOG]: start to build osd daemon for /dev/vdb2 on node154
+[2016-06-01T03:56:04.141952][LOG]: Builded osd.3 daemon on node154
+[2016-06-01T03:56:04.142248][LOG]: mkfs.xfs for /dev/vdc2 on node154
+[2016-06-01T03:56:05.956790][LOG]: start to build osd daemon for /dev/vdc2 on node154
+[2016-06-01T03:56:10.700268][LOG]: Builded osd.4 daemon on node154
+[2016-06-01T03:56:10.700552][LOG]: mkfs.xfs for /dev/vdd2 on node154
+[2016-06-01T03:56:12.558479][LOG]: start to build osd daemon for /dev/vdd2 on node154
+[2016-06-01T03:56:17.729351][LOG]: Builded osd.5 daemon on node154
+[2016-06-01T03:56:17.729664][LOG]: Succeeded in building osd daemon
+[2016-06-01T03:56:17.740389][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-01T03:56:21.402938][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-01T03:56:21.403146][LOG]: Tuning[version] is not same with current configuration
+[2016-06-01T03:56:22.053278][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-06-01T03:56:25.641721][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-06-01T03:56:34.839103][WARNING]: Applied tuning, waiting ceph to be healthy
+[2016-06-01T03:56:37.917907][WARNING]: Caught KeyboardInterrupt, exit
+[2016-06-01T03:57:09.641341][LOG]: Generating history view
+[2016-06-01T03:57:09.701813][ERROR]: Generating history view failed
+[2016-06-01T03:57:32.383253][LOG]: start to run performance test
+[2016-06-01T03:57:32.383449][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-01T03:57:35.837428][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-01T03:57:35.837643][LOG]: Tuning[version] is not same with current configuration
+[2016-06-01T03:57:39.750736][LOG]: RUNID: 1, RESULT_DIR: //mnt/data//1-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd
+[2016-06-01T03:57:39.751094][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-01T03:57:40.092395][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-01T03:57:40.440961][ERROR]: node154: bash: fatrace: command not found
+pdsh@node153: node154: ssh exited with exit code 127
+
+[2016-06-01T04:03:24.566947][LOG]: start to run performance test
+[2016-06-01T04:03:24.567156][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-01T04:03:28.065850][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-01T04:03:28.066091][LOG]: Tuning[version] is not same with current configuration
+[2016-06-01T04:03:31.950182][LOG]: RUNID: 2, RESULT_DIR: //mnt/data//2-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd
+[2016-06-01T04:03:31.950529][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-01T04:03:32.290653][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-01T04:03:32.610042][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-01T04:03:32.937452][ERROR]: node154: bash: blktrace: command not found
+pdsh@node153: node154: ssh exited with exit code 127
+
+[2016-06-01T04:04:13.933765][LOG]: start to run performance test
+[2016-06-01T04:04:13.933942][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-01T04:04:17.296581][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-01T04:04:17.296805][LOG]: Tuning[version] is not same with current configuration
+[2016-06-01T04:04:21.218562][LOG]: RUNID: 3, RESULT_DIR: //mnt/data//3-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd
+[2016-06-01T04:04:21.218963][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-01T04:04:21.552273][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-01T04:04:21.877539][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-01T04:04:22.193041][LOG]: Prerun_check: check if strace installed 
+[2016-06-01T04:04:22.521276][ERROR]: node154: bash: strace: command not found
+pdsh@node153: node154: ssh exited with exit code 127
+
+[2016-06-01T04:05:42.015920][LOG]: start to run performance test
+[2016-06-01T04:05:42.016113][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-01T04:05:45.422401][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-01T04:05:45.422586][LOG]: Tuning[version] is not same with current configuration
+[2016-06-01T04:05:49.307913][LOG]: RUNID: 4, RESULT_DIR: //mnt/data//4-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd
+[2016-06-01T04:05:49.308251][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-01T04:05:49.663179][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-01T04:05:50.001156][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-01T04:05:50.342836][LOG]: Prerun_check: check if strace installed 
+[2016-06-01T04:05:50.675876][LOG]: Prerun_check: check if lttng installed 
+[2016-06-01T04:05:51.211798][LOG]: check if FIO rbd engine installed
+[2016-06-01T04:05:51.433553][LOG]: check if rbd volume fully initialized
+[2016-06-01T04:05:52.046436][WARNING]: Ceph cluster used data occupied: 0.128 KB, planned_space: 41943040.0 KB 
+[2016-06-01T04:05:52.046673][WARNING]: rbd volume initialization has not be done
+[2016-06-01T04:05:52.046887][LOG]: Creating rbd volume
+[2016-06-01T04:05:53.927994][WARNING]: 1 fio job still runing
+[2016-06-01T04:05:53.928197][LOG]: 1 FIO Jobs starts on node153
+[2016-06-01T04:05:53.928338][LOG]: Wait rbd initialization stop
+[2016-06-01T04:05:54.248507][WARNING]: 1 fio job still runing
+[2016-06-01T04:05:59.411478][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-01T04:05:59.411706][LOG]: rbd initialization finished
+[2016-06-01T04:07:21.154342][WARNING]: Caught KeyboardInterrupt Interruption
+[2016-06-01T04:12:29.541660][LOG]: start to run performance test
+[2016-06-01T04:12:29.541886][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-01T04:12:32.970329][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-01T04:12:32.970669][LOG]: Tuning[version] is not same with current configuration
+[2016-06-01T04:12:36.881930][LOG]: RUNID: 5, RESULT_DIR: //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd
+[2016-06-01T04:12:36.882268][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-01T04:12:37.214962][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-01T04:12:37.545162][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-01T04:12:37.882713][LOG]: Prerun_check: check if strace installed 
+[2016-06-01T04:12:38.208825][LOG]: Prerun_check: check if lttng installed 
+[2016-06-01T04:12:38.753108][LOG]: check if FIO rbd engine installed
+[2016-06-01T04:12:38.964780][LOG]: check if rbd volume fully initialized
+[2016-06-01T04:12:39.564706][WARNING]: Ceph cluster used data occupied: 131072.0 KB, planned_space: 41943040.0 KB 
+[2016-06-01T04:12:39.564915][WARNING]: rbd volume initialization has not be done
+[2016-06-01T04:12:39.565128][LOG]: Creating rbd volume
+[2016-06-01T04:12:41.574434][WARNING]: 1 fio job still runing
+[2016-06-01T04:12:41.574679][LOG]: 1 FIO Jobs starts on node153
+[2016-06-01T04:12:41.574852][LOG]: Wait rbd initialization stop
+[2016-06-01T04:12:41.739715][WARNING]: 1 fio job still runing
+[2016-06-01T04:12:46.906929][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-01T04:12:46.907122][LOG]: rbd initialization finished
+[2016-06-01T04:12:51.064195][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-01T04:12:51.724686][LOG]: Cleaned original data under /opt/ 
+[2016-06-01T04:12:51.724907][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-01T04:12:51.725114][LOG]: This test will run 500 secs until finish.
+[2016-06-01T04:12:54.425362][LOG]: Start system data collector under ['node153', 'node154'] 
+[2016-06-01T04:12:56.214516][LOG]: Start perfcounter data collector under ['node153', 'node154'] 
+[2016-06-01T04:12:56.226454][LOG]: Start blktrace data collector under node153 
+[2016-06-01T04:12:56.455390][LOG]: Start blktrace data collector under node154 
+[2016-06-01T04:12:56.718899][LOG]: Start fatrace data collector under ['node153', 'node154'] 
+[2016-06-01T04:12:57.840242][LOG]: Start strace data collector under ['node153', 'node154'] 
+[2016-06-01T04:12:57.905805][LOG]: Start lttng data collector under ['node153', 'node154'] 
+[2016-06-01T04:13:02.319969][LOG]: Start system data collector under ['node153'] 
+[2016-06-01T04:13:05.533283][LOG]: Start perfcounter data collector under ['node153'] 
+[2016-06-01T04:13:08.940047][WARNING]: 1 fio job still runing
+[2016-06-01T04:13:08.940279][LOG]: 1 FIO Jobs starts on ['node153']
+[2016-06-01T04:13:09.950458][WARNING]: 1 fio job still runing
+[2016-06-01T04:13:15.932640][WARNING]: 1 fio job still runing
+[2016-06-01T04:13:22.242511][WARNING]: 1 fio job still runing
+[2016-06-01T04:13:27.719288][WARNING]: 1 fio job still runing
+[2016-06-01T04:13:33.538473][WARNING]: 1 fio job still runing
+[2016-06-01T04:13:39.360442][WARNING]: 1 fio job still runing
+[2016-06-01T04:13:45.321614][WARNING]: 1 fio job still runing
+[2016-06-01T04:13:51.343427][WARNING]: 1 fio job still runing
+[2016-06-01T04:13:57.024417][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:02.649904][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:08.411780][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:15.068533][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:21.366018][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:26.981467][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:32.676231][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:38.798456][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:45.492177][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:50.998244][WARNING]: 1 fio job still runing
+[2016-06-01T04:14:56.597293][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:02.532341][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:09.222736][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:15.107620][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:20.802797][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:26.595535][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:32.724810][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:39.227958][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:44.717405][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:50.340941][WARNING]: 1 fio job still runing
+[2016-06-01T04:15:56.223857][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:02.925932][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:09.323571][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:14.867703][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:20.608111][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:26.424127][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:33.208719][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:38.826173][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:44.561852][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:50.469636][WARNING]: 1 fio job still runing
+[2016-06-01T04:16:56.665318][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:03.499008][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:09.129794][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:14.896037][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:21.034188][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:27.116130][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:32.759094][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:38.344155][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:44.273169][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:50.116460][WARNING]: 1 fio job still runing
+[2016-06-01T04:17:55.832147][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:01.269486][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:07.117145][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:13.446528][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:19.984927][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:25.794972][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:31.438263][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:37.685135][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:43.513778][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:50.029764][WARNING]: 1 fio job still runing
+[2016-06-01T04:18:55.744744][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:01.344825][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:07.215941][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:13.651145][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:19.758713][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:25.322380][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:30.882138][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:36.658751][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:43.271188][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:48.903817][WARNING]: 1 fio job still runing
+[2016-06-01T04:19:54.668081][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:00.519848][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:06.649835][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:13.188580][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:18.900317][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:24.513868][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:30.281936][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:37.071674][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:42.632108][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:48.174072][WARNING]: 1 fio job still runing
+[2016-06-01T04:20:54.158327][WARNING]: 1 fio job still runing
+[2016-06-01T04:21:00.497423][WARNING]: 1 fio job still runing
+[2016-06-01T04:21:06.317489][WARNING]: 1 fio job still runing
+[2016-06-01T04:21:11.789732][WARNING]: 1 fio job still runing
+[2016-06-01T04:21:17.497528][WARNING]: 1 fio job still runing
+[2016-06-01T04:21:23.287139][WARNING]: 1 fio job still runing
+[2016-06-01T04:21:29.632885][WARNING]: 1 fio job still runing
+[2016-06-01T04:21:35.243793][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-01T04:21:35.244070][LOG]: Waiting Workload to complete its work
+[2016-06-01T04:21:35.783137][LOG]: Workload completed
+[2016-06-01T04:21:53.837698][LOG]: Collecting Data, this will takes quite long time depends on the network
+[2016-06-01T04:22:00.391374][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-01T04:22:07.172620][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-01T04:22:11.415513][LOG]: Post Process Result Data
+[2016-06-01T04:22:11.487850][LOG]: Processing node153_node153_ceph_health.txt
+[2016-06-01T04:22:11.488011][LOG]: Processing node153_node153_ceph-osd.0.asok.txt
+[2016-06-01T04:22:11.488161][LOG]: loading //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/node153/node153_ceph-osd.0.asok.txt
+[2016-06-01T04:22:14.931481][LOG]: Processing node153_node153_ceph-osd.1.asok.txt
+[2016-06-01T04:22:14.931710][LOG]: loading //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/node153/node153_ceph-osd.1.asok.txt
+[2016-06-01T04:22:18.832056][LOG]: Processing node153_node153_ceph-osd.2.asok.txt
+[2016-06-01T04:22:18.832235][LOG]: loading //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/node153/node153_ceph-osd.2.asok.txt
+[2016-06-01T04:22:22.897256][LOG]: Processing node153_node153_fatrace.txt
+[2016-06-01T04:22:22.897419][LOG]: Processing node153_node153_foo_fio_errorlog.txt
+[2016-06-01T04:22:22.897544][LOG]: Processing node153_node153_foo_fio.txt
+[2016-06-01T04:22:22.990511][LOG]: Processing node153_node153_interrupts_end.txt
+[2016-06-01T04:22:22.990903][LOG]: Processing node153_node153_interrupts_start.txt
+[2016-06-01T04:22:22.991040][LOG]: Processing node153_node153_iostat.txt
+[2016-06-01T04:22:23.567496][LOG]: Processing node153_node153_mpstat.txt
+[2016-06-01T04:22:23.567910][LOG]: Processing node153_node153_process_log.txt
+[2016-06-01T04:22:23.568252][LOG]: Processing node153_node153_ps.txt
+[2016-06-01T04:22:23.568380][LOG]: Processing node153_node153_sar.txt
+[2016-06-01T04:22:25.365879][LOG]: Processing node153_node153_strace_2091.txt
+[2016-06-01T04:22:25.366042][LOG]: Processing node153_node153_strace_2600.txt
+[2016-06-01T04:22:25.366166][LOG]: Processing node153_node153_strace_3063.txt
+[2016-06-01T04:22:25.366289][LOG]: Processing node153_node153_top.txt
+[2016-06-01T04:22:25.366413][LOG]: Processing node153_node153_blktrace__dev_vdb1.log
+[2016-06-01T04:22:25.366535][LOG]: Processing node153_node153_blktrace__dev_vdb2.log
+[2016-06-01T04:22:25.366695][LOG]: Processing node153_node153_blktrace__dev_vdc1.log
+[2016-06-01T04:22:25.366835][LOG]: Processing node153_node153_blktrace__dev_vdc2.log
+[2016-06-01T04:22:25.366960][LOG]: Processing node153_node153_blktrace__dev_vdd1.log
+[2016-06-01T04:22:25.367083][LOG]: Processing node153_node153_blktrace__dev_vdd2.log
+[2016-06-01T04:22:25.367205][LOG]: Processing node153_node153_journal__dev_vdc1.blktrace.0
+[2016-06-01T04:22:25.367328][LOG]: Processing node153_node153_journal__dev_vdd1.blktrace.0
+[2016-06-01T04:22:25.367452][LOG]: Processing node153_node153_journal__dev_vdd1.blktrace.1
+[2016-06-01T04:22:25.367574][LOG]: Processing node153_node153_osd__dev_vdb2.blktrace.0
+[2016-06-01T04:22:25.367738][LOG]: Processing node153_node153_osd__dev_vdb2.blktrace.1
+[2016-06-01T04:22:25.367872][LOG]: Processing node153_node153_foo_fio_bw.log
+[2016-06-01T04:22:25.368000][LOG]: Processing node153_node153_foo_fio_clat.log
+[2016-06-01T04:22:25.368118][LOG]: Processing node153_node153_foo_fio_iops.log
+[2016-06-01T04:22:25.368237][LOG]: Processing node153_node153_foo_fio_lat.log
+[2016-06-01T04:22:25.368354][LOG]: Processing node153_node153_foo_fio_slat.log
+[2016-06-01T04:22:25.368471][LOG]: Processing node153_node153_strace_2091.log
+[2016-06-01T04:22:25.368613][LOG]: Processing node153_node153_strace_2600.log
+[2016-06-01T04:22:25.368752][LOG]: Processing node153_node153_strace_3063.log
+[2016-06-01T04:22:25.369191][LOG]: Processing node153_node153_ceph_health.txt
+[2016-06-01T04:22:25.369315][LOG]: Processing node153_node153_ceph-osd.0.asok.txt
+[2016-06-01T04:22:25.369461][LOG]: loading //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/node153/node153_ceph-osd.0.asok.txt
+[2016-06-01T04:22:29.370635][LOG]: Processing node153_node153_ceph-osd.1.asok.txt
+[2016-06-01T04:22:29.370877][LOG]: loading //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/node153/node153_ceph-osd.1.asok.txt
+[2016-06-01T04:22:33.740845][LOG]: Processing node153_node153_ceph-osd.2.asok.txt
+[2016-06-01T04:22:33.741017][LOG]: loading //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/node153/node153_ceph-osd.2.asok.txt
+[2016-06-01T04:22:37.635797][LOG]: Processing node153_node153_fatrace.txt
+[2016-06-01T04:22:37.635979][LOG]: Processing node153_node153_foo_fio_errorlog.txt
+[2016-06-01T04:22:37.636103][LOG]: Processing node153_node153_foo_fio.txt
+[2016-06-01T04:22:37.673776][LOG]: Processing node153_node153_interrupts_end.txt
+[2016-06-01T04:22:37.673953][LOG]: Processing node153_node153_interrupts_start.txt
+[2016-06-01T04:22:37.674075][LOG]: Processing node153_node153_iostat.txt
+[2016-06-01T04:22:37.914243][LOG]: Processing node153_node153_mpstat.txt
+[2016-06-01T04:22:37.914410][LOG]: Processing node153_node153_process_log.txt
+[2016-06-01T04:22:37.914784][LOG]: Processing node153_node153_ps.txt
+[2016-06-01T04:22:37.914918][LOG]: Processing node153_node153_sar.txt
+[2016-06-01T04:22:39.726092][LOG]: Processing node153_node153_strace_2091.txt
+[2016-06-01T04:22:39.726257][LOG]: Processing node153_node153_strace_2600.txt
+[2016-06-01T04:22:39.726384][LOG]: Processing node153_node153_strace_3063.txt
+[2016-06-01T04:22:39.726512][LOG]: Processing node153_node153_top.txt
+[2016-06-01T04:22:39.726890][LOG]: Processing node153_node153_blktrace__dev_vdb1.log
+[2016-06-01T04:22:39.727034][LOG]: Processing node153_node153_blktrace__dev_vdb2.log
+[2016-06-01T04:22:39.727160][LOG]: Processing node153_node153_blktrace__dev_vdc1.log
+[2016-06-01T04:22:39.727283][LOG]: Processing node153_node153_blktrace__dev_vdc2.log
+[2016-06-01T04:22:39.727409][LOG]: Processing node153_node153_blktrace__dev_vdd1.log
+[2016-06-01T04:22:39.727531][LOG]: Processing node153_node153_blktrace__dev_vdd2.log
+[2016-06-01T04:22:39.727693][LOG]: Processing node153_node153_journal__dev_vdc1.blktrace.0
+[2016-06-01T04:22:39.727845][LOG]: Processing node153_node153_journal__dev_vdd1.blktrace.0
+[2016-06-01T04:22:39.727970][LOG]: Processing node153_node153_journal__dev_vdd1.blktrace.1
+[2016-06-01T04:22:39.728097][LOG]: Processing node153_node153_osd__dev_vdb2.blktrace.0
+[2016-06-01T04:22:39.728222][LOG]: Processing node153_node153_osd__dev_vdb2.blktrace.1
+[2016-06-01T04:22:39.728347][LOG]: Processing node153_node153_foo_fio_bw.log
+[2016-06-01T04:22:39.728472][LOG]: Processing node153_node153_foo_fio_clat.log
+[2016-06-01T04:22:39.728621][LOG]: Processing node153_node153_foo_fio_iops.log
+[2016-06-01T04:22:39.728777][LOG]: Processing node153_node153_foo_fio_lat.log
+[2016-06-01T04:22:39.728906][LOG]: Processing node153_node153_foo_fio_slat.log
+[2016-06-01T04:22:39.729030][LOG]: Processing node153_node153_strace_2091.log
+[2016-06-01T04:22:39.729152][LOG]: Processing node153_node153_strace_2600.log
+[2016-06-01T04:22:39.729274][LOG]: Processing node153_node153_strace_3063.log
+[2016-06-01T04:22:39.729678][LOG]: Processing node154_node154_ceph_health.txt
+[2016-06-01T04:22:39.729832][LOG]: Processing node154_node154_ceph-osd.3.asok.txt
+[2016-06-01T04:22:39.729983][LOG]: loading //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/node154/node154_ceph-osd.3.asok.txt
+[2016-06-01T04:22:44.685196][LOG]: Processing node154_node154_ceph-osd.4.asok.txt
+[2016-06-01T04:22:44.685372][LOG]: loading //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/node154/node154_ceph-osd.4.asok.txt
+[2016-06-01T04:22:48.258475][LOG]: Processing node154_node154_ceph-osd.5.asok.txt
+[2016-06-01T04:22:48.258686][LOG]: loading //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/node154/node154_ceph-osd.5.asok.txt
+[2016-06-01T04:22:52.416476][LOG]: Processing node154_node154_fatrace.txt
+[2016-06-01T04:22:52.416896][LOG]: Processing node154_node154_interrupts_end.txt
+[2016-06-01T04:22:52.417078][LOG]: Processing node154_node154_interrupts_start.txt
+[2016-06-01T04:22:52.417237][LOG]: Processing node154_node154_iostat.txt
+[2016-06-01T04:22:52.912084][LOG]: Processing node154_node154_mpstat.txt
+[2016-06-01T04:22:52.912311][LOG]: Processing node154_node154_process_log.txt
+[2016-06-01T04:22:52.912890][LOG]: Processing node154_node154_ps.txt
+[2016-06-01T04:22:52.913079][LOG]: Processing node154_node154_sar.txt
+[2016-06-01T04:22:54.929968][LOG]: Processing node154_node154_strace_4660.txt
+[2016-06-01T04:22:54.930130][LOG]: Processing node154_node154_strace_5000.txt
+[2016-06-01T04:22:54.930257][LOG]: Processing node154_node154_strace_5359.txt
+[2016-06-01T04:22:54.930386][LOG]: Processing node154_node154_top.txt
+[2016-06-01T04:22:54.930527][LOG]: Processing node154_node154_blktrace__dev_vdb1.log
+[2016-06-01T04:22:54.930749][LOG]: Processing node154_node154_blktrace__dev_vdb2.log
+[2016-06-01T04:22:54.930908][LOG]: Processing node154_node154_blktrace__dev_vdc1.log
+[2016-06-01T04:22:54.931035][LOG]: Processing node154_node154_blktrace__dev_vdc2.log
+[2016-06-01T04:22:54.931160][LOG]: Processing node154_node154_blktrace__dev_vdd1.log
+[2016-06-01T04:22:54.931286][LOG]: Processing node154_node154_blktrace__dev_vdd2.log
+[2016-06-01T04:22:54.931423][LOG]: Processing node154_node154_journal__dev_vdd1.blktrace.0
+[2016-06-01T04:22:54.931554][LOG]: Processing node154_node154_journal__dev_vdd1.blktrace.1
+[2016-06-01T04:22:54.931718][LOG]: Processing node154_node154_osd__dev_vdb2.blktrace.0
+[2016-06-01T04:22:54.931916][LOG]: Processing node154_node154_osd__dev_vdb2.blktrace.1
+[2016-06-01T04:22:54.932046][LOG]: Processing node154_node154_osd__dev_vdc2.blktrace.0
+[2016-06-01T04:22:54.932171][LOG]: Processing node154_node154_osd__dev_vdc2.blktrace.1
+[2016-06-01T04:22:55.786680][LOG]: Write analyzed results into result.json
+[2016-06-01T04:22:57.040060][LOG]: Generating summary view
+[2016-06-01T04:22:57.069321][LOG]: generate summary line chart
+[2016-06-01T04:22:57.097968][LOG]: generate summary line chart
+[2016-06-01T04:22:57.098219][LOG]: Generating workload view
+[2016-06-01T04:22:57.127019][LOG]: generate workload line chart
+[2016-06-01T04:22:57.187007][LOG]: generate workload line chart
+[2016-06-01T04:23:09.298748][LOG]: generate workload line chart
+[2016-06-01T04:23:38.674886][LOG]: Generating ceph view
+[2016-06-01T04:23:38.707183][LOG]: generate ceph line chart
+[2016-06-01T04:23:43.024459][LOG]: generate ceph line chart
+[2016-06-01T04:23:43.063213][LOG]: generate ceph line chart
+[2016-06-01T04:23:48.880950][LOG]: generate ceph line chart
+[2016-06-01T04:23:53.143264][LOG]: generate ceph line chart
+[2016-06-01T04:23:56.502147][LOG]: generate ceph line chart
+[2016-06-01T04:24:02.252858][LOG]: generate ceph line chart
+[2016-06-01T04:24:14.090693][LOG]: generate ceph line chart
+[2016-06-01T04:24:47.345477][LOG]: Generating client view
+[2016-06-01T04:24:47.375287][LOG]: generate client line chart
+[2016-06-01T04:24:51.457552][LOG]: generate client line chart
+[2016-06-01T04:24:56.441552][LOG]: generate client line chart
+[2016-06-01T04:25:00.232658][LOG]: generate client line chart
+[2016-06-01T04:25:03.257222][LOG]: generate client line chart
+[2016-06-01T04:25:22.475062][LOG]: Generating history view
+[2016-06-01T04:25:22.552442][ERROR]: Generating history view failed
+[2016-06-01T04:25:28.398576][LOG]: Generating history view
+[2016-06-01T04:25:28.461124][ERROR]: Generating history view failed
+[2016-06-01T04:25:29.681520][LOG]: Generating history view
+[2016-06-01T04:25:29.798316][ERROR]: Generating history view failed
+[2016-06-01T04:25:30.954792][LOG]: Generating history view
+[2016-06-01T04:25:31.144437][ERROR]: Generating history view failed
+[2016-06-01T04:25:31.171861][LOG]: Generating history view
+[2016-06-01T04:25:31.265555][ERROR]: Generating history view failed
+[2016-06-01T04:25:31.287742][LOG]: Generating history view
+[2016-06-01T04:25:31.346252][ERROR]: Generating history view failed
+[2016-06-01T04:25:31.369105][LOG]: Generating history view
+[2016-06-01T04:25:31.423146][ERROR]: Generating history view failed
+[2016-06-01T04:29:20.191757][LOG]: Generating history view
+[2016-06-01T04:29:20.251454][ERROR]: Generating history view failed

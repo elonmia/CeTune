@@ -22,6 +22,7 @@ class Generic(Benchmark):
             fio_job_num_total += len(self.cluster["testjob_distribution"][client])
         time.sleep(1)
         if not self.check_fio_pgrep(clients, fio_job_num_total):
+            print "generic here"#debug by longxing
             common.printout("ERROR","Failed to start FIO process")
             common.pdsh(user, clients, "killall -9 fio", option = "check_return")
             raise KeyboardInterrupt

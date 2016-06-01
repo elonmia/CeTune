@@ -546,7 +546,8 @@ def parse_nvme( dev_name ):
     return dev_name
 
 def parse_device_name(dev_name):
-    sata_pattern = re.compile(r'sd\D*')
+#    sata_pattern = re.compile(r'sd\D*')
+    sata_pattern = re.compile(r'vd\D*')#debug_by longxing_for vda device
     nvme_pattern = re.compile(r'nvme\dn\d*')
     res = sata_pattern.search(dev_name)
     if res:

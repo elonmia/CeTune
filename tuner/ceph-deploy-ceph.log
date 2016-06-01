@@ -1,0 +1,809 @@
+[2016-05-31 23:32:31,886][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2016-05-31 23:32:31,887][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy purge node153
+[2016-05-31 23:32:31,887][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-05-31 23:32:31,887][ceph_deploy.cli][INFO  ]  username                      : None
+[2016-05-31 23:32:31,887][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-05-31 23:32:31,888][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-05-31 23:32:31,888][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-05-31 23:32:31,888][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0xc49fc8>
+[2016-05-31 23:32:31,888][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-05-31 23:32:31,888][ceph_deploy.cli][INFO  ]  host                          : ['node153']
+[2016-05-31 23:32:31,888][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0xbb55f0>
+[2016-05-31 23:32:31,889][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-05-31 23:32:31,889][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-05-31 23:32:31,889][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2016-05-31 23:32:31,889][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2016-05-31 23:32:31,889][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts node153
+[2016-05-31 23:32:31,890][ceph_deploy.install][DEBUG ] Detecting platform for host node153 ...
+[2016-05-31 23:32:32,009][node153][DEBUG ] connected to host: node153 
+[2016-05-31 23:32:32,010][node153][DEBUG ] detect platform information from remote host
+[2016-05-31 23:32:32,059][node153][DEBUG ] detect machine type
+[2016-05-31 23:32:32,068][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.2.1511 Core
+[2016-05-31 23:32:32,069][node153][INFO  ] Purging Ceph on node153
+[2016-05-31 23:32:32,072][node153][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2016-05-31 23:32:32,455][node153][WARNING] No Match for argument: ceph
+[2016-05-31 23:32:32,570][node153][WARNING] No Match for argument: ceph-release
+[2016-05-31 23:32:32,736][node153][WARNING] No Match for argument: ceph-radosgw
+[2016-05-31 23:32:35,272][node153][INFO  ] Running command: yum clean all
+[2016-05-31 23:32:35,547][node153][DEBUG ] Loaded plugins: fastestmirror
+[2016-05-31 23:32:35,662][node153][DEBUG ] Cleaning repos: base epel extras updates
+[2016-05-31 23:32:35,662][node153][DEBUG ] Cleaning up everything
+[2016-05-31 23:32:35,978][node153][DEBUG ] Cleaning up list of fastest mirrors
+[2016-05-31 23:32:36,403][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2016-05-31 23:32:36,405][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy install --release hammer node153
+[2016-05-31 23:32:36,405][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-05-31 23:32:36,405][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-05-31 23:32:36,406][ceph_deploy.cli][INFO  ]  testing                       : None
+[2016-05-31 23:32:36,406][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x11e5b48>
+[2016-05-31 23:32:36,406][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-05-31 23:32:36,406][ceph_deploy.cli][INFO  ]  dev_commit                    : None
+[2016-05-31 23:32:36,407][ceph_deploy.cli][INFO  ]  install_mds                   : False
+[2016-05-31 23:32:36,407][ceph_deploy.cli][INFO  ]  stable                        : None
+[2016-05-31 23:32:36,407][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-05-31 23:32:36,407][ceph_deploy.cli][INFO  ]  username                      : None
+[2016-05-31 23:32:36,408][ceph_deploy.cli][INFO  ]  adjust_repos                  : True
+[2016-05-31 23:32:36,408][ceph_deploy.cli][INFO  ]  func                          : <function install at 0x1175320>
+[2016-05-31 23:32:36,408][ceph_deploy.cli][INFO  ]  install_all                   : False
+[2016-05-31 23:32:36,408][ceph_deploy.cli][INFO  ]  repo                          : False
+[2016-05-31 23:32:36,409][ceph_deploy.cli][INFO  ]  host                          : ['node153']
+[2016-05-31 23:32:36,409][ceph_deploy.cli][INFO  ]  install_rgw                   : False
+[2016-05-31 23:32:36,409][ceph_deploy.cli][INFO  ]  install_tests                 : False
+[2016-05-31 23:32:36,409][ceph_deploy.cli][INFO  ]  repo_url                      : None
+[2016-05-31 23:32:36,410][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-05-31 23:32:36,410][ceph_deploy.cli][INFO  ]  install_osd                   : False
+[2016-05-31 23:32:36,410][ceph_deploy.cli][INFO  ]  version_kind                  : stable
+[2016-05-31 23:32:36,411][ceph_deploy.cli][INFO  ]  install_common                : False
+[2016-05-31 23:32:36,411][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-05-31 23:32:36,411][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-05-31 23:32:36,411][ceph_deploy.cli][INFO  ]  dev                           : master
+[2016-05-31 23:32:36,412][ceph_deploy.cli][INFO  ]  local_mirror                  : None
+[2016-05-31 23:32:36,412][ceph_deploy.cli][INFO  ]  release                       : hammer
+[2016-05-31 23:32:36,412][ceph_deploy.cli][INFO  ]  install_mon                   : False
+[2016-05-31 23:32:36,412][ceph_deploy.cli][INFO  ]  gpg_url                       : None
+[2016-05-31 23:32:36,413][ceph_deploy.install][DEBUG ] Installing stable version hammer on cluster ceph hosts node153
+[2016-05-31 23:32:36,413][ceph_deploy.install][DEBUG ] Detecting platform for host node153 ...
+[2016-05-31 23:32:36,530][node153][DEBUG ] connected to host: node153 
+[2016-05-31 23:32:36,532][node153][DEBUG ] detect platform information from remote host
+[2016-05-31 23:32:36,578][node153][DEBUG ] detect machine type
+[2016-05-31 23:32:36,586][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.2.1511 Core
+[2016-05-31 23:32:36,586][node153][INFO  ] installing Ceph on node153
+[2016-05-31 23:32:36,589][node153][INFO  ] Running command: yum clean all
+[2016-05-31 23:32:36,874][node153][DEBUG ] Loaded plugins: fastestmirror
+[2016-05-31 23:32:36,938][node153][DEBUG ] Cleaning repos: base epel extras updates
+[2016-05-31 23:32:36,939][node153][DEBUG ] Cleaning up everything
+[2016-05-31 23:32:36,979][node153][INFO  ] Running command: yum -y install epel-release
+[2016-05-31 23:32:37,255][node153][DEBUG ] Loaded plugins: fastestmirror
+[2016-05-31 23:33:10,700][node153][WARNING] http://mirror.premi.st/epel/7/x86_64/repodata/5318707669f4d92d61a95655647b63548b11cfdfd9a7de3ed3816b99481c1c6a-updateinfo.xml.bz2: [Errno 14] HTTP Error 404 - Not Found
+[2016-05-31 23:33:10,700][node153][WARNING] Trying other mirror.
+[2016-05-31 23:33:10,700][node153][WARNING] To address this issue please refer to the below knowledge base article 
+[2016-05-31 23:33:10,700][node153][WARNING] 
+[2016-05-31 23:33:10,701][node153][WARNING] https://access.redhat.com/articles/1320623
+[2016-05-31 23:33:10,701][node153][WARNING] 
+[2016-05-31 23:33:10,701][node153][WARNING] If above article doesn't help to resolve this issue please create a bug on https://bugs.centos.org/
+[2016-05-31 23:33:10,701][node153][WARNING] 
+[2016-05-31 23:34:30,492][node153][DEBUG ] Determining fastest mirrors
+[2016-05-31 23:34:31,913][node153][DEBUG ]  * base: mirrors.aliyun.com
+[2016-05-31 23:34:31,914][node153][DEBUG ]  * epel: ftp.cuhk.edu.hk
+[2016-05-31 23:34:31,914][node153][DEBUG ]  * extras: mirrors.tuna.tsinghua.edu.cn
+[2016-05-31 23:34:31,914][node153][DEBUG ]  * updates: mirrors.tuna.tsinghua.edu.cn
+[2016-05-31 23:34:36,381][node153][DEBUG ] Package epel-release-7-6.noarch already installed and latest version
+[2016-05-31 23:34:36,382][node153][DEBUG ] Nothing to do
+[2016-05-31 23:34:36,387][node153][INFO  ] Running command: yum -y install yum-plugin-priorities
+[2016-05-31 23:34:36,612][node153][DEBUG ] Loaded plugins: fastestmirror
+[2016-05-31 23:34:36,676][node153][DEBUG ] Loading mirror speeds from cached hostfile
+[2016-05-31 23:34:36,677][node153][DEBUG ]  * base: mirrors.aliyun.com
+[2016-05-31 23:34:36,677][node153][DEBUG ]  * epel: ftp.cuhk.edu.hk
+[2016-05-31 23:34:36,677][node153][DEBUG ]  * extras: mirrors.tuna.tsinghua.edu.cn
+[2016-05-31 23:34:36,677][node153][DEBUG ]  * updates: mirrors.tuna.tsinghua.edu.cn
+[2016-05-31 23:34:37,093][node153][DEBUG ] Resolving Dependencies
+[2016-05-31 23:34:37,094][node153][DEBUG ] --> Running transaction check
+[2016-05-31 23:34:37,094][node153][DEBUG ] ---> Package yum-plugin-priorities.noarch 0:1.1.31-34.el7 will be installed
+[2016-05-31 23:34:38,012][node153][DEBUG ] --> Finished Dependency Resolution
+[2016-05-31 23:34:38,077][node153][DEBUG ] 
+[2016-05-31 23:34:38,078][node153][DEBUG ] Dependencies Resolved
+[2016-05-31 23:34:38,078][node153][DEBUG ] 
+[2016-05-31 23:34:38,078][node153][DEBUG ] ================================================================================
+[2016-05-31 23:34:38,078][node153][DEBUG ]  Package                     Arch         Version              Repository  Size
+[2016-05-31 23:34:38,078][node153][DEBUG ] ================================================================================
+[2016-05-31 23:34:38,079][node153][DEBUG ] Installing:
+[2016-05-31 23:34:38,079][node153][DEBUG ]  yum-plugin-priorities       noarch       1.1.31-34.el7        base        25 k
+[2016-05-31 23:34:38,079][node153][DEBUG ] 
+[2016-05-31 23:34:38,079][node153][DEBUG ] Transaction Summary
+[2016-05-31 23:34:38,079][node153][DEBUG ] ================================================================================
+[2016-05-31 23:34:38,080][node153][DEBUG ] Install  1 Package
+[2016-05-31 23:34:38,080][node153][DEBUG ] 
+[2016-05-31 23:34:38,080][node153][DEBUG ] Total download size: 25 k
+[2016-05-31 23:34:38,080][node153][DEBUG ] Installed size: 28 k
+[2016-05-31 23:34:38,080][node153][DEBUG ] Downloading packages:
+[2016-05-31 23:34:43,774][node153][DEBUG ] Running transaction check
+[2016-05-31 23:34:43,774][node153][DEBUG ] Running transaction test
+[2016-05-31 23:34:43,774][node153][DEBUG ] Transaction test succeeded
+[2016-05-31 23:34:43,774][node153][DEBUG ] Running transaction
+[2016-05-31 23:34:46,502][node153][DEBUG ]   Installing : yum-plugin-priorities-1.1.31-34.el7.noarch                   1/1 
+[2016-05-31 23:34:46,919][node153][DEBUG ]   Verifying  : yum-plugin-priorities-1.1.31-34.el7.noarch                   1/1 
+[2016-05-31 23:34:46,919][node153][DEBUG ] 
+[2016-05-31 23:34:46,920][node153][DEBUG ] Installed:
+[2016-05-31 23:34:46,920][node153][DEBUG ]   yum-plugin-priorities.noarch 0:1.1.31-34.el7                                  
+[2016-05-31 23:34:46,920][node153][DEBUG ] 
+[2016-05-31 23:34:46,920][node153][DEBUG ] Complete!
+[2016-05-31 23:34:46,936][node153][DEBUG ] Configure Yum priorities to include obsoletes
+[2016-05-31 23:34:46,938][node153][WARNING] check_obsoletes has been enabled for Yum priorities plugin
+[2016-05-31 23:34:46,941][node153][INFO  ] Running command: rpm --import https://download.ceph.com/keys/release.asc
+[2016-05-31 23:34:54,156][node153][INFO  ] Running command: rpm -Uvh --replacepkgs https://download.ceph.com/rpm-hammer/el7/noarch/ceph-release-1-0.el7.noarch.rpm
+[2016-05-31 23:35:02,118][node153][DEBUG ] Retrieving https://download.ceph.com/rpm-hammer/el7/noarch/ceph-release-1-0.el7.noarch.rpm
+[2016-05-31 23:35:02,119][node153][DEBUG ] Preparing...                          ########################################
+[2016-05-31 23:35:02,119][node153][DEBUG ] Updating / installing...
+[2016-05-31 23:35:02,119][node153][DEBUG ] ceph-release-1-1.el7                  ########################################
+[2016-05-31 23:35:02,385][node153][WARNING] ensuring that /etc/yum.repos.d/ceph.repo contains a high priority
+[2016-05-31 23:35:02,388][node153][WARNING] altered ceph.repo priorities to contain: priority=1
+[2016-05-31 23:35:02,391][node153][INFO  ] Running command: yum -y install ceph ceph-radosgw
+[2016-05-31 23:35:02,675][node153][DEBUG ] Loaded plugins: fastestmirror, priorities
+[2016-05-31 23:35:29,639][node153][DEBUG ] Loading mirror speeds from cached hostfile
+[2016-05-31 23:35:29,639][node153][DEBUG ]  * base: mirrors.aliyun.com
+[2016-05-31 23:35:29,639][node153][DEBUG ]  * epel: ftp.cuhk.edu.hk
+[2016-05-31 23:35:29,640][node153][DEBUG ]  * extras: mirrors.tuna.tsinghua.edu.cn
+[2016-05-31 23:35:29,640][node153][DEBUG ]  * updates: mirrors.tuna.tsinghua.edu.cn
+[2016-05-31 23:35:32,623][node153][DEBUG ] 26 packages excluded due to repository priority protections
+[2016-05-31 23:35:33,944][node153][DEBUG ] Resolving Dependencies
+[2016-05-31 23:35:33,945][node153][DEBUG ] --> Running transaction check
+[2016-05-31 23:35:33,946][node153][DEBUG ] ---> Package ceph.x86_64 1:0.94.7-0.el7 will be installed
+[2016-05-31 23:35:34,014][node153][DEBUG ] --> Processing Dependency: python-rbd = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,079][node153][DEBUG ] --> Processing Dependency: python-cephfs = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,080][node153][DEBUG ] --> Processing Dependency: librados2 = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,080][node153][DEBUG ] --> Processing Dependency: libcephfs1 = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,080][node153][DEBUG ] --> Processing Dependency: librbd1 = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,080][node153][DEBUG ] --> Processing Dependency: python-rados = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,080][node153][DEBUG ] --> Processing Dependency: ceph-common = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,082][node153][DEBUG ] --> Processing Dependency: python-flask for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,082][node153][DEBUG ] --> Processing Dependency: libcephfs.so.1()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,086][node153][DEBUG ] --> Processing Dependency: libboost_program_options-mt.so.1.53.0()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,087][node153][DEBUG ] --> Processing Dependency: libleveldb.so.1()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,091][node153][DEBUG ] --> Processing Dependency: libtcmalloc.so.4()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,095][node153][DEBUG ] --> Processing Dependency: liblttng-ust.so.0()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,098][node153][DEBUG ] ---> Package ceph-radosgw.x86_64 1:0.94.7-0.el7 will be installed
+[2016-05-31 23:35:34,163][node153][DEBUG ] --> Processing Dependency: libfcgi.so.0()(64bit) for package: 1:ceph-radosgw-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,164][node153][DEBUG ] --> Running transaction check
+[2016-05-31 23:35:34,164][node153][DEBUG ] ---> Package boost-program-options.x86_64 0:1.53.0-25.el7 will be installed
+[2016-05-31 23:35:34,164][node153][DEBUG ] ---> Package ceph-common.x86_64 1:0.94.7-0.el7 will be installed
+[2016-05-31 23:35:34,180][node153][DEBUG ] --> Processing Dependency: libbabeltrace-ctf.so.1()(64bit) for package: 1:ceph-common-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,180][node153][DEBUG ] --> Processing Dependency: libbabeltrace.so.1()(64bit) for package: 1:ceph-common-0.94.7-0.el7.x86_64
+[2016-05-31 23:35:34,181][node153][DEBUG ] ---> Package fcgi.x86_64 0:2.4.0-25.el7 will be installed
+[2016-05-31 23:35:34,184][node153][DEBUG ] ---> Package gperftools-libs.x86_64 0:2.4-7.el7 will be installed
+[2016-05-31 23:35:34,192][node153][DEBUG ] --> Processing Dependency: libunwind.so.8()(64bit) for package: gperftools-libs-2.4-7.el7.x86_64
+[2016-05-31 23:35:34,200][node153][DEBUG ] ---> Package leveldb.x86_64 0:1.12.0-5.el7 will be installed
+[2016-05-31 23:35:34,204][node153][DEBUG ] ---> Package libcephfs1.x86_64 1:0.94.7-0.el7 will be installed
+[2016-05-31 23:35:34,236][node153][DEBUG ] ---> Package librados2.x86_64 1:0.80.7-3.el7 will be updated
+[2016-05-31 23:35:34,237][node153][DEBUG ] ---> Package librados2.x86_64 1:0.94.7-0.el7 will be an update
+[2016-05-31 23:35:34,244][node153][DEBUG ] ---> Package librbd1.x86_64 1:0.80.7-3.el7 will be updated
+[2016-05-31 23:35:34,248][node153][DEBUG ] ---> Package librbd1.x86_64 1:0.94.7-0.el7 will be an update
+[2016-05-31 23:35:34,264][node153][DEBUG ] ---> Package lttng-ust.x86_64 0:2.4.1-1.el7 will be installed
+[2016-05-31 23:35:34,272][node153][DEBUG ] --> Processing Dependency: liburcu-cds.so.1()(64bit) for package: lttng-ust-2.4.1-1.el7.x86_64
+[2016-05-31 23:35:34,274][node153][DEBUG ] --> Processing Dependency: liburcu-bp.so.1()(64bit) for package: lttng-ust-2.4.1-1.el7.x86_64
+[2016-05-31 23:35:34,274][node153][DEBUG ] ---> Package python-cephfs.x86_64 1:0.94.7-0.el7 will be installed
+[2016-05-31 23:35:34,275][node153][DEBUG ] ---> Package python-flask.noarch 1:0.10.1-4.el7 will be installed
+[2016-05-31 23:35:34,279][node153][DEBUG ] --> Processing Dependency: python-werkzeug for package: 1:python-flask-0.10.1-4.el7.noarch
+[2016-05-31 23:35:34,281][node153][DEBUG ] --> Processing Dependency: python-itsdangerous for package: 1:python-flask-0.10.1-4.el7.noarch
+[2016-05-31 23:35:34,282][node153][DEBUG ] ---> Package python-rados.x86_64 1:0.80.7-3.el7 will be updated
+[2016-05-31 23:35:34,286][node153][DEBUG ] ---> Package python-rados.x86_64 1:0.94.7-0.el7 will be an update
+[2016-05-31 23:35:34,286][node153][DEBUG ] ---> Package python-rbd.x86_64 1:0.80.7-3.el7 will be updated
+[2016-05-31 23:35:34,290][node153][DEBUG ] ---> Package python-rbd.x86_64 1:0.94.7-0.el7 will be an update
+[2016-05-31 23:35:34,290][node153][DEBUG ] --> Running transaction check
+[2016-05-31 23:35:34,291][node153][DEBUG ] ---> Package libbabeltrace.x86_64 0:1.2.4-3.el7 will be installed
+[2016-05-31 23:35:34,298][node153][DEBUG ] ---> Package libunwind.x86_64 2:1.1-5.el7_2.2 will be installed
+[2016-05-31 23:35:34,302][node153][DEBUG ] ---> Package python-itsdangerous.noarch 0:0.23-2.el7 will be installed
+[2016-05-31 23:35:34,302][node153][DEBUG ] ---> Package python-werkzeug.noarch 0:0.9.1-2.el7 will be installed
+[2016-05-31 23:35:34,304][node153][DEBUG ] ---> Package userspace-rcu.x86_64 0:0.7.16-1.el7 will be installed
+[2016-05-31 23:35:35,174][node153][DEBUG ] --> Finished Dependency Resolution
+[2016-05-31 23:35:35,351][node153][DEBUG ] 
+[2016-05-31 23:35:35,351][node153][DEBUG ] Dependencies Resolved
+[2016-05-31 23:35:35,352][node153][DEBUG ] 
+[2016-05-31 23:35:35,352][node153][DEBUG ] ================================================================================
+[2016-05-31 23:35:35,352][node153][DEBUG ]  Package                    Arch        Version              Repository    Size
+[2016-05-31 23:35:35,352][node153][DEBUG ] ================================================================================
+[2016-05-31 23:35:35,352][node153][DEBUG ] Installing:
+[2016-05-31 23:35:35,353][node153][DEBUG ]  ceph                       x86_64      1:0.94.7-0.el7       Ceph          20 M
+[2016-05-31 23:35:35,353][node153][DEBUG ]  ceph-radosgw               x86_64      1:0.94.7-0.el7       Ceph         2.3 M
+[2016-05-31 23:35:35,353][node153][DEBUG ] Installing for dependencies:
+[2016-05-31 23:35:35,353][node153][DEBUG ]  boost-program-options      x86_64      1.53.0-25.el7        base         155 k
+[2016-05-31 23:35:35,353][node153][DEBUG ]  ceph-common                x86_64      1:0.94.7-0.el7       Ceph         7.2 M
+[2016-05-31 23:35:35,354][node153][DEBUG ]  fcgi                       x86_64      2.4.0-25.el7         epel          47 k
+[2016-05-31 23:35:35,354][node153][DEBUG ]  gperftools-libs            x86_64      2.4-7.el7            base         272 k
+[2016-05-31 23:35:35,354][node153][DEBUG ]  leveldb                    x86_64      1.12.0-5.el7         epel         158 k
+[2016-05-31 23:35:35,354][node153][DEBUG ]  libbabeltrace              x86_64      1.2.4-3.el7          epel         147 k
+[2016-05-31 23:35:35,354][node153][DEBUG ]  libcephfs1                 x86_64      1:0.94.7-0.el7       Ceph         1.9 M
+[2016-05-31 23:35:35,355][node153][DEBUG ]  libunwind                  x86_64      2:1.1-5.el7_2.2      updates       56 k
+[2016-05-31 23:35:35,355][node153][DEBUG ]  lttng-ust                  x86_64      2.4.1-1.el7          epel         176 k
+[2016-05-31 23:35:35,355][node153][DEBUG ]  python-cephfs              x86_64      1:0.94.7-0.el7       Ceph          11 k
+[2016-05-31 23:35:35,355][node153][DEBUG ]  python-flask               noarch      1:0.10.1-4.el7       extras       204 k
+[2016-05-31 23:35:35,355][node153][DEBUG ]  python-itsdangerous        noarch      0.23-2.el7           extras        24 k
+[2016-05-31 23:35:35,356][node153][DEBUG ]  python-werkzeug            noarch      0.9.1-2.el7          extras       562 k
+[2016-05-31 23:35:35,356][node153][DEBUG ]  userspace-rcu              x86_64      0.7.16-1.el7         epel          73 k
+[2016-05-31 23:35:35,356][node153][DEBUG ] Updating for dependencies:
+[2016-05-31 23:35:35,356][node153][DEBUG ]  librados2                  x86_64      1:0.94.7-0.el7       Ceph         1.8 M
+[2016-05-31 23:35:35,356][node153][DEBUG ]  librbd1                    x86_64      1:0.94.7-0.el7       Ceph         1.9 M
+[2016-05-31 23:35:35,357][node153][DEBUG ]  python-rados               x86_64      1:0.94.7-0.el7       Ceph          28 k
+[2016-05-31 23:35:35,357][node153][DEBUG ]  python-rbd                 x86_64      1:0.94.7-0.el7       Ceph          18 k
+[2016-05-31 23:35:35,357][node153][DEBUG ] 
+[2016-05-31 23:35:35,357][node153][DEBUG ] Transaction Summary
+[2016-05-31 23:35:35,357][node153][DEBUG ] ================================================================================
+[2016-05-31 23:35:35,358][node153][DEBUG ] Install  2 Packages (+14 Dependent packages)
+[2016-05-31 23:35:35,358][node153][DEBUG ] Upgrade             (  4 Dependent packages)
+[2016-05-31 23:35:35,358][node153][DEBUG ] 
+[2016-05-31 23:35:35,358][node153][DEBUG ] Total download size: 37 M
+[2016-05-31 23:35:35,358][node153][DEBUG ] Downloading packages:
+[2016-05-31 23:35:35,359][node153][DEBUG ] Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+[2016-05-31 23:36:38,315][node153][WARNING] http://epel.mirror.net.in/epel/7/x86_64/l/leveldb-1.12.0-5.el7.x86_64.rpm: [Errno 14] curl#18 - "transfer closed with 162128 bytes remaining to read"
+[2016-05-31 23:36:38,316][node153][WARNING] Trying other mirror.
+[2016-05-31 23:38:04,957][node153][DEBUG ] --------------------------------------------------------------------------------
+[2016-05-31 23:38:04,957][node153][DEBUG ] Total                                              253 kB/s |  37 MB  02:29     
+[2016-05-31 23:38:04,990][node153][DEBUG ] Running transaction check
+[2016-05-31 23:38:05,104][node153][DEBUG ] Running transaction test
+[2016-05-31 23:38:05,320][node153][DEBUG ] Transaction test succeeded
+[2016-05-31 23:38:05,320][node153][DEBUG ] Running transaction
+[2016-05-31 23:38:05,321][node153][WARNING] Warning: RPMDB altered outside of yum.
+[2016-05-31 23:38:07,819][node153][DEBUG ]   Installing : 1:libcephfs1-0.94.7-0.el7.x86_64                            1/24 
+[2016-05-31 23:38:08,687][node153][DEBUG ]   Installing : userspace-rcu-0.7.16-1.el7.x86_64                           2/24 
+[2016-05-31 23:38:09,714][node153][DEBUG ]   Installing : lttng-ust-2.4.1-1.el7.x86_64                                3/24 
+[2016-05-31 23:38:10,130][node153][DEBUG ]   Updating   : 1:librados2-0.94.7-0.el7.x86_64                             4/24 
+[2016-05-31 23:38:10,949][node153][DEBUG ]   Updating   : 1:python-rados-0.94.7-0.el7.x86_64                          5/24 
+[2016-05-31 23:38:11,366][node153][DEBUG ]   Updating   : 1:librbd1-0.94.7-0.el7.x86_64                               6/24 
+[2016-05-31 23:38:11,782][node153][DEBUG ]   Updating   : 1:python-rbd-0.94.7-0.el7.x86_64                            7/24 
+[2016-05-31 23:38:12,450][node153][DEBUG ]   Installing : 1:python-cephfs-0.94.7-0.el7.x86_64                         8/24 
+[2016-05-31 23:38:13,420][node153][DEBUG ]   Installing : python-werkzeug-0.9.1-2.el7.noarch                          9/24 
+[2016-05-31 23:38:13,938][node153][DEBUG ]   Installing : leveldb-1.12.0-5.el7.x86_64                                10/24 
+[2016-05-31 23:38:16,224][node153][DEBUG ]   Installing : libbabeltrace-1.2.4-3.el7.x86_64                           11/24 
+[2016-05-31 23:38:16,992][node153][DEBUG ]   Installing : 1:ceph-common-0.94.7-0.el7.x86_64                          12/24 
+[2016-05-31 23:38:18,264][node153][DEBUG ]   Installing : boost-program-options-1.53.0-25.el7.x86_64                 13/24 
+[2016-05-31 23:38:18,881][node153][DEBUG ]   Installing : fcgi-2.4.0-25.el7.x86_64                                   14/24 
+[2016-05-31 23:38:19,398][node153][DEBUG ]   Installing : 2:libunwind-1.1-5.el7_2.2.x86_64                           15/24 
+[2016-05-31 23:38:19,865][node153][DEBUG ]   Installing : gperftools-libs-2.4-7.el7.x86_64                           16/24 
+[2016-05-31 23:38:20,482][node153][DEBUG ]   Installing : python-itsdangerous-0.23-2.el7.noarch                      17/24 
+[2016-05-31 23:38:26,417][node153][DEBUG ]   Installing : 1:python-flask-0.10.1-4.el7.noarch                         18/24 
+[2016-05-31 23:38:27,902][node153][DEBUG ]   Installing : 1:ceph-0.94.7-0.el7.x86_64                                 19/24 
+[2016-05-31 23:38:29,273][node153][DEBUG ]   Installing : 1:ceph-radosgw-0.94.7-0.el7.x86_64                         20/24 
+[2016-05-31 23:38:29,690][node153][DEBUG ]   Cleanup    : 1:python-rbd-0.80.7-3.el7.x86_64                           21/24 
+[2016-05-31 23:38:30,057][node153][DEBUG ]   Cleanup    : 1:python-rados-0.80.7-3.el7.x86_64                         22/24 
+[2016-05-31 23:38:32,036][node153][DEBUG ]   Cleanup    : 1:librbd1-0.80.7-3.el7.x86_64                              23/24 
+[2016-05-31 23:38:32,506][node153][DEBUG ]   Cleanup    : 1:librados2-0.80.7-3.el7.x86_64                            24/24 
+[2016-05-31 23:38:32,621][node153][DEBUG ]   Verifying  : 1:python-flask-0.10.1-4.el7.noarch                          1/24 
+[2016-05-31 23:38:32,787][node153][DEBUG ]   Verifying  : 1:librados2-0.94.7-0.el7.x86_64                             2/24 
+[2016-05-31 23:38:32,902][node153][DEBUG ]   Verifying  : gperftools-libs-2.4-7.el7.x86_64                            3/24 
+[2016-05-31 23:38:33,017][node153][DEBUG ]   Verifying  : 1:ceph-0.94.7-0.el7.x86_64                                  4/24 
+[2016-05-31 23:38:33,182][node153][DEBUG ]   Verifying  : 1:ceph-common-0.94.7-0.el7.x86_64                           5/24 
+[2016-05-31 23:38:33,297][node153][DEBUG ]   Verifying  : python-itsdangerous-0.23-2.el7.noarch                       6/24 
+[2016-05-31 23:38:33,463][node153][DEBUG ]   Verifying  : 1:python-rados-0.94.7-0.el7.x86_64                          7/24 
+[2016-05-31 23:38:33,578][node153][DEBUG ]   Verifying  : 1:python-cephfs-0.94.7-0.el7.x86_64                         8/24 
+[2016-05-31 23:38:33,744][node153][DEBUG ]   Verifying  : 2:libunwind-1.1-5.el7_2.2.x86_64                            9/24 
+[2016-05-31 23:38:33,808][node153][DEBUG ]   Verifying  : fcgi-2.4.0-25.el7.x86_64                                   10/24 
+[2016-05-31 23:38:33,923][node153][DEBUG ]   Verifying  : boost-program-options-1.53.0-25.el7.x86_64                 11/24 
+[2016-05-31 23:38:33,988][node153][DEBUG ]   Verifying  : 1:libcephfs1-0.94.7-0.el7.x86_64                           12/24 
+[2016-05-31 23:38:34,153][node153][DEBUG ]   Verifying  : libbabeltrace-1.2.4-3.el7.x86_64                           13/24 
+[2016-05-31 23:38:34,268][node153][DEBUG ]   Verifying  : leveldb-1.12.0-5.el7.x86_64                                14/24 
+[2016-05-31 23:38:34,434][node153][DEBUG ]   Verifying  : lttng-ust-2.4.1-1.el7.x86_64                               15/24 
+[2016-05-31 23:38:34,549][node153][DEBUG ]   Verifying  : python-werkzeug-0.9.1-2.el7.noarch                         16/24 
+[2016-05-31 23:38:34,714][node153][DEBUG ]   Verifying  : 1:librbd1-0.94.7-0.el7.x86_64                              17/24 
+[2016-05-31 23:38:34,829][node153][DEBUG ]   Verifying  : 1:ceph-radosgw-0.94.7-0.el7.x86_64                         18/24 
+[2016-05-31 23:38:34,945][node153][DEBUG ]   Verifying  : 1:python-rbd-0.94.7-0.el7.x86_64                           19/24 
+[2016-05-31 23:38:35,067][node153][DEBUG ]   Verifying  : userspace-rcu-0.7.16-1.el7.x86_64                          20/24 
+[2016-05-31 23:38:35,068][node153][DEBUG ]   Verifying  : 1:librbd1-0.80.7-3.el7.x86_64                              21/24 
+[2016-05-31 23:38:35,068][node153][DEBUG ]   Verifying  : 1:librados2-0.80.7-3.el7.x86_64                            22/24 
+[2016-05-31 23:38:35,068][node153][DEBUG ]   Verifying  : 1:python-rados-0.80.7-3.el7.x86_64                         23/24 
+[2016-05-31 23:38:35,374][node153][DEBUG ]   Verifying  : 1:python-rbd-0.80.7-3.el7.x86_64                           24/24 
+[2016-05-31 23:38:35,375][node153][DEBUG ] 
+[2016-05-31 23:38:35,375][node153][DEBUG ] Installed:
+[2016-05-31 23:38:35,375][node153][DEBUG ]   ceph.x86_64 1:0.94.7-0.el7         ceph-radosgw.x86_64 1:0.94.7-0.el7        
+[2016-05-31 23:38:35,376][node153][DEBUG ] 
+[2016-05-31 23:38:35,376][node153][DEBUG ] Dependency Installed:
+[2016-05-31 23:38:35,376][node153][DEBUG ]   boost-program-options.x86_64 0:1.53.0-25.el7                                  
+[2016-05-31 23:38:35,376][node153][DEBUG ]   ceph-common.x86_64 1:0.94.7-0.el7                                             
+[2016-05-31 23:38:35,377][node153][DEBUG ]   fcgi.x86_64 0:2.4.0-25.el7                                                    
+[2016-05-31 23:38:35,377][node153][DEBUG ]   gperftools-libs.x86_64 0:2.4-7.el7                                            
+[2016-05-31 23:38:35,377][node153][DEBUG ]   leveldb.x86_64 0:1.12.0-5.el7                                                 
+[2016-05-31 23:38:35,377][node153][DEBUG ]   libbabeltrace.x86_64 0:1.2.4-3.el7                                            
+[2016-05-31 23:38:35,378][node153][DEBUG ]   libcephfs1.x86_64 1:0.94.7-0.el7                                              
+[2016-05-31 23:38:35,378][node153][DEBUG ]   libunwind.x86_64 2:1.1-5.el7_2.2                                              
+[2016-05-31 23:38:35,378][node153][DEBUG ]   lttng-ust.x86_64 0:2.4.1-1.el7                                                
+[2016-05-31 23:38:35,378][node153][DEBUG ]   python-cephfs.x86_64 1:0.94.7-0.el7                                           
+[2016-05-31 23:38:35,379][node153][DEBUG ]   python-flask.noarch 1:0.10.1-4.el7                                            
+[2016-05-31 23:38:35,379][node153][DEBUG ]   python-itsdangerous.noarch 0:0.23-2.el7                                       
+[2016-05-31 23:38:35,379][node153][DEBUG ]   python-werkzeug.noarch 0:0.9.1-2.el7                                          
+[2016-05-31 23:38:35,379][node153][DEBUG ]   userspace-rcu.x86_64 0:0.7.16-1.el7                                           
+[2016-05-31 23:38:35,380][node153][DEBUG ] 
+[2016-05-31 23:38:35,380][node153][DEBUG ] Dependency Updated:
+[2016-05-31 23:38:35,380][node153][DEBUG ]   librados2.x86_64 1:0.94.7-0.el7         librbd1.x86_64 1:0.94.7-0.el7        
+[2016-05-31 23:38:35,380][node153][DEBUG ]   python-rados.x86_64 1:0.94.7-0.el7      python-rbd.x86_64 1:0.94.7-0.el7     
+[2016-05-31 23:38:35,381][node153][DEBUG ] 
+[2016-05-31 23:38:35,381][node153][DEBUG ] Complete!
+[2016-05-31 23:38:35,499][node153][INFO  ] Running command: ceph --version
+[2016-05-31 23:38:35,673][node153][DEBUG ] ceph version 0.94.7 (d56bdf93ced6b80b07397d57e3fa68fe68304432)
+[2016-06-01 03:44:59,763][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2016-06-01 03:44:59,860][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy install --release hammer node154
+[2016-06-01 03:44:59,860][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-06-01 03:44:59,860][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-06-01 03:44:59,861][ceph_deploy.cli][INFO  ]  testing                       : None
+[2016-06-01 03:44:59,861][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x149acb0>
+[2016-06-01 03:44:59,861][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-06-01 03:44:59,861][ceph_deploy.cli][INFO  ]  dev_commit                    : None
+[2016-06-01 03:44:59,861][ceph_deploy.cli][INFO  ]  install_mds                   : False
+[2016-06-01 03:44:59,862][ceph_deploy.cli][INFO  ]  stable                        : None
+[2016-06-01 03:44:59,862][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-06-01 03:44:59,862][ceph_deploy.cli][INFO  ]  username                      : None
+[2016-06-01 03:44:59,862][ceph_deploy.cli][INFO  ]  adjust_repos                  : True
+[2016-06-01 03:44:59,862][ceph_deploy.cli][INFO  ]  func                          : <function install at 0x1428320>
+[2016-06-01 03:44:59,863][ceph_deploy.cli][INFO  ]  install_all                   : False
+[2016-06-01 03:44:59,863][ceph_deploy.cli][INFO  ]  repo                          : False
+[2016-06-01 03:44:59,863][ceph_deploy.cli][INFO  ]  host                          : ['node154']
+[2016-06-01 03:44:59,863][ceph_deploy.cli][INFO  ]  install_rgw                   : False
+[2016-06-01 03:44:59,864][ceph_deploy.cli][INFO  ]  install_tests                 : False
+[2016-06-01 03:44:59,864][ceph_deploy.cli][INFO  ]  repo_url                      : None
+[2016-06-01 03:44:59,864][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-06-01 03:44:59,864][ceph_deploy.cli][INFO  ]  install_osd                   : False
+[2016-06-01 03:44:59,864][ceph_deploy.cli][INFO  ]  version_kind                  : stable
+[2016-06-01 03:44:59,865][ceph_deploy.cli][INFO  ]  install_common                : False
+[2016-06-01 03:44:59,865][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-06-01 03:44:59,865][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-06-01 03:44:59,865][ceph_deploy.cli][INFO  ]  dev                           : master
+[2016-06-01 03:44:59,865][ceph_deploy.cli][INFO  ]  local_mirror                  : None
+[2016-06-01 03:44:59,866][ceph_deploy.cli][INFO  ]  release                       : hammer
+[2016-06-01 03:44:59,866][ceph_deploy.cli][INFO  ]  install_mon                   : False
+[2016-06-01 03:44:59,866][ceph_deploy.cli][INFO  ]  gpg_url                       : None
+[2016-06-01 03:44:59,866][ceph_deploy.install][DEBUG ] Installing stable version hammer on cluster ceph hosts node154
+[2016-06-01 03:44:59,866][ceph_deploy.install][DEBUG ] Detecting platform for host node154 ...
+[2016-06-01 03:45:00,770][node154][DEBUG ] connected to host: node154 
+[2016-06-01 03:45:00,772][node154][DEBUG ] detect platform information from remote host
+[2016-06-01 03:45:00,824][node154][DEBUG ] detect machine type
+[2016-06-01 03:45:00,835][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.2.1511 Core
+[2016-06-01 03:45:00,835][node154][INFO  ] installing Ceph on node154
+[2016-06-01 03:45:00,840][node154][INFO  ] Running command: yum clean all
+[2016-06-01 03:45:01,234][node154][DEBUG ] Loaded plugins: fastestmirror
+[2016-06-01 03:45:01,299][node154][DEBUG ] Cleaning repos: base extras updates
+[2016-06-01 03:45:01,299][node154][DEBUG ] Cleaning up everything
+[2016-06-01 03:45:01,316][node154][DEBUG ] Cleaning up list of fastest mirrors
+[2016-06-01 03:45:01,335][node154][INFO  ] Running command: yum -y install epel-release
+[2016-06-01 03:45:01,611][node154][DEBUG ] Loaded plugins: fastestmirror
+[2016-06-01 03:46:33,986][node154][DEBUG ] Determining fastest mirrors
+[2016-06-01 03:46:45,508][node154][DEBUG ]  * base: mirrors.aliyun.com
+[2016-06-01 03:46:45,508][node154][DEBUG ]  * extras: mirrors.aliyun.com
+[2016-06-01 03:46:45,508][node154][DEBUG ]  * updates: mirrors.tuna.tsinghua.edu.cn
+[2016-06-01 03:46:48,741][node154][DEBUG ] Resolving Dependencies
+[2016-06-01 03:46:48,741][node154][DEBUG ] --> Running transaction check
+[2016-06-01 03:46:48,741][node154][DEBUG ] ---> Package epel-release.noarch 0:7-6 will be installed
+[2016-06-01 03:46:49,358][node154][DEBUG ] --> Finished Dependency Resolution
+[2016-06-01 03:46:49,391][node154][DEBUG ] 
+[2016-06-01 03:46:49,391][node154][DEBUG ] Dependencies Resolved
+[2016-06-01 03:46:49,392][node154][DEBUG ] 
+[2016-06-01 03:46:49,392][node154][DEBUG ] ================================================================================
+[2016-06-01 03:46:49,392][node154][DEBUG ]  Package                Arch             Version         Repository        Size
+[2016-06-01 03:46:49,392][node154][DEBUG ] ================================================================================
+[2016-06-01 03:46:49,392][node154][DEBUG ] Installing:
+[2016-06-01 03:46:49,393][node154][DEBUG ]  epel-release           noarch           7-6             extras            14 k
+[2016-06-01 03:46:49,393][node154][DEBUG ] 
+[2016-06-01 03:46:49,393][node154][DEBUG ] Transaction Summary
+[2016-06-01 03:46:49,393][node154][DEBUG ] ================================================================================
+[2016-06-01 03:46:49,393][node154][DEBUG ] Install  1 Package
+[2016-06-01 03:46:49,393][node154][DEBUG ] 
+[2016-06-01 03:46:49,394][node154][DEBUG ] Total download size: 14 k
+[2016-06-01 03:46:49,394][node154][DEBUG ] Installed size: 24 k
+[2016-06-01 03:46:49,394][node154][DEBUG ] Downloading packages:
+[2016-06-01 03:47:00,113][node154][DEBUG ] Running transaction check
+[2016-06-01 03:47:00,114][node154][DEBUG ] Running transaction test
+[2016-06-01 03:47:00,117][node154][DEBUG ] Transaction test succeeded
+[2016-06-01 03:47:00,118][node154][DEBUG ] Running transaction
+[2016-06-01 03:47:00,334][node154][DEBUG ]   Installing : epel-release-7-6.noarch                                      1/1 
+[2016-06-01 03:47:00,449][node154][DEBUG ]   Verifying  : epel-release-7-6.noarch                                      1/1 
+[2016-06-01 03:47:00,450][node154][DEBUG ] 
+[2016-06-01 03:47:00,450][node154][DEBUG ] Installed:
+[2016-06-01 03:47:00,450][node154][DEBUG ]   epel-release.noarch 0:7-6                                                     
+[2016-06-01 03:47:00,450][node154][DEBUG ] 
+[2016-06-01 03:47:00,451][node154][DEBUG ] Complete!
+[2016-06-01 03:47:00,520][node154][INFO  ] Running command: yum -y install yum-plugin-priorities
+[2016-06-01 03:47:00,795][node154][DEBUG ] Loaded plugins: fastestmirror
+[2016-06-01 03:47:45,390][node154][WARNING] http://ftp.kddilabs.jp/Linux/packages/fedora/epel/7/x86_64/repodata/5318707669f4d92d61a95655647b63548b11cfdfd9a7de3ed3816b99481c1c6a-updateinfo.xml.bz2: [Errno 14] HTTP Error 404 - Not Found
+[2016-06-01 03:47:45,390][node154][WARNING] Trying other mirror.
+[2016-06-01 03:47:45,391][node154][WARNING] To address this issue please refer to the below knowledge base article 
+[2016-06-01 03:47:45,391][node154][WARNING] 
+[2016-06-01 03:47:45,391][node154][WARNING] https://access.redhat.com/articles/1320623
+[2016-06-01 03:47:45,391][node154][WARNING] 
+[2016-06-01 03:47:45,391][node154][WARNING] If above article doesn't help to resolve this issue please create a bug on https://bugs.centos.org/
+[2016-06-01 03:47:45,392][node154][WARNING] 
+[2016-06-01 03:47:54,253][node154][DEBUG ] Loading mirror speeds from cached hostfile
+[2016-06-01 03:47:59,844][node154][DEBUG ]  * base: mirrors.aliyun.com
+[2016-06-01 03:47:59,844][node154][DEBUG ]  * epel: ftp.cuhk.edu.hk
+[2016-06-01 03:47:59,844][node154][DEBUG ]  * extras: mirrors.aliyun.com
+[2016-06-01 03:47:59,845][node154][DEBUG ]  * updates: mirrors.tuna.tsinghua.edu.cn
+[2016-06-01 03:48:01,220][node154][DEBUG ] Resolving Dependencies
+[2016-06-01 03:48:01,221][node154][DEBUG ] --> Running transaction check
+[2016-06-01 03:48:01,221][node154][DEBUG ] ---> Package yum-plugin-priorities.noarch 0:1.1.31-34.el7 will be installed
+[2016-06-01 03:48:01,538][node154][DEBUG ] --> Finished Dependency Resolution
+[2016-06-01 03:48:01,653][node154][DEBUG ] 
+[2016-06-01 03:48:01,654][node154][DEBUG ] Dependencies Resolved
+[2016-06-01 03:48:01,654][node154][DEBUG ] 
+[2016-06-01 03:48:01,654][node154][DEBUG ] ================================================================================
+[2016-06-01 03:48:01,654][node154][DEBUG ]  Package                     Arch         Version              Repository  Size
+[2016-06-01 03:48:01,655][node154][DEBUG ] ================================================================================
+[2016-06-01 03:48:01,655][node154][DEBUG ] Installing:
+[2016-06-01 03:48:01,655][node154][DEBUG ]  yum-plugin-priorities       noarch       1.1.31-34.el7        base        25 k
+[2016-06-01 03:48:01,655][node154][DEBUG ] 
+[2016-06-01 03:48:01,655][node154][DEBUG ] Transaction Summary
+[2016-06-01 03:48:01,656][node154][DEBUG ] ================================================================================
+[2016-06-01 03:48:01,656][node154][DEBUG ] Install  1 Package
+[2016-06-01 03:48:01,656][node154][DEBUG ] 
+[2016-06-01 03:48:01,656][node154][DEBUG ] Total download size: 25 k
+[2016-06-01 03:48:01,656][node154][DEBUG ] Installed size: 28 k
+[2016-06-01 03:48:01,657][node154][DEBUG ] Downloading packages:
+[2016-06-01 03:48:12,371][node154][DEBUG ] Running transaction check
+[2016-06-01 03:48:12,372][node154][DEBUG ] Running transaction test
+[2016-06-01 03:48:12,375][node154][DEBUG ] Transaction test succeeded
+[2016-06-01 03:48:12,377][node154][DEBUG ] Running transaction
+[2016-06-01 03:48:12,592][node154][DEBUG ]   Installing : yum-plugin-priorities-1.1.31-34.el7.noarch                   1/1 
+[2016-06-01 03:48:12,758][node154][DEBUG ]   Verifying  : yum-plugin-priorities-1.1.31-34.el7.noarch                   1/1 
+[2016-06-01 03:48:12,758][node154][DEBUG ] 
+[2016-06-01 03:48:12,758][node154][DEBUG ] Installed:
+[2016-06-01 03:48:12,759][node154][DEBUG ]   yum-plugin-priorities.noarch 0:1.1.31-34.el7                                  
+[2016-06-01 03:48:12,759][node154][DEBUG ] 
+[2016-06-01 03:48:12,759][node154][DEBUG ] Complete!
+[2016-06-01 03:48:12,824][node154][DEBUG ] Configure Yum priorities to include obsoletes
+[2016-06-01 03:48:12,827][node154][WARNING] check_obsoletes has been enabled for Yum priorities plugin
+[2016-06-01 03:48:12,830][node154][INFO  ] Running command: rpm --import https://download.ceph.com/keys/release.asc
+[2016-06-01 03:48:25,370][node154][INFO  ] Running command: rpm -Uvh --replacepkgs https://download.ceph.com/rpm-hammer/el7/noarch/ceph-release-1-0.el7.noarch.rpm
+[2016-06-01 03:48:38,257][node154][DEBUG ] Retrieving https://download.ceph.com/rpm-hammer/el7/noarch/ceph-release-1-0.el7.noarch.rpm
+[2016-06-01 03:48:38,257][node154][DEBUG ] Preparing...                          ########################################
+[2016-06-01 03:48:38,258][node154][DEBUG ] Updating / installing...
+[2016-06-01 03:48:38,258][node154][DEBUG ] ceph-release-1-1.el7                  ########################################
+[2016-06-01 03:48:38,322][node154][WARNING] ensuring that /etc/yum.repos.d/ceph.repo contains a high priority
+[2016-06-01 03:48:38,326][node154][WARNING] altered ceph.repo priorities to contain: priority=1
+[2016-06-01 03:48:38,330][node154][INFO  ] Running command: yum -y install ceph ceph-radosgw
+[2016-06-01 03:48:38,605][node154][DEBUG ] Loaded plugins: fastestmirror, priorities
+[2016-06-01 03:49:27,059][node154][DEBUG ] Loading mirror speeds from cached hostfile
+[2016-06-01 03:49:35,166][node154][DEBUG ]  * base: mirrors.aliyun.com
+[2016-06-01 03:49:35,167][node154][DEBUG ]  * epel: ftp.cuhk.edu.hk
+[2016-06-01 03:49:35,167][node154][DEBUG ]  * extras: mirrors.aliyun.com
+[2016-06-01 03:49:35,168][node154][DEBUG ]  * updates: mirrors.tuna.tsinghua.edu.cn
+[2016-06-01 03:49:38,147][node154][DEBUG ] 26 packages excluded due to repository priority protections
+[2016-06-01 03:49:39,569][node154][DEBUG ] Resolving Dependencies
+[2016-06-01 03:49:39,569][node154][DEBUG ] --> Running transaction check
+[2016-06-01 03:49:39,569][node154][DEBUG ] ---> Package ceph.x86_64 1:0.94.7-0.el7 will be installed
+[2016-06-01 03:49:39,602][node154][DEBUG ] --> Processing Dependency: python-rbd = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,667][node154][DEBUG ] --> Processing Dependency: python-cephfs = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,667][node154][DEBUG ] --> Processing Dependency: librados2 = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,667][node154][DEBUG ] --> Processing Dependency: libcephfs1 = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,667][node154][DEBUG ] --> Processing Dependency: librbd1 = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,671][node154][DEBUG ] --> Processing Dependency: python-rados = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,675][node154][DEBUG ] --> Processing Dependency: ceph-common = 1:0.94.7-0.el7 for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,678][node154][DEBUG ] --> Processing Dependency: cryptsetup for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,682][node154][DEBUG ] --> Processing Dependency: gdisk for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,686][node154][DEBUG ] --> Processing Dependency: python-requests for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,686][node154][DEBUG ] --> Processing Dependency: python-flask for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,687][node154][DEBUG ] --> Processing Dependency: redhat-lsb-core for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,695][node154][DEBUG ] --> Processing Dependency: hdparm for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,696][node154][DEBUG ] --> Processing Dependency: libcephfs.so.1()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,700][node154][DEBUG ] --> Processing Dependency: libboost_system-mt.so.1.53.0()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,704][node154][DEBUG ] --> Processing Dependency: libboost_program_options-mt.so.1.53.0()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,704][node154][DEBUG ] --> Processing Dependency: libboost_thread-mt.so.1.53.0()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,708][node154][DEBUG ] --> Processing Dependency: libleveldb.so.1()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,709][node154][DEBUG ] --> Processing Dependency: libtcmalloc.so.4()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,717][node154][DEBUG ] --> Processing Dependency: liblttng-ust.so.0()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,718][node154][DEBUG ] --> Processing Dependency: librados.so.2()(64bit) for package: 1:ceph-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,721][node154][DEBUG ] ---> Package ceph-radosgw.x86_64 1:0.94.7-0.el7 will be installed
+[2016-06-01 03:49:39,786][node154][DEBUG ] --> Processing Dependency: mailcap for package: 1:ceph-radosgw-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,786][node154][DEBUG ] --> Processing Dependency: libfcgi.so.0()(64bit) for package: 1:ceph-radosgw-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,787][node154][DEBUG ] --> Running transaction check
+[2016-06-01 03:49:39,787][node154][DEBUG ] ---> Package boost-program-options.x86_64 0:1.53.0-25.el7 will be installed
+[2016-06-01 03:49:39,787][node154][DEBUG ] ---> Package boost-system.x86_64 0:1.53.0-25.el7 will be installed
+[2016-06-01 03:49:39,787][node154][DEBUG ] ---> Package boost-thread.x86_64 0:1.53.0-25.el7 will be installed
+[2016-06-01 03:49:39,787][node154][DEBUG ] ---> Package ceph-common.x86_64 1:0.94.7-0.el7 will be installed
+[2016-06-01 03:49:39,820][node154][DEBUG ] --> Processing Dependency: libbabeltrace-ctf.so.1()(64bit) for package: 1:ceph-common-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,820][node154][DEBUG ] --> Processing Dependency: libbabeltrace.so.1()(64bit) for package: 1:ceph-common-0.94.7-0.el7.x86_64
+[2016-06-01 03:49:39,820][node154][DEBUG ] ---> Package cryptsetup.x86_64 0:1.6.7-1.el7 will be installed
+[2016-06-01 03:49:39,828][node154][DEBUG ] ---> Package fcgi.x86_64 0:2.4.0-25.el7 will be installed
+[2016-06-01 03:49:39,832][node154][DEBUG ] ---> Package gdisk.x86_64 0:0.8.6-5.el7 will be installed
+[2016-06-01 03:49:39,848][node154][DEBUG ] --> Processing Dependency: libicuuc.so.50()(64bit) for package: gdisk-0.8.6-5.el7.x86_64
+[2016-06-01 03:49:39,848][node154][DEBUG ] --> Processing Dependency: libicuio.so.50()(64bit) for package: gdisk-0.8.6-5.el7.x86_64
+[2016-06-01 03:49:39,848][node154][DEBUG ] ---> Package gperftools-libs.x86_64 0:2.4-7.el7 will be installed
+[2016-06-01 03:49:39,856][node154][DEBUG ] --> Processing Dependency: libunwind.so.8()(64bit) for package: gperftools-libs-2.4-7.el7.x86_64
+[2016-06-01 03:49:39,860][node154][DEBUG ] ---> Package hdparm.x86_64 0:9.43-5.el7 will be installed
+[2016-06-01 03:49:39,860][node154][DEBUG ] ---> Package leveldb.x86_64 0:1.12.0-5.el7 will be installed
+[2016-06-01 03:49:39,868][node154][DEBUG ] ---> Package libcephfs1.x86_64 1:0.94.7-0.el7 will be installed
+[2016-06-01 03:49:39,884][node154][DEBUG ] ---> Package librados2.x86_64 1:0.94.7-0.el7 will be installed
+[2016-06-01 03:49:39,900][node154][DEBUG ] ---> Package librbd1.x86_64 1:0.94.7-0.el7 will be installed
+[2016-06-01 03:49:39,916][node154][DEBUG ] ---> Package lttng-ust.x86_64 0:2.4.1-1.el7 will be installed
+[2016-06-01 03:49:39,924][node154][DEBUG ] --> Processing Dependency: liburcu-cds.so.1()(64bit) for package: lttng-ust-2.4.1-1.el7.x86_64
+[2016-06-01 03:49:39,928][node154][DEBUG ] --> Processing Dependency: liburcu-bp.so.1()(64bit) for package: lttng-ust-2.4.1-1.el7.x86_64
+[2016-06-01 03:49:39,929][node154][DEBUG ] ---> Package mailcap.noarch 0:2.1.41-2.el7 will be installed
+[2016-06-01 03:49:39,929][node154][DEBUG ] ---> Package python-cephfs.x86_64 1:0.94.7-0.el7 will be installed
+[2016-06-01 03:49:39,929][node154][DEBUG ] ---> Package python-flask.noarch 1:0.10.1-4.el7 will be installed
+[2016-06-01 03:49:39,933][node154][DEBUG ] --> Processing Dependency: python-werkzeug for package: 1:python-flask-0.10.1-4.el7.noarch
+[2016-06-01 03:49:39,936][node154][DEBUG ] --> Processing Dependency: python-jinja2 for package: 1:python-flask-0.10.1-4.el7.noarch
+[2016-06-01 03:49:39,937][node154][DEBUG ] --> Processing Dependency: python-itsdangerous for package: 1:python-flask-0.10.1-4.el7.noarch
+[2016-06-01 03:49:39,940][node154][DEBUG ] ---> Package python-rados.x86_64 1:0.94.7-0.el7 will be installed
+[2016-06-01 03:49:39,941][node154][DEBUG ] ---> Package python-rbd.x86_64 1:0.94.7-0.el7 will be installed
+[2016-06-01 03:49:39,941][node154][DEBUG ] ---> Package python-requests.noarch 0:2.6.0-1.el7_1 will be installed
+[2016-06-01 03:49:39,949][node154][DEBUG ] --> Processing Dependency: python-urllib3 >= 1.10.2-1 for package: python-requests-2.6.0-1.el7_1.noarch
+[2016-06-01 03:49:39,949][node154][DEBUG ] --> Processing Dependency: python-chardet >= 2.2.1-1 for package: python-requests-2.6.0-1.el7_1.noarch
+[2016-06-01 03:49:39,950][node154][DEBUG ] ---> Package redhat-lsb-core.x86_64 0:4.1-27.el7.centos.1 will be installed
+[2016-06-01 03:49:40,266][node154][DEBUG ] --> Processing Dependency: redhat-lsb-submod-security(x86-64) = 4.1-27.el7.centos.1 for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,267][node154][DEBUG ] --> Processing Dependency: spax for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,267][node154][DEBUG ] --> Processing Dependency: /usr/sbin/fuser for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,267][node154][DEBUG ] --> Processing Dependency: /usr/bin/time for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,267][node154][DEBUG ] --> Processing Dependency: /usr/bin/patch for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,268][node154][DEBUG ] --> Processing Dependency: /usr/bin/m4 for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,268][node154][DEBUG ] --> Processing Dependency: /usr/bin/lpr for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,268][node154][DEBUG ] --> Processing Dependency: /usr/bin/lp for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,268][node154][DEBUG ] --> Processing Dependency: /usr/bin/killall for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,268][node154][DEBUG ] --> Processing Dependency: /usr/bin/bc for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,269][node154][DEBUG ] --> Processing Dependency: /usr/bin/batch for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,270][node154][DEBUG ] --> Processing Dependency: /usr/bin/at for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,270][node154][DEBUG ] --> Processing Dependency: /bin/mailx for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,274][node154][DEBUG ] --> Processing Dependency: /bin/ed for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+[2016-06-01 03:49:40,274][node154][DEBUG ] --> Running transaction check
+[2016-06-01 03:49:40,274][node154][DEBUG ] ---> Package at.x86_64 0:3.1.13-20.el7 will be installed
+[2016-06-01 03:49:40,290][node154][DEBUG ] ---> Package bc.x86_64 0:1.06.95-13.el7 will be installed
+[2016-06-01 03:49:40,291][node154][DEBUG ] ---> Package cups-client.x86_64 1:1.6.3-22.el7 will be installed
+[2016-06-01 03:49:40,323][node154][DEBUG ] --> Processing Dependency: cups-libs(x86-64) = 1:1.6.3-22.el7 for package: 1:cups-client-1.6.3-22.el7.x86_64
+[2016-06-01 03:49:40,324][node154][DEBUG ] --> Processing Dependency: libcups.so.2()(64bit) for package: 1:cups-client-1.6.3-22.el7.x86_64
+[2016-06-01 03:49:40,324][node154][DEBUG ] ---> Package ed.x86_64 0:1.9-4.el7 will be installed
+[2016-06-01 03:49:40,324][node154][DEBUG ] ---> Package libbabeltrace.x86_64 0:1.2.4-3.el7 will be installed
+[2016-06-01 03:49:40,332][node154][DEBUG ] ---> Package libicu.x86_64 0:50.1.2-15.el7 will be installed
+[2016-06-01 03:49:40,340][node154][DEBUG ] ---> Package libunwind.x86_64 2:1.1-5.el7_2.2 will be installed
+[2016-06-01 03:49:40,341][node154][DEBUG ] ---> Package m4.x86_64 0:1.4.16-10.el7 will be installed
+[2016-06-01 03:49:40,349][node154][DEBUG ] ---> Package mailx.x86_64 0:12.5-12.el7_0 will be installed
+[2016-06-01 03:49:40,357][node154][DEBUG ] ---> Package patch.x86_64 0:2.7.1-8.el7 will be installed
+[2016-06-01 03:49:40,365][node154][DEBUG ] ---> Package psmisc.x86_64 0:22.20-9.el7 will be installed
+[2016-06-01 03:49:40,365][node154][DEBUG ] ---> Package python-chardet.noarch 0:2.2.1-1.el7_1 will be installed
+[2016-06-01 03:49:40,367][node154][DEBUG ] ---> Package python-itsdangerous.noarch 0:0.23-2.el7 will be installed
+[2016-06-01 03:49:40,367][node154][DEBUG ] ---> Package python-jinja2.noarch 0:2.7.2-2.el7 will be installed
+[2016-06-01 03:49:40,371][node154][DEBUG ] --> Processing Dependency: python-babel >= 0.8 for package: python-jinja2-2.7.2-2.el7.noarch
+[2016-06-01 03:49:40,374][node154][DEBUG ] --> Processing Dependency: python-markupsafe for package: python-jinja2-2.7.2-2.el7.noarch
+[2016-06-01 03:49:40,375][node154][DEBUG ] ---> Package python-urllib3.noarch 0:1.10.2-2.el7_1 will be installed
+[2016-06-01 03:49:40,379][node154][DEBUG ] --> Processing Dependency: python-six for package: python-urllib3-1.10.2-2.el7_1.noarch
+[2016-06-01 03:49:40,379][node154][DEBUG ] --> Processing Dependency: python-backports-ssl_match_hostname for package: python-urllib3-1.10.2-2.el7_1.noarch
+[2016-06-01 03:49:40,388][node154][DEBUG ] ---> Package python-werkzeug.noarch 0:0.9.1-2.el7 will be installed
+[2016-06-01 03:49:40,388][node154][DEBUG ] ---> Package redhat-lsb-submod-security.x86_64 0:4.1-27.el7.centos.1 will be installed
+[2016-06-01 03:49:40,388][node154][DEBUG ] ---> Package spax.x86_64 0:1.5.2-13.el7 will be installed
+[2016-06-01 03:49:40,392][node154][DEBUG ] ---> Package time.x86_64 0:1.7-45.el7 will be installed
+[2016-06-01 03:49:40,396][node154][DEBUG ] ---> Package userspace-rcu.x86_64 0:0.7.16-1.el7 will be installed
+[2016-06-01 03:49:40,404][node154][DEBUG ] --> Running transaction check
+[2016-06-01 03:49:40,404][node154][DEBUG ] ---> Package cups-libs.x86_64 1:1.6.3-22.el7 will be installed
+[2016-06-01 03:49:40,420][node154][DEBUG ] ---> Package python-babel.noarch 0:0.9.6-8.el7 will be installed
+[2016-06-01 03:49:40,421][node154][DEBUG ] ---> Package python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7 will be installed
+[2016-06-01 03:49:40,421][node154][DEBUG ] --> Processing Dependency: python-backports for package: python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch
+[2016-06-01 03:49:40,421][node154][DEBUG ] ---> Package python-markupsafe.x86_64 0:0.11-10.el7 will be installed
+[2016-06-01 03:49:40,425][node154][DEBUG ] ---> Package python-six.noarch 0:1.9.0-2.el7 will be installed
+[2016-06-01 03:49:40,425][node154][DEBUG ] --> Running transaction check
+[2016-06-01 03:49:40,425][node154][DEBUG ] ---> Package python-backports.x86_64 0:1.0-8.el7 will be installed
+[2016-06-01 03:49:41,194][node154][DEBUG ] --> Finished Dependency Resolution
+[2016-06-01 03:49:41,310][node154][DEBUG ] 
+[2016-06-01 03:49:41,310][node154][DEBUG ] Dependencies Resolved
+[2016-06-01 03:49:41,343][node154][DEBUG ] 
+[2016-06-01 03:49:41,343][node154][DEBUG ] ================================================================================
+[2016-06-01 03:49:41,343][node154][DEBUG ]  Package                             Arch   Version               Repository
+[2016-06-01 03:49:41,343][node154][DEBUG ]                                                                            Size
+[2016-06-01 03:49:41,344][node154][DEBUG ] ================================================================================
+[2016-06-01 03:49:41,344][node154][DEBUG ] Installing:
+[2016-06-01 03:49:41,344][node154][DEBUG ]  ceph                                x86_64 1:0.94.7-0.el7        Ceph     20 M
+[2016-06-01 03:49:41,344][node154][DEBUG ]  ceph-radosgw                        x86_64 1:0.94.7-0.el7        Ceph    2.3 M
+[2016-06-01 03:49:41,344][node154][DEBUG ] Installing for dependencies:
+[2016-06-01 03:49:41,344][node154][DEBUG ]  at                                  x86_64 3.1.13-20.el7         base     50 k
+[2016-06-01 03:49:41,345][node154][DEBUG ]  bc                                  x86_64 1.06.95-13.el7        base    115 k
+[2016-06-01 03:49:41,345][node154][DEBUG ]  boost-program-options               x86_64 1.53.0-25.el7         base    155 k
+[2016-06-01 03:49:41,345][node154][DEBUG ]  boost-system                        x86_64 1.53.0-25.el7         base     39 k
+[2016-06-01 03:49:41,345][node154][DEBUG ]  boost-thread                        x86_64 1.53.0-25.el7         base     57 k
+[2016-06-01 03:49:41,345][node154][DEBUG ]  ceph-common                         x86_64 1:0.94.7-0.el7        Ceph    7.2 M
+[2016-06-01 03:49:41,345][node154][DEBUG ]  cryptsetup                          x86_64 1.6.7-1.el7           base    119 k
+[2016-06-01 03:49:41,346][node154][DEBUG ]  cups-client                         x86_64 1:1.6.3-22.el7        base    148 k
+[2016-06-01 03:49:41,346][node154][DEBUG ]  cups-libs                           x86_64 1:1.6.3-22.el7        base    355 k
+[2016-06-01 03:49:41,346][node154][DEBUG ]  ed                                  x86_64 1.9-4.el7             base     72 k
+[2016-06-01 03:49:41,346][node154][DEBUG ]  fcgi                                x86_64 2.4.0-25.el7          epel     47 k
+[2016-06-01 03:49:41,346][node154][DEBUG ]  gdisk                               x86_64 0.8.6-5.el7           base    187 k
+[2016-06-01 03:49:41,346][node154][DEBUG ]  gperftools-libs                     x86_64 2.4-7.el7             base    272 k
+[2016-06-01 03:49:41,347][node154][DEBUG ]  hdparm                              x86_64 9.43-5.el7            base     83 k
+[2016-06-01 03:49:41,347][node154][DEBUG ]  leveldb                             x86_64 1.12.0-5.el7          epel    158 k
+[2016-06-01 03:49:41,347][node154][DEBUG ]  libbabeltrace                       x86_64 1.2.4-3.el7           epel    147 k
+[2016-06-01 03:49:41,347][node154][DEBUG ]  libcephfs1                          x86_64 1:0.94.7-0.el7        Ceph    1.9 M
+[2016-06-01 03:49:41,347][node154][DEBUG ]  libicu                              x86_64 50.1.2-15.el7         base    6.9 M
+[2016-06-01 03:49:41,347][node154][DEBUG ]  librados2                           x86_64 1:0.94.7-0.el7        Ceph    1.8 M
+[2016-06-01 03:49:41,348][node154][DEBUG ]  librbd1                             x86_64 1:0.94.7-0.el7        Ceph    1.9 M
+[2016-06-01 03:49:41,348][node154][DEBUG ]  libunwind                           x86_64 2:1.1-5.el7_2.2       updates  56 k
+[2016-06-01 03:49:41,348][node154][DEBUG ]  lttng-ust                           x86_64 2.4.1-1.el7           epel    176 k
+[2016-06-01 03:49:41,348][node154][DEBUG ]  m4                                  x86_64 1.4.16-10.el7         base    256 k
+[2016-06-01 03:49:41,348][node154][DEBUG ]  mailcap                             noarch 2.1.41-2.el7          base     31 k
+[2016-06-01 03:49:41,348][node154][DEBUG ]  mailx                               x86_64 12.5-12.el7_0         base    244 k
+[2016-06-01 03:49:41,349][node154][DEBUG ]  patch                               x86_64 2.7.1-8.el7           base    110 k
+[2016-06-01 03:49:41,349][node154][DEBUG ]  psmisc                              x86_64 22.20-9.el7           base    140 k
+[2016-06-01 03:49:41,349][node154][DEBUG ]  python-babel                        noarch 0.9.6-8.el7           base    1.4 M
+[2016-06-01 03:49:41,349][node154][DEBUG ]  python-backports                    x86_64 1.0-8.el7             base    5.8 k
+[2016-06-01 03:49:41,349][node154][DEBUG ]  python-backports-ssl_match_hostname noarch 3.4.0.2-4.el7         base     12 k
+[2016-06-01 03:49:41,350][node154][DEBUG ]  python-cephfs                       x86_64 1:0.94.7-0.el7        Ceph     11 k
+[2016-06-01 03:49:41,350][node154][DEBUG ]  python-chardet                      noarch 2.2.1-1.el7_1         base    227 k
+[2016-06-01 03:49:41,350][node154][DEBUG ]  python-flask                        noarch 1:0.10.1-4.el7        extras  204 k
+[2016-06-01 03:49:41,350][node154][DEBUG ]  python-itsdangerous                 noarch 0.23-2.el7            extras   24 k
+[2016-06-01 03:49:41,350][node154][DEBUG ]  python-jinja2                       noarch 2.7.2-2.el7           base    515 k
+[2016-06-01 03:49:41,350][node154][DEBUG ]  python-markupsafe                   x86_64 0.11-10.el7           base     25 k
+[2016-06-01 03:49:41,351][node154][DEBUG ]  python-rados                        x86_64 1:0.94.7-0.el7        Ceph     28 k
+[2016-06-01 03:49:41,351][node154][DEBUG ]  python-rbd                          x86_64 1:0.94.7-0.el7        Ceph     18 k
+[2016-06-01 03:49:41,351][node154][DEBUG ]  python-requests                     noarch 2.6.0-1.el7_1         base     94 k
+[2016-06-01 03:49:41,351][node154][DEBUG ]  python-six                          noarch 1.9.0-2.el7           base     29 k
+[2016-06-01 03:49:41,351][node154][DEBUG ]  python-urllib3                      noarch 1.10.2-2.el7_1        base    100 k
+[2016-06-01 03:49:41,351][node154][DEBUG ]  python-werkzeug                     noarch 0.9.1-2.el7           extras  562 k
+[2016-06-01 03:49:41,352][node154][DEBUG ]  redhat-lsb-core                     x86_64 4.1-27.el7.centos.1   base     38 k
+[2016-06-01 03:49:41,352][node154][DEBUG ]  redhat-lsb-submod-security          x86_64 4.1-27.el7.centos.1   base     15 k
+[2016-06-01 03:49:41,352][node154][DEBUG ]  spax                                x86_64 1.5.2-13.el7          base    260 k
+[2016-06-01 03:49:41,352][node154][DEBUG ]  time                                x86_64 1.7-45.el7            base     30 k
+[2016-06-01 03:49:41,352][node154][DEBUG ]  userspace-rcu                       x86_64 0.7.16-1.el7          epel     73 k
+[2016-06-01 03:49:41,352][node154][DEBUG ] 
+[2016-06-01 03:49:41,353][node154][DEBUG ] Transaction Summary
+[2016-06-01 03:49:41,353][node154][DEBUG ] ================================================================================
+[2016-06-01 03:49:41,353][node154][DEBUG ] Install  2 Packages (+47 Dependent packages)
+[2016-06-01 03:49:41,353][node154][DEBUG ] 
+[2016-06-01 03:49:41,353][node154][DEBUG ] Total download size: 48 M
+[2016-06-01 03:49:41,353][node154][DEBUG ] Installed size: 179 M
+[2016-06-01 03:49:41,354][node154][DEBUG ] Downloading packages:
+[2016-06-01 03:51:28,471][node154][WARNING] warning: /var/cache/yum/x86_64/7/epel/packages/leveldb-1.12.0-5.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+[2016-06-01 03:51:28,472][node154][DEBUG ] Public key for leveldb-1.12.0-5.el7.x86_64.rpm is not installed
+[2016-06-01 03:53:16,980][node154][DEBUG ] --------------------------------------------------------------------------------
+[2016-06-01 03:53:16,980][node154][DEBUG ] Total                                              230 kB/s |  48 MB  03:35     
+[2016-06-01 03:53:17,013][node154][DEBUG ] Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+[2016-06-01 03:53:17,021][node154][WARNING] Importing GPG key 0x352C64E5:
+[2016-06-01 03:53:17,021][node154][WARNING]  Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+[2016-06-01 03:53:17,021][node154][WARNING]  Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+[2016-06-01 03:53:17,022][node154][WARNING]  Package    : epel-release-7-6.noarch (@extras)
+[2016-06-01 03:53:17,022][node154][WARNING]  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+[2016-06-01 03:53:17,137][node154][DEBUG ] Running transaction check
+[2016-06-01 03:53:17,353][node154][DEBUG ] Running transaction test
+[2016-06-01 03:53:17,518][node154][DEBUG ] Transaction test succeeded
+[2016-06-01 03:53:17,519][node154][DEBUG ] Running transaction
+[2016-06-01 03:53:17,527][node154][WARNING] Warning: RPMDB altered outside of yum.
+[2016-06-01 03:53:18,095][node154][DEBUG ]   Installing : boost-system-1.53.0-25.el7.x86_64                           1/49 
+[2016-06-01 03:53:18,663][node154][DEBUG ]   Installing : boost-thread-1.53.0-25.el7.x86_64                           2/49 
+[2016-06-01 03:53:18,777][node154][DEBUG ]   Installing : 1:libcephfs1-0.94.7-0.el7.x86_64                            3/49 
+[2016-06-01 03:53:18,842][node154][DEBUG ]   Installing : libbabeltrace-1.2.4-3.el7.x86_64                            4/49 
+[2016-06-01 03:53:19,007][node154][DEBUG ]   Installing : time-1.7-45.el7.x86_64                                      5/49 
+[2016-06-01 03:53:19,122][node154][DEBUG ]   Installing : psmisc-22.20-9.el7.x86_64                                   6/49 
+[2016-06-01 03:53:19,237][node154][DEBUG ]   Installing : ed-1.9-4.el7.x86_64                                         7/49 
+[2016-06-01 03:53:19,352][node154][DEBUG ]   Installing : mailx-12.5-12.el7_0.x86_64                                  8/49 
+[2016-06-01 03:53:19,467][node154][DEBUG ]   Installing : userspace-rcu-0.7.16-1.el7.x86_64                           9/49 
+[2016-06-01 03:53:20,035][node154][DEBUG ]   Installing : lttng-ust-2.4.1-1.el7.x86_64                               10/49 
+[2016-06-01 03:53:20,100][node154][DEBUG ]   Installing : 1:librados2-0.94.7-0.el7.x86_64                            11/49 
+[2016-06-01 03:53:20,666][node154][DEBUG ]   Installing : 1:python-rados-0.94.7-0.el7.x86_64                         12/49 
+[2016-06-01 03:53:20,731][node154][DEBUG ]   Installing : 1:librbd1-0.94.7-0.el7.x86_64                              13/49 
+[2016-06-01 03:53:20,796][node154][DEBUG ]   Installing : 1:python-rbd-0.94.7-0.el7.x86_64                           14/49 
+[2016-06-01 03:53:22,468][node154][DEBUG ]   Installing : 1:python-cephfs-0.94.7-0.el7.x86_64                        15/49 
+[2016-06-01 03:53:22,633][node154][DEBUG ]   Installing : libicu-50.1.2-15.el7.x86_64                                16/49 
+[2016-06-01 03:53:22,699][node154][DEBUG ]   Installing : gdisk-0.8.6-5.el7.x86_64                                   17/49 
+[2016-06-01 03:53:23,166][node154][DEBUG ]   Installing : python-six-1.9.0-2.el7.noarch                              18/49 
+[2016-06-01 03:53:23,230][node154][DEBUG ]   Installing : python-werkzeug-0.9.1-2.el7.noarch                         19/49 
+[2016-06-01 03:53:23,295][node154][DEBUG ]   Installing : python-backports-1.0-8.el7.x86_64                          20/49 
+[2016-06-01 03:53:23,460][node154][DEBUG ]   Installing : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch   21/49 
+[2016-06-01 03:53:23,575][node154][DEBUG ]   Installing : python-urllib3-1.10.2-2.el7_1.noarch                       22/49 
+[2016-06-01 03:53:23,740][node154][DEBUG ]   Installing : leveldb-1.12.0-5.el7.x86_64                                23/49 
+[2016-06-01 03:53:23,855][node154][DEBUG ]   Installing : 1:cups-libs-1.6.3-22.el7.x86_64                            24/49 
+[2016-06-01 03:53:24,876][node154][DEBUG ]   Installing : 1:cups-client-1.6.3-22.el7.x86_64                          25/49 
+[2016-06-01 03:53:24,991][node154][DEBUG ]   Installing : python-babel-0.9.6-8.el7.noarch                            26/49 
+[2016-06-01 03:53:25,307][node154][DEBUG ]   Installing : at-3.1.13-20.el7.x86_64                                    27/49 
+[2016-06-01 03:53:25,422][node154][DEBUG ]   Installing : boost-program-options-1.53.0-25.el7.x86_64                 28/49 
+[2016-06-01 03:53:25,537][node154][DEBUG ]   Installing : fcgi-2.4.0-25.el7.x86_64                                   29/49 
+[2016-06-01 03:53:26,104][node154][DEBUG ]   Installing : python-markupsafe-0.11-10.el7.x86_64                       30/49 
+[2016-06-01 03:53:26,169][node154][DEBUG ]   Installing : python-jinja2-2.7.2-2.el7.noarch                           31/49 
+[2016-06-01 03:53:26,334][node154][DEBUG ]   Installing : 2:libunwind-1.1-5.el7_2.2.x86_64                           32/49 
+[2016-06-01 03:53:26,449][node154][DEBUG ]   Installing : gperftools-libs-2.4-7.el7.x86_64                           33/49 
+[2016-06-01 03:53:26,514][node154][DEBUG ]   Installing : patch-2.7.1-8.el7.x86_64                                   34/49 
+[2016-06-01 03:53:26,980][node154][DEBUG ]   Installing : python-itsdangerous-0.23-2.el7.noarch                      35/49 
+[2016-06-01 03:53:27,095][node154][DEBUG ]   Installing : 1:python-flask-0.10.1-4.el7.noarch                         36/49 
+[2016-06-01 03:53:27,160][node154][DEBUG ]   Installing : hdparm-9.43-5.el7.x86_64                                   37/49 
+[2016-06-01 03:53:27,325][node154][DEBUG ]   Installing : bc-1.06.95-13.el7.x86_64                                   38/49 
+[2016-06-01 03:53:27,440][node154][DEBUG ]   Installing : cryptsetup-1.6.7-1.el7.x86_64                              39/49 
+[2016-06-01 03:53:27,555][node154][DEBUG ]   Installing : m4-1.4.16-10.el7.x86_64                                    40/49 
+[2016-06-01 03:53:27,871][node154][DEBUG ]   Installing : spax-1.5.2-13.el7.x86_64                                   41/49 
+[2016-06-01 03:53:27,986][node154][DEBUG ]   Installing : python-chardet-2.2.1-1.el7_1.noarch                        42/49 
+[2016-06-01 03:53:29,963][node154][DEBUG ]   Installing : python-requests-2.6.0-1.el7_1.noarch                       43/49 
+[2016-06-01 03:53:30,028][node154][DEBUG ]   Installing : 1:ceph-common-0.94.7-0.el7.x86_64                          44/49 
+[2016-06-01 03:53:30,093][node154][DEBUG ]   Installing : mailcap-2.1.41-2.el7.noarch                                45/49 
+[2016-06-01 03:53:30,157][node154][DEBUG ]   Installing : redhat-lsb-submod-security-4.1-27.el7.centos.1.x86_64      46/49 
+[2016-06-01 03:53:35,597][node154][DEBUG ]   Installing : redhat-lsb-core-4.1-27.el7.centos.1.x86_64                 47/49 
+[2016-06-01 03:53:36,567][node154][DEBUG ]   Installing : 1:ceph-0.94.7-0.el7.x86_64                                 48/49 
+[2016-06-01 03:53:36,732][node154][DEBUG ]   Installing : 1:ceph-radosgw-0.94.7-0.el7.x86_64                         49/49 
+[2016-06-01 03:53:36,733][node154][DEBUG ]   Verifying  : python-jinja2-2.7.2-2.el7.noarch                            1/49 
+[2016-06-01 03:53:36,741][node154][DEBUG ]   Verifying  : 1:python-flask-0.10.1-4.el7.noarch                          2/49 
+[2016-06-01 03:53:36,774][node154][DEBUG ]   Verifying  : redhat-lsb-submod-security-4.1-27.el7.centos.1.x86_64       3/49 
+[2016-06-01 03:53:36,806][node154][DEBUG ]   Verifying  : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch    4/49 
+[2016-06-01 03:53:36,823][node154][DEBUG ]   Verifying  : mailcap-2.1.41-2.el7.noarch                                 5/49 
+[2016-06-01 03:53:36,839][node154][DEBUG ]   Verifying  : 1:librados2-0.94.7-0.el7.x86_64                             6/49 
+[2016-06-01 03:53:36,872][node154][DEBUG ]   Verifying  : python-chardet-2.2.1-1.el7_1.noarch                         7/49 
+[2016-06-01 03:53:36,889][node154][DEBUG ]   Verifying  : spax-1.5.2-13.el7.x86_64                                    8/49 
+[2016-06-01 03:53:36,921][node154][DEBUG ]   Verifying  : m4-1.4.16-10.el7.x86_64                                     9/49 
+[2016-06-01 03:53:36,938][node154][DEBUG ]   Verifying  : gperftools-libs-2.4-7.el7.x86_64                           10/49 
+[2016-06-01 03:53:36,971][node154][DEBUG ]   Verifying  : cryptsetup-1.6.7-1.el7.x86_64                              11/49 
+[2016-06-01 03:53:36,987][node154][DEBUG ]   Verifying  : bc-1.06.95-13.el7.x86_64                                   12/49 
+[2016-06-01 03:53:37,020][node154][DEBUG ]   Verifying  : 1:ceph-0.94.7-0.el7.x86_64                                 13/49 
+[2016-06-01 03:53:37,053][node154][DEBUG ]   Verifying  : 1:ceph-common-0.94.7-0.el7.x86_64                          14/49 
+[2016-06-01 03:53:37,085][node154][DEBUG ]   Verifying  : hdparm-9.43-5.el7.x86_64                                   15/49 
+[2016-06-01 03:53:37,118][node154][DEBUG ]   Verifying  : gdisk-0.8.6-5.el7.x86_64                                   16/49 
+[2016-06-01 03:53:37,134][node154][DEBUG ]   Verifying  : python-itsdangerous-0.23-2.el7.noarch                      17/49 
+[2016-06-01 03:53:37,167][node154][DEBUG ]   Verifying  : 1:python-rados-0.94.7-0.el7.x86_64                         18/49 
+[2016-06-01 03:53:37,231][node154][DEBUG ]   Verifying  : patch-2.7.1-8.el7.x86_64                                   19/49 
+[2016-06-01 03:53:37,232][node154][DEBUG ]   Verifying  : 1:python-cephfs-0.94.7-0.el7.x86_64                        20/49 
+[2016-06-01 03:53:37,264][node154][DEBUG ]   Verifying  : 2:libunwind-1.1-5.el7_2.2.x86_64                           21/49 
+[2016-06-01 03:53:37,296][node154][DEBUG ]   Verifying  : boost-thread-1.53.0-25.el7.x86_64                          22/49 
+[2016-06-01 03:53:37,329][node154][DEBUG ]   Verifying  : python-markupsafe-0.11-10.el7.x86_64                       23/49 
+[2016-06-01 03:53:37,345][node154][DEBUG ]   Verifying  : fcgi-2.4.0-25.el7.x86_64                                   24/49 
+[2016-06-01 03:53:37,410][node154][DEBUG ]   Verifying  : boost-program-options-1.53.0-25.el7.x86_64                 25/49 
+[2016-06-01 03:53:37,410][node154][DEBUG ]   Verifying  : 1:libcephfs1-0.94.7-0.el7.x86_64                           26/49 
+[2016-06-01 03:53:37,443][node154][DEBUG ]   Verifying  : at-3.1.13-20.el7.x86_64                                    27/49 
+[2016-06-01 03:53:37,475][node154][DEBUG ]   Verifying  : python-babel-0.9.6-8.el7.noarch                            28/49 
+[2016-06-01 03:53:37,508][node154][DEBUG ]   Verifying  : 1:cups-libs-1.6.3-22.el7.x86_64                            29/49 
+[2016-06-01 03:53:37,540][node154][DEBUG ]   Verifying  : leveldb-1.12.0-5.el7.x86_64                                30/49 
+[2016-06-01 03:53:37,573][node154][DEBUG ]   Verifying  : python-backports-1.0-8.el7.x86_64                          31/49 
+[2016-06-01 03:53:37,590][node154][DEBUG ]   Verifying  : lttng-ust-2.4.1-1.el7.x86_64                               32/49 
+[2016-06-01 03:53:37,622][node154][DEBUG ]   Verifying  : python-werkzeug-0.9.1-2.el7.noarch                         33/49 
+[2016-06-01 03:53:37,687][node154][DEBUG ]   Verifying  : 1:librbd1-0.94.7-0.el7.x86_64                              34/49 
+[2016-06-01 03:53:37,687][node154][DEBUG ]   Verifying  : 1:ceph-radosgw-0.94.7-0.el7.x86_64                         35/49 
+[2016-06-01 03:53:37,751][node154][DEBUG ]   Verifying  : python-six-1.9.0-2.el7.noarch                              36/49 
+[2016-06-01 03:53:37,752][node154][DEBUG ]   Verifying  : 1:python-rbd-0.94.7-0.el7.x86_64                           37/49 
+[2016-06-01 03:53:37,816][node154][DEBUG ]   Verifying  : python-requests-2.6.0-1.el7_1.noarch                       38/49 
+[2016-06-01 03:53:37,817][node154][DEBUG ]   Verifying  : libicu-50.1.2-15.el7.x86_64                                39/49 
+[2016-06-01 03:53:37,849][node154][DEBUG ]   Verifying  : userspace-rcu-0.7.16-1.el7.x86_64                          40/49 
+[2016-06-01 03:53:37,881][node154][DEBUG ]   Verifying  : mailx-12.5-12.el7_0.x86_64                                 41/49 
+[2016-06-01 03:53:37,913][node154][DEBUG ]   Verifying  : boost-system-1.53.0-25.el7.x86_64                          42/49 
+[2016-06-01 03:53:37,930][node154][DEBUG ]   Verifying  : ed-1.9-4.el7.x86_64                                        43/49 
+[2016-06-01 03:53:37,962][node154][DEBUG ]   Verifying  : 1:cups-client-1.6.3-22.el7.x86_64                          44/49 
+[2016-06-01 03:53:37,994][node154][DEBUG ]   Verifying  : redhat-lsb-core-4.1-27.el7.centos.1.x86_64                 45/49 
+[2016-06-01 03:53:38,059][node154][DEBUG ]   Verifying  : python-urllib3-1.10.2-2.el7_1.noarch                       46/49 
+[2016-06-01 03:53:38,063][node154][DEBUG ]   Verifying  : psmisc-22.20-9.el7.x86_64                                  47/49 
+[2016-06-01 03:53:38,095][node154][DEBUG ]   Verifying  : time-1.7-45.el7.x86_64                                     48/49 
+[2016-06-01 03:53:38,260][node154][DEBUG ]   Verifying  : libbabeltrace-1.2.4-3.el7.x86_64                           49/49 
+[2016-06-01 03:53:38,261][node154][DEBUG ] 
+[2016-06-01 03:53:38,261][node154][DEBUG ] Installed:
+[2016-06-01 03:53:38,261][node154][DEBUG ]   ceph.x86_64 1:0.94.7-0.el7         ceph-radosgw.x86_64 1:0.94.7-0.el7        
+[2016-06-01 03:53:38,261][node154][DEBUG ] 
+[2016-06-01 03:53:38,262][node154][DEBUG ] Dependency Installed:
+[2016-06-01 03:53:38,262][node154][DEBUG ]   at.x86_64 0:3.1.13-20.el7                                                     
+[2016-06-01 03:53:38,262][node154][DEBUG ]   bc.x86_64 0:1.06.95-13.el7                                                    
+[2016-06-01 03:53:38,262][node154][DEBUG ]   boost-program-options.x86_64 0:1.53.0-25.el7                                  
+[2016-06-01 03:53:38,262][node154][DEBUG ]   boost-system.x86_64 0:1.53.0-25.el7                                           
+[2016-06-01 03:53:38,263][node154][DEBUG ]   boost-thread.x86_64 0:1.53.0-25.el7                                           
+[2016-06-01 03:53:38,263][node154][DEBUG ]   ceph-common.x86_64 1:0.94.7-0.el7                                             
+[2016-06-01 03:53:38,263][node154][DEBUG ]   cryptsetup.x86_64 0:1.6.7-1.el7                                               
+[2016-06-01 03:53:38,263][node154][DEBUG ]   cups-client.x86_64 1:1.6.3-22.el7                                             
+[2016-06-01 03:53:38,264][node154][DEBUG ]   cups-libs.x86_64 1:1.6.3-22.el7                                               
+[2016-06-01 03:53:38,264][node154][DEBUG ]   ed.x86_64 0:1.9-4.el7                                                         
+[2016-06-01 03:53:38,264][node154][DEBUG ]   fcgi.x86_64 0:2.4.0-25.el7                                                    
+[2016-06-01 03:53:38,264][node154][DEBUG ]   gdisk.x86_64 0:0.8.6-5.el7                                                    
+[2016-06-01 03:53:38,264][node154][DEBUG ]   gperftools-libs.x86_64 0:2.4-7.el7                                            
+[2016-06-01 03:53:38,265][node154][DEBUG ]   hdparm.x86_64 0:9.43-5.el7                                                    
+[2016-06-01 03:53:38,265][node154][DEBUG ]   leveldb.x86_64 0:1.12.0-5.el7                                                 
+[2016-06-01 03:53:38,265][node154][DEBUG ]   libbabeltrace.x86_64 0:1.2.4-3.el7                                            
+[2016-06-01 03:53:38,265][node154][DEBUG ]   libcephfs1.x86_64 1:0.94.7-0.el7                                              
+[2016-06-01 03:53:38,265][node154][DEBUG ]   libicu.x86_64 0:50.1.2-15.el7                                                 
+[2016-06-01 03:53:38,266][node154][DEBUG ]   librados2.x86_64 1:0.94.7-0.el7                                               
+[2016-06-01 03:53:38,266][node154][DEBUG ]   librbd1.x86_64 1:0.94.7-0.el7                                                 
+[2016-06-01 03:53:38,266][node154][DEBUG ]   libunwind.x86_64 2:1.1-5.el7_2.2                                              
+[2016-06-01 03:53:38,266][node154][DEBUG ]   lttng-ust.x86_64 0:2.4.1-1.el7                                                
+[2016-06-01 03:53:38,266][node154][DEBUG ]   m4.x86_64 0:1.4.16-10.el7                                                     
+[2016-06-01 03:53:38,267][node154][DEBUG ]   mailcap.noarch 0:2.1.41-2.el7                                                 
+[2016-06-01 03:53:38,267][node154][DEBUG ]   mailx.x86_64 0:12.5-12.el7_0                                                  
+[2016-06-01 03:53:38,267][node154][DEBUG ]   patch.x86_64 0:2.7.1-8.el7                                                    
+[2016-06-01 03:53:38,267][node154][DEBUG ]   psmisc.x86_64 0:22.20-9.el7                                                   
+[2016-06-01 03:53:38,267][node154][DEBUG ]   python-babel.noarch 0:0.9.6-8.el7                                             
+[2016-06-01 03:53:38,268][node154][DEBUG ]   python-backports.x86_64 0:1.0-8.el7                                           
+[2016-06-01 03:53:38,268][node154][DEBUG ]   python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7                    
+[2016-06-01 03:53:38,268][node154][DEBUG ]   python-cephfs.x86_64 1:0.94.7-0.el7                                           
+[2016-06-01 03:53:38,268][node154][DEBUG ]   python-chardet.noarch 0:2.2.1-1.el7_1                                         
+[2016-06-01 03:53:38,269][node154][DEBUG ]   python-flask.noarch 1:0.10.1-4.el7                                            
+[2016-06-01 03:53:38,269][node154][DEBUG ]   python-itsdangerous.noarch 0:0.23-2.el7                                       
+[2016-06-01 03:53:38,269][node154][DEBUG ]   python-jinja2.noarch 0:2.7.2-2.el7                                            
+[2016-06-01 03:53:38,269][node154][DEBUG ]   python-markupsafe.x86_64 0:0.11-10.el7                                        
+[2016-06-01 03:53:38,269][node154][DEBUG ]   python-rados.x86_64 1:0.94.7-0.el7                                            
+[2016-06-01 03:53:38,270][node154][DEBUG ]   python-rbd.x86_64 1:0.94.7-0.el7                                              
+[2016-06-01 03:53:38,270][node154][DEBUG ]   python-requests.noarch 0:2.6.0-1.el7_1                                        
+[2016-06-01 03:53:38,270][node154][DEBUG ]   python-six.noarch 0:1.9.0-2.el7                                               
+[2016-06-01 03:53:38,270][node154][DEBUG ]   python-urllib3.noarch 0:1.10.2-2.el7_1                                        
+[2016-06-01 03:53:38,271][node154][DEBUG ]   python-werkzeug.noarch 0:0.9.1-2.el7                                          
+[2016-06-01 03:53:38,271][node154][DEBUG ]   redhat-lsb-core.x86_64 0:4.1-27.el7.centos.1                                  
+[2016-06-01 03:53:38,271][node154][DEBUG ]   redhat-lsb-submod-security.x86_64 0:4.1-27.el7.centos.1                       
+[2016-06-01 03:53:38,271][node154][DEBUG ]   spax.x86_64 0:1.5.2-13.el7                                                    
+[2016-06-01 03:53:38,271][node154][DEBUG ]   time.x86_64 0:1.7-45.el7                                                      
+[2016-06-01 03:53:38,272][node154][DEBUG ]   userspace-rcu.x86_64 0:0.7.16-1.el7                                           
+[2016-06-01 03:53:38,272][node154][DEBUG ] 
+[2016-06-01 03:53:38,272][node154][DEBUG ] Complete!
+[2016-06-01 03:53:39,295][node154][INFO  ] Running command: ceph --version
+[2016-06-01 03:53:39,469][node154][DEBUG ] ceph version 0.94.7 (d56bdf93ced6b80b07397d57e3fa68fe68304432)
