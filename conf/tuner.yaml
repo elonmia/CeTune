@@ -12,7 +12,7 @@
         "global": {
             "mon_pg_warn_max_per_osd": 1000
         }, 
-        "workstages": "", 
+        "workstages": "benchmark", 
         "analyzer": "all,"
     }
 }

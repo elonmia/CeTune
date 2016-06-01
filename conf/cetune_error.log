@@ -1,24 +1,36 @@
-[2016-06-01T04:25:22.552051][ERROR]: 127.0.0.1: Host key verification failed.
+[2016-06-01T04:42:35.546851][ERROR]: pdsh@node153: node153: ssh exited with exit code 1
 
-[2016-06-01T04:25:22.552308][ERROR]: Generating history view failed
-[2016-06-01T04:25:28.460731][ERROR]: 127.0.0.1: Host key verification failed.
+[2016-06-01T04:42:46.034539][ERROR]: pdsh@node153: node153: ssh exited with exit code 1
 
-[2016-06-01T04:25:28.460993][ERROR]: Generating history view failed
-[2016-06-01T04:25:29.797959][ERROR]: 127.0.0.1: Host key verification failed.
+[2016-06-01T04:42:46.385758][ERROR]: node153: Error: Can't find valid lttng config /opt//.lttngrc
+node153: Error: Command error
+node153: Error: Can't find valid lttng config /opt//.lttngrc
+node153: Error: Command error
+pdsh@node153: node153: ssh exited with exit code 1
+node154: Error: Can't find valid lttng config /opt//.lttngrc
+node154: Error: Command error
+node154: Error: Can't find valid lttng config /opt//.lttngrc
+node154: Error: Command error
+pdsh@node153: node154: ssh exited with exit code 1
 
-[2016-06-01T04:25:29.798185][ERROR]: Generating history view failed
-[2016-06-01T04:25:31.144125][ERROR]: 127.0.0.1: Host key verification failed.
+[2016-06-01T04:42:52.675713][ERROR]: node153: fatrace: no process found
+pdsh@node153: node153: ssh exited with exit code 1
+node154: fatrace: no process found
+pdsh@node153: node154: ssh exited with exit code 1
 
-[2016-06-01T04:25:31.144321][ERROR]: Generating history view failed
-[2016-06-01T04:25:31.265192][ERROR]: 127.0.0.1: Host key verification failed.
+[2016-06-01T04:42:53.390240][ERROR]: node153: blktrace: no process found
+pdsh@node153: node153: ssh exited with exit code 1
+node154: blktrace: no process found
+pdsh@node153: node154: ssh exited with exit code 1
 
-[2016-06-01T04:25:31.265389][ERROR]: Generating history view failed
-[2016-06-01T04:25:31.345937][ERROR]: 127.0.0.1: Host key verification failed.
+[2016-06-01T04:42:53.744065][ERROR]: node153: strace: no process found
+pdsh@node153: node153: ssh exited with exit code 1
+node154: strace: no process found
+pdsh@node153: node154: ssh exited with exit code 1
 
-[2016-06-01T04:25:31.346138][ERROR]: Generating history view failed
-[2016-06-01T04:25:31.422829][ERROR]: 127.0.0.1: Host key verification failed.
+[2016-06-01T05:01:58.024077][ERROR]: pdsh@node153: node153: ssh exited with exit code 124
 
-[2016-06-01T04:25:31.423035][ERROR]: Generating history view failed
-[2016-06-01T04:29:20.251084][ERROR]: 127.0.0.1: Host key verification failed.
+[2016-06-01T05:02:01.577300][ERROR]: pdsh@node153: node153: ssh exited with exit code 124
 
-[2016-06-01T04:29:20.251319][ERROR]: Generating history view failed
+[2016-06-01T05:02:31.101248][ERROR]: pdsh@node153: node153: ssh exited with exit code 124
+

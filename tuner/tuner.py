@@ -20,12 +20,16 @@ class Tuner:
         self.worksheet = common.load_yaml_conf("../conf/tuner.yaml")
         self.cluster = {}
         self.cluster["user"] = self.all_conf_data.get("user")
+	print self.cluster["user"]#debug_by longxing
         self.cluster["head"] = self.all_conf_data.get("head")
+	print self.cluster["head"]#debug_by longxing
         self.cluster["client"] = self.all_conf_data.get_list("list_client")
+	print self.cluster["client"]#debug_by longxing
         self.cluster["osds"] = self.all_conf_data.get_list("list_server")
+	print self.cluster["osds"]#debug_by longxing
         self.cluster["mons"] = self.all_conf_data.get_list("list_mon")
+	print self.cluster["mons"]#debug_by longxing
         self.cluster["rgw"] = self.all_conf_data.get_list("rgw_server")
-        self.cluster["rgw_enable"] = self.all_conf_data.get("enable_rgw")
         self.cluster["osd_daemon_num"] = 0
         for osd in self.cluster["osds"]:
             self.cluster[osd] = []
@@ -34,6 +38,10 @@ class Tuner:
                 self.cluster[osd].append( osd_journal[0] )
                 if osd_journal[1] not in self.cluster[osd]:
                     self.cluster[osd].append( osd_journal[1] )
+
+		print self.cluster[osd]#print osd data
+
+
 
     def default_all_conf(self):
         self.cluster = {}
@@ -62,7 +70,8 @@ class Tuner:
                     self.apply_tuning(section)
                 elif work == "benchmark":
                     if not common.check_ceph_running( user, controller ):
-                        run_deploy.main(['restart'])
+#                        run_deploy.main(['restart'])#not restart the ceph_by longxing
+			pass #by longxing
                     common.printout("LOG","start to run performance test")
                     self.apply_tuning(section)
                     time.sleep(3)
@@ -354,20 +363,22 @@ class Tuner:
 
         #wait ceph health to be OK
         waitcount = 0
-        try:
-            while not self.check_health() and waitcount < 300:
-                common.printout("WARNING","Applied tuning, waiting ceph to be healthy")
-                time.sleep(3)
-                waitcount += 3
-        except:
-            common.printout("WARNING","Caught KeyboardInterrupt, exit")
-            sys.exit()
-        if waitcount < 300:
-            common.printout("LOG","Tuning has applied to ceph cluster, ceph is Healthy now")
-        else:
-            common.printout("ERROR","ceph is unHealthy after 300sec waiting, please fix the issue manually")
-            sys.exit()
 
+#skip the ceph status check_by longxing
+#        try:
+#            while not self.check_health() and waitcount < 300:
+#                common.printout("WARNING","Applied tuning, waiting ceph to be healthy")
+#                time.sleep(3)
+#                waitcount += 3
+#        except:
+#            common.printout("WARNING","Caught KeyboardInterrupt, exit")
+#            sys.exit()
+#        if waitcount < 300:
+#            common.printout("LOG","Tuning has applied to ceph cluster, ceph is Healthy now")
+#        else:
+#            common.printout("ERROR","ceph is unHealthy after 300sec waiting, please fix the issue manually")
+#            sys.exit()
+#by longxing
     def handle_pool(self, option="set", param = {}):
         user = self.cluster["user"]
         controller = self.cluster["head"]
