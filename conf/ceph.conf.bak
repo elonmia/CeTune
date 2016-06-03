@@ -1,0 +1,70 @@
+[global]
+    fsid = 269651a4-2897-11e6-9953-52540098521a
+    pid_path = /var/run/ceph
+    auth_service_required = none
+    auth_cluster_required = none
+    auth_client_required = none
+    osd_objectstore = filestore
+    osd_pool_default_size = 2
+    public_network = 172.28.217.0/24
+    cluster_network = 172.28.217.0/24
+    mon_pg_warn_max_per_osd = 1000
+[mon]
+    mon_data = /var/lib/ceph/mon.$id
+[osd]
+    osd_data = /var/lib/ceph/mnt/osd-device-$id-data
+    osd_mkfs_type = xfs
+    osd_mount_options_xfs = rw,noatime,inode64,logbsize=256k
+[client]
+    rbd_cache = false
+[mon.node164]
+    host = node164
+    mon addr = 172.28.217.164
+[mon.node165]
+    host = node165
+    mon addr = 172.28.217.165
+[mon.node166]
+    host = node166
+    mon addr = 172.28.217.166
+[osd.0]
+    host = node164
+    public addr = 172.28.217.164
+    cluster addr = 172.28.217.164
+    osd journal = /dev/sdc1
+    devs = /dev/sdd1
+[osd.1]
+    host = node164
+    public addr = 172.28.217.164
+    cluster addr = 172.28.217.164
+    osd journal = /dev/sdc2
+    devs = /dev/sde1
+[osd.2]
+    host = node164
+    public addr = 172.28.217.164
+    cluster addr = 172.28.217.164
+    osd journal = /dev/sdc3
+    devs = /dev/sdf1
+[osd.3]
+    host = node165
+    public addr = 172.28.217.165
+    cluster addr = 172.28.217.165
+    osd journal = /dev/sdc1
+    devs = /dev/sdd1
+[osd.4]
+    host = node165
+    public addr = 172.28.217.165
+    cluster addr = 172.28.217.165
+    osd journal = /dev/sdc2
+    devs = /dev/sde1
+[osd.5]
+    host = node166
+    public addr = 172.28.217.166
+    cluster addr = 172.28.217.166
+    osd journal = /dev/sdc1
+    devs = /dev/sdd1
+[osd.6]
+    host = node166
+    public addr = 172.28.217.166
+    cluster addr = 172.28.217.166
+    osd journal = /dev/sdc2
+    devs = /dev/sde1

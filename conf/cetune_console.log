@@ -262,3 +262,1246 @@
 [2016-06-01T05:04:04.490335][WARNING]: 1 fio job still runing
 [2016-06-01T05:04:09.966504][WARNING]: 1 fio job still runing
 [2016-06-01T05:04:15.489578][WARNING]: 1 fio job still runing
+[2016-06-02T03:24:37.148774][ERROR]: Unknown tuner workstage 
+[2016-06-02T03:24:58.004481][LOG]: start to run performance test
+[2016-06-02T03:24:58.004680][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T03:26:18.571321][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T03:26:18.571531][LOG]: Tuning [read_ahead_kb:2048] differs with current configuration, will apply
+[2016-06-02T03:26:18.571692][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T03:26:18.571840][LOG]: Tuning [rbd] not in configuration
+[2016-06-02T03:26:18.571972][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T03:26:18.572092][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T03:26:18.572210][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T03:26:18.572328][LOG]: Tuning[disk] is not same with current configuration
+[2016-06-02T03:26:18.572450][LOG]: Tuning[pool] is not same with current configuration
+[2016-06-02T03:26:18.572641][LOG]: create ceph pool rbd, pg_num is 350
+[2016-06-02T03:33:36.156998][LOG]: start to run performance test
+[2016-06-02T03:33:36.157167][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T03:34:56.768609][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T03:34:56.768793][LOG]: Tuning [read_ahead_kb:2048] differs with current configuration, will apply
+[2016-06-02T03:34:56.768933][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T03:34:56.769061][LOG]: Tuning [rbdforCetuen] not in configuration
+[2016-06-02T03:34:56.769186][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T03:34:56.769304][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T03:34:56.769422][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T03:34:56.769572][LOG]: Tuning[disk] is not same with current configuration
+[2016-06-02T03:34:56.769721][LOG]: Tuning[pool] is not same with current configuration
+[2016-06-02T03:34:56.769878][LOG]: create ceph pool rbdforCetuen, pg_num is 350
+[2016-06-02T03:40:07.793894][LOG]: start to run performance test
+[2016-06-02T03:40:07.794061][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T03:41:32.786442][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T03:41:32.786655][LOG]: Tuning [read_ahead_kb:2048] differs with current configuration, will apply
+[2016-06-02T03:41:32.786815][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T03:41:32.786962][LOG]: Tuning [size:2] differs with current configuration, will apply
+[2016-06-02T03:41:32.787090][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T03:41:32.787212][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T03:41:32.787344][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T03:41:32.787464][LOG]: Tuning[disk] is not same with current configuration
+[2016-06-02T03:41:32.787698][LOG]: Tuning[pool] is not same with current configuration
+[2016-06-02T03:41:32.787873][LOG]: delete ceph pool rbd
+[2016-06-02T03:41:42.617629][LOG]: create ceph pool rbd, pg_num is 350
+[2016-06-02T03:42:02.292993][LOG]: set ceph pool rbd, size to 2
+[2016-06-02T03:51:31.653310][LOG]: start to run performance test
+[2016-06-02T03:51:31.653473][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T03:53:21.915067][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T03:53:21.915245][LOG]: Tuning [read_ahead_kb:2048] differs with current configuration, will apply
+[2016-06-02T03:53:21.915388][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T03:53:21.915569][LOG]: Tuning [size:2] differs with current configuration, will apply
+[2016-06-02T03:53:21.915711][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T03:53:21.915863][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T03:53:21.915988][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T03:53:21.916111][LOG]: Tuning[disk] is not same with current configuration
+[2016-06-02T03:53:21.916233][LOG]: Tuning[pool] is not same with current configuration
+[2016-06-02T03:53:21.916388][LOG]: delete ceph pool rbd
+[2016-06-02T03:53:22.736874][LOG]: create ceph pool rbd, pg_num is 350
+[2016-06-02T03:53:42.666693][LOG]: set ceph pool rbd, size to 2
+[2016-06-02T03:53:53.386976][LOG]: Apply osd and mon tuning to ceph.conf
+[2016-06-02T03:53:53.397188][WARNING]: Current Cluster ceph.conf file not exists under CeTune/conf/
+[2016-06-02T03:53:53.397471][WARNING]: Found different configuration from conf/ceph_current_conf with your desired config : OrderedDict([('mon', {'node164': '172.28.217.164', 'node165': '172.28.217.165', 'node166': '172.28.217.166'}), ('osd', {'node164': {'cluster': '172.28.217.164', 'public': '172.28.217.164'}, 'node165': {'cluster': '172.28.217.165', 'public': '172.28.217.165'}, 'node166': {'cluster': '172.28.217.166', 'public': '172.28.217.166'}}), ('mds', {}), ('osd_num', 0), ('node164', ['/dev/sdd1:/dev/sdc1', '/dev/sde1:/dev/sdc2', '/dev/sdf1:/dev/sdc3']), ('node165', ['/dev/sdd1:/dev/sdc1', '/dev/sde1:/dev/sdc2']), ('node166', ['/dev/sdd1:/dev/sdc1', '/dev/sde1:/dev/sdc2'])])
+[2016-06-02T03:53:53.397806][WARNING]: Current Cluster ceph.conf file not exists under CeTune/conf/
+[2016-06-02T03:53:53.398356][LOG]: Distribute ceph.conf
+[2016-06-02T03:54:31.622281][LOG]: Restart ceph cluster
+[2016-06-02T03:54:31.627185][LOG]: Shutting down mon daemon
+[2016-06-02T03:54:37.044565][LOG]: Shutting down osd daemon
+[2016-06-02T03:54:42.494885][LOG]: Starting mon daemon
+[2016-06-02T03:54:42.495158][ERROR]: Current Cluster ceph.conf file not exists under CeTune/conf/
+[2016-06-02T04:44:17.188307][LOG]: start to run performance test
+[2016-06-02T04:44:17.188472][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T04:45:42.138164][LOG]: Tuning [read_ahead_kb:2048] differs with current configuration, will apply
+[2016-06-02T04:45:42.138343][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T04:45:42.138490][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T04:45:42.138666][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T04:45:42.138801][LOG]: Tuning[disk] is not same with current configuration
+[2016-06-02T04:45:42.138930][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T04:45:42.139049][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T04:45:42.139183][LOG]: Apply osd and mon tuning to ceph.conf
+[2016-06-02T04:45:42.139299][LOG]: Distribute ceph.conf
+[2016-06-02T04:45:42.139419][LOG]: Restart ceph cluster
+[2016-06-02T04:47:09.344747][LOG]: Creating rbd volume
+[2016-06-02T04:47:29.440858][LOG]: 1 RBD Image Created
+[2016-06-02T04:47:40.466847][WARNING]: 1 fio job still runing
+[2016-06-02T04:47:40.467018][LOG]: 1 FIO Jobs starts on node152
+[2016-06-02T04:47:40.467134][LOG]: Wait rbd initialization stop
+[2016-06-02T04:47:40.794390][WARNING]: 1 fio job still runing
+[2016-06-02T04:47:46.154791][WARNING]: 1 fio job still runing
+[2016-06-02T04:47:51.485843][WARNING]: 1 fio job still runing
+[2016-06-02T04:47:56.834519][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:02.186041][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:07.551843][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:12.896682][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:18.241242][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:23.549516][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:28.916682][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:34.250357][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:39.618164][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:44.938827][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:50.247897][WARNING]: 1 fio job still runing
+[2016-06-02T04:48:55.611300][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:00.977022][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:06.327098][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:11.649413][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:16.986490][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:22.308144][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:27.668352][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:33.018942][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:38.377137][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:43.728595][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:49.047619][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:54.393217][WARNING]: 1 fio job still runing
+[2016-06-02T04:49:59.760578][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:05.073298][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:10.382354][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:15.705283][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:21.075069][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:26.386606][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:31.708469][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:37.040478][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:42.393915][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:47.761927][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:53.117520][WARNING]: 1 fio job still runing
+[2016-06-02T04:50:58.523207][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:03.841834][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:09.188924][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:14.515026][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:19.900856][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:25.272328][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:30.635346][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:35.965381][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:41.326356][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:46.682443][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:52.068698][WARNING]: 1 fio job still runing
+[2016-06-02T04:51:57.402072][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:02.769521][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:08.159216][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:13.524848][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:18.837179][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:24.157218][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:29.488486][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:34.877726][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:40.226560][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:45.543764][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:50.879635][WARNING]: 1 fio job still runing
+[2016-06-02T04:52:56.291838][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:01.645042][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:06.994278][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:12.333675][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:17.659593][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:22.998843][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:28.353986][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:33.689264][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:39.059313][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:44.392431][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:49.769216][WARNING]: 1 fio job still runing
+[2016-06-02T04:53:55.149534][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:00.512745][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:05.820718][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:11.157961][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:16.499401][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:21.861163][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:27.203707][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:32.578098][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:37.928952][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:43.291880][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:48.675892][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:54.032366][WARNING]: 1 fio job still runing
+[2016-06-02T04:54:59.387084][WARNING]: 1 fio job still runing
+[2016-06-02T04:55:04.744683][WARNING]: 1 fio job still runing
+[2016-06-02T04:55:10.068097][WARNING]: 1 fio job still runing
+[2016-06-02T04:55:15.435399][WARNING]: 1 fio job still runing
+[2016-06-02T04:55:20.784096][WARNING]: 1 fio job still runing
+[2016-06-02T04:55:26.127175][WARNING]: 1 fio job still runing
+[2016-06-02T04:55:31.540777][WARNING]: 1 fio job still runing
+[2016-06-02T04:55:36.846267][WARNING]: 1 fio job still runing
+[2016-06-02T04:55:42.126381][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-02T04:55:42.126574][LOG]: rbd initialization finished
+[2016-06-02T04:55:43.208769][LOG]: RUNID: 1, RESULT_DIR: //mnt/data//1-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd
+[2016-06-02T04:55:43.209049][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-02T04:55:48.784974][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-02T04:55:54.177184][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-02T04:55:59.575336][LOG]: Prerun_check: check if strace installed 
+[2016-06-02T04:56:04.970200][LOG]: Prerun_check: check if lttng installed 
+[2016-06-02T04:56:10.697271][LOG]: check if FIO rbd engine installed
+[2016-06-02T04:56:11.028633][LOG]: check if rbd volume fully initialized
+[2016-06-02T05:08:03.044392][LOG]: start to run performance test
+[2016-06-02T05:08:03.044593][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T05:09:19.064816][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T05:09:19.064993][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T05:09:19.065122][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T05:09:19.065241][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T05:09:19.065359][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T05:09:19.065490][LOG]: Apply osd and mon tuning to ceph.conf
+[2016-06-02T05:09:19.065652][LOG]: Distribute ceph.conf
+[2016-06-02T05:09:19.065788][LOG]: Restart ceph cluster
+[2016-06-02T05:09:23.643906][LOG]: RUNID: 1, RESULT_DIR: //mnt/data//1-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-02T05:09:23.644191][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-02T05:09:29.035013][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-02T05:09:34.429587][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-02T05:09:39.823626][LOG]: Prerun_check: check if strace installed 
+[2016-06-02T05:09:45.215209][LOG]: Prerun_check: check if lttng installed 
+[2016-06-02T05:09:50.928579][LOG]: check if FIO rbd engine installed
+[2016-06-02T05:09:51.257883][LOG]: check if rbd volume fully initialized
+[2016-06-02T05:15:03.817477][LOG]: start to run performance test
+[2016-06-02T05:15:03.817675][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T05:16:19.747334][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T05:16:19.747613][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T05:16:19.747784][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T05:16:19.747911][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T05:16:19.748035][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T05:16:23.142130][LOG]: Creating rbd volume
+[2016-06-02T05:16:32.955772][LOG]: 1 RBD Image Created
+[2016-06-02T05:16:34.940670][WARNING]: 1 fio job still runing
+[2016-06-02T05:16:34.940854][LOG]: 1 FIO Jobs starts on node152
+[2016-06-02T05:16:34.940975][LOG]: Wait rbd initialization stop
+[2016-06-02T05:16:35.237451][WARNING]: 1 fio job still runing
+[2016-06-02T05:16:40.522928][WARNING]: 1 fio job still runing
+[2016-06-02T05:16:45.818613][WARNING]: 1 fio job still runing
+[2016-06-02T05:16:51.111569][WARNING]: 1 fio job still runing
+[2016-06-02T05:16:56.478901][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:01.798543][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:07.227741][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:12.607115][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:17.970056][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:23.313318][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:28.730588][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:34.047866][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:39.357177][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:44.751737][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:50.070813][WARNING]: 1 fio job still runing
+[2016-06-02T05:17:55.412747][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:00.745988][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:06.087848][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:11.401139][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:16.755738][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:22.066384][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:27.402187][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:32.770454][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:38.082571][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:43.430628][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:48.811327][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:54.147724][WARNING]: 1 fio job still runing
+[2016-06-02T05:18:59.475955][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:04.821924][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:10.133092][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:15.463262][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:20.794344][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:26.136370][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:31.462615][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:36.818408][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:42.143717][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:47.523214][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:52.876031][WARNING]: 1 fio job still runing
+[2016-06-02T05:19:58.202676][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:03.587883][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:08.932164][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:14.277225][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:19.607042][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:24.950928][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:30.295275][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:35.620806][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:40.947379][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:46.302804][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:51.646665][WARNING]: 1 fio job still runing
+[2016-06-02T05:20:56.973955][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:02.305457][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:07.643708][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:13.016066][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:18.370649][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:23.721053][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:29.028197][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:34.380820][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:39.705786][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:45.041607][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:50.360614][WARNING]: 1 fio job still runing
+[2016-06-02T05:21:55.751489][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:01.064928][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:06.399309][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:11.718111][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:17.045689][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:22.373959][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:27.717040][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:33.032986][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:38.364104][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:43.675242][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:49.031451][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:54.342004][WARNING]: 1 fio job still runing
+[2016-06-02T05:22:59.675693][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:05.013766][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:10.367329][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:15.694752][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:21.030145][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:26.384015][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:31.762294][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:37.087179][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:42.474967][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:47.818664][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:53.203988][WARNING]: 1 fio job still runing
+[2016-06-02T05:23:58.550457][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:03.914977][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:09.271540][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:14.630543][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:19.973320][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:25.308455][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:30.653734][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:36.007204][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:41.347152][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:46.731907][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:52.051158][WARNING]: 1 fio job still runing
+[2016-06-02T05:24:57.344808][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-02T05:24:57.344968][LOG]: rbd initialization finished
+[2016-06-02T05:24:58.476265][LOG]: RUNID: 2, RESULT_DIR: //mnt/data//2-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-02T05:24:58.476666][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-02T05:25:04.031770][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-02T05:25:09.420292][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-02T05:25:14.813738][LOG]: Prerun_check: check if strace installed 
+[2016-06-02T05:25:20.205010][LOG]: Prerun_check: check if lttng installed 
+[2016-06-02T05:25:25.928116][LOG]: check if FIO rbd engine installed
+[2016-06-02T05:25:26.251539][LOG]: check if rbd volume fully initialized
+[2016-06-02T05:46:16.220293][LOG]: start to run performance test
+[2016-06-02T05:46:16.220527][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T05:46:47.051836][LOG]: start to run performance test
+[2016-06-02T05:46:47.051985][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T05:47:38.280456][LOG]: start to run performance test
+[2016-06-02T05:47:38.280661][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T05:48:12.149098][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T05:48:12.149258][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T05:48:12.149381][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T05:48:12.149518][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T05:48:12.149669][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T05:48:25.689203][LOG]: RUNID: 3, RESULT_DIR: //mnt/data//3-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-02T05:48:25.689656][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-02T05:48:31.091411][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-02T05:48:36.480916][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-02T05:48:41.870613][LOG]: Prerun_check: check if strace installed 
+[2016-06-02T05:48:47.266855][LOG]: Prerun_check: check if lttng installed 
+[2016-06-02T05:48:52.977906][LOG]: check if FIO rbd engine installed
+[2016-06-02T05:48:53.303784][LOG]: check if rbd volume fully initialized
+[2016-06-02T05:49:03.180573][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T05:49:03.180771][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T05:49:03.180907][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T05:49:03.181031][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T05:49:03.181154][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T05:49:16.673029][LOG]: RUNID: 4, RESULT_DIR: //mnt/data//4-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-02T05:49:16.673314][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-02T05:49:22.066801][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-02T05:49:27.457601][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-02T05:49:32.852163][LOG]: Prerun_check: check if strace installed 
+[2016-06-02T05:49:38.250730][LOG]: Prerun_check: check if lttng installed 
+[2016-06-02T05:49:43.986961][LOG]: check if FIO rbd engine installed
+[2016-06-02T05:49:44.337202][LOG]: check if rbd volume fully initialized
+[2016-06-02T21:10:36.980158][LOG]: start to run performance test
+[2016-06-02T21:10:36.980332][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T21:12:03.323135][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T21:12:03.323311][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T21:12:03.323447][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T21:12:03.323615][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T21:12:03.323758][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T21:12:06.444991][WARNING]: Caught KeyboardInterrupt Interruption
+[2016-06-02T22:03:21.182021][LOG]: start to run performance test
+[2016-06-02T22:03:21.182188][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T22:04:37.141549][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T22:04:37.141747][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T22:04:37.141898][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T22:04:37.142025][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T22:04:37.142145][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T22:04:41.619406][LOG]: RUNID: 5, RESULT_DIR: //mnt/data//5-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-02T22:04:41.619745][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-02T22:04:47.017333][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-02T22:04:52.405338][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-02T22:04:57.799780][LOG]: Prerun_check: check if strace installed 
+[2016-06-02T22:05:03.188689][LOG]: Prerun_check: check if lttng installed 
+[2016-06-02T22:05:08.906280][LOG]: check if FIO rbd engine installed
+[2016-06-02T22:05:09.242583][LOG]: check if rbd volume fully initialized
+[2016-06-02T22:05:09.896232][WARNING]: Ceph cluster used data occupied: 0.128 KB, planned_space: 41943040.0 KB 
+[2016-06-02T22:05:09.896396][WARNING]: rbd volume initialization has not be done
+[2016-06-02T22:05:09.896606][LOG]: Creating rbd volume
+[2016-06-02T22:05:30.265704][WARNING]: 1 fio job still runing
+[2016-06-02T22:05:30.265892][LOG]: 1 FIO Jobs starts on node152
+[2016-06-02T22:05:30.266011][LOG]: Wait rbd initialization stop
+[2016-06-02T22:05:30.612983][WARNING]: 1 fio job still runing
+[2016-06-02T22:05:36.003680][WARNING]: 1 fio job still runing
+[2016-06-02T22:05:41.298325][WARNING]: 1 fio job still runing
+[2016-06-02T22:05:46.605045][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-02T22:05:46.605216][LOG]: rbd initialization finished
+[2016-06-02T22:21:24.650447][WARNING]: Caught KeyboardInterrupt Interruption
+[2016-06-02T22:22:27.860901][LOG]: start to run performance test
+[2016-06-02T22:22:27.861080][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T22:23:52.830548][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T22:23:52.830746][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T22:23:52.830884][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T22:23:52.831007][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T22:23:52.831127][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T22:24:05.228060][LOG]: Creating rbd volume
+[2016-06-02T22:24:24.063779][LOG]: 1 RBD Image Created
+[2016-06-02T22:24:26.080356][WARNING]: 1 fio job still runing
+[2016-06-02T22:24:26.080565][LOG]: 1 FIO Jobs starts on node152
+[2016-06-02T22:24:26.080699][LOG]: Wait rbd initialization stop
+[2016-06-02T22:24:26.380273][WARNING]: 1 fio job still runing
+[2016-06-02T22:24:31.667985][WARNING]: 1 fio job still runing
+[2016-06-02T22:24:36.952612][WARNING]: 1 fio job still runing
+[2016-06-02T22:24:42.240662][WARNING]: 1 fio job still runing
+[2016-06-02T22:24:47.574103][WARNING]: 1 fio job still runing
+[2016-06-02T22:24:52.910512][WARNING]: 1 fio job still runing
+[2016-06-02T22:24:58.274523][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:03.617008][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:08.954744][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:14.300709][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:19.620041][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:24.995188][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:30.355853][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:35.716072][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:41.031606][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:46.422691][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:51.784448][WARNING]: 1 fio job still runing
+[2016-06-02T22:25:57.179710][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:02.500660][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:07.887046][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:13.207410][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:18.544331][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:23.897084][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:29.337029][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:34.665729][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:40.010723][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:45.335553][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:50.703888][WARNING]: 1 fio job still runing
+[2016-06-02T22:26:56.046718][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:01.411839][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:06.741985][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:12.061797][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:17.413013][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:22.762961][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:28.096330][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:33.441187][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:38.792652][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:44.171372][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:49.533642][WARNING]: 1 fio job still runing
+[2016-06-02T22:27:54.903600][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:00.290953][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:05.632400][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:10.990643][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:16.324146][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:21.659164][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:27.015058][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:32.385345][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:37.725973][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:43.086867][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:48.429850][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:53.773756][WARNING]: 1 fio job still runing
+[2016-06-02T22:28:59.133863][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:04.463875][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:09.798742][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:15.119418][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:20.452549][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:25.792707][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:31.161924][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:36.477163][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:41.806372][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:47.159972][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:52.515478][WARNING]: 1 fio job still runing
+[2016-06-02T22:29:57.838764][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:03.166932][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:08.503915][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:13.814090][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:19.157190][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:24.493201][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:29.856472][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:35.192247][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:40.521715][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:45.852818][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:51.245413][WARNING]: 1 fio job still runing
+[2016-06-02T22:30:56.564312][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:01.969707][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:07.289235][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:12.652121][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:17.982196][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:23.305593][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:28.638522][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:33.990290][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:39.384334][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:44.746632][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:50.080521][WARNING]: 1 fio job still runing
+[2016-06-02T22:31:55.437462][WARNING]: 1 fio job still runing
+[2016-06-02T22:32:00.768199][WARNING]: 1 fio job still runing
+[2016-06-02T22:32:06.123796][WARNING]: 1 fio job still runing
+[2016-06-02T22:32:11.443599][WARNING]: 1 fio job still runing
+[2016-06-02T22:32:16.796543][WARNING]: 1 fio job still runing
+[2016-06-02T22:32:22.142423][WARNING]: 1 fio job still runing
+[2016-06-02T22:32:27.501320][WARNING]: 1 fio job still runing
+[2016-06-02T22:32:32.847430][WARNING]: 1 fio job still runing
+[2016-06-02T22:32:38.227598][WARNING]: 1 fio job still runing
+[2016-06-02T22:32:43.523260][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-02T22:32:43.523413][LOG]: rbd initialization finished
+[2016-06-02T22:32:44.603118][LOG]: RUNID: 6, RESULT_DIR: //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-02T22:32:44.603402][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-02T22:32:50.197281][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-02T22:32:55.595945][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-02T22:33:00.984597][LOG]: Prerun_check: check if strace installed 
+[2016-06-02T22:33:06.367408][LOG]: Prerun_check: check if lttng installed 
+[2016-06-02T22:33:12.108911][LOG]: check if FIO rbd engine installed
+[2016-06-02T22:33:12.445187][LOG]: check if rbd volume fully initialized
+[2016-06-02T22:33:13.144254][WARNING]: Ceph cluster used data occupied: 41943040.0 KB, planned_space: 41943040.0 KB 
+[2016-06-02T22:34:08.759750][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-02T22:34:14.698319][LOG]: Cleaned original data under /opt/ 
+[2016-06-02T22:34:14.698545][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-02T22:34:14.698748][LOG]: This test will run 500 secs until finish.
+[2016-06-02T22:34:35.344797][LOG]: Start system data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T22:35:02.306260][LOG]: Start perfcounter data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T22:35:02.312021][LOG]: Start blktrace data collector under node164 
+[2016-06-02T22:35:02.412077][LOG]: Start blktrace data collector under node165 
+[2016-06-02T22:35:02.481646][LOG]: Start blktrace data collector under node166 
+[2016-06-02T22:35:02.516400][LOG]: Start fatrace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T22:35:08.167672][LOG]: Start strace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T22:35:08.174074][LOG]: Start lttng data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T22:35:31.435883][LOG]: Start system data collector under ['node152'] 
+[2016-06-02T22:35:32.900941][LOG]: Start perfcounter data collector under ['node152'] 
+[2016-06-02T22:35:40.093529][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-02T22:35:40.093853][ERROR]: Failed to start FIO process
+[2016-06-02T22:35:40.115668][WARNING]: Caught Signal to Cancel this run, killing Workload now, pls wait
+[2016-06-02T22:36:45.819111][LOG]: Waiting Workload to complete its work
+[2016-06-02T22:36:46.113814][LOG]: Workload completed
+[2016-06-02T22:37:53.172782][LOG]: Collecting Data, this will takes quite long time depends on the network
+[2016-06-02T22:38:09.957626][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-02T22:38:26.553640][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-02T22:38:42.813896][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-02T22:38:44.433820][WARNING]: scp: /opt//*.log: No such file or directory
+
+
+[2016-06-02T22:38:44.473855][LOG]: Post Process Result Data
+[2016-06-02T22:38:44.506815][LOG]: Processing node164_node164_ceph_health.txt
+[2016-06-02T22:38:44.506974][LOG]: Processing node164_node164_ceph-osd.0.asok.txt
+[2016-06-02T22:38:44.507131][LOG]: loading //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd/raw/node164/node164_ceph-osd.0.asok.txt
+[2016-06-02T22:38:45.902435][LOG]: Processing node164_node164_ceph-osd.1.asok.txt
+[2016-06-02T22:38:45.902693][LOG]: loading //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd/raw/node164/node164_ceph-osd.1.asok.txt
+[2016-06-02T22:38:47.339514][LOG]: Processing node164_node164_ceph-osd.7.asok.txt
+[2016-06-02T22:38:47.339722][LOG]: loading //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd/raw/node164/node164_ceph-osd.7.asok.txt
+[2016-06-02T22:38:48.822071][LOG]: Processing node164_node164_fatrace.txt
+[2016-06-02T22:38:48.822307][LOG]: Processing node164_node164_interrupts_end.txt
+[2016-06-02T22:38:48.822439][LOG]: Processing node164_node164_interrupts_start.txt
+[2016-06-02T22:38:48.822640][LOG]: Processing node164_node164_iostat.txt
+[2016-06-02T22:38:48.896741][LOG]: Processing node164_node164_mpstat.txt
+[2016-06-02T22:38:48.896900][LOG]: Processing node164_node164_process_log.txt
+[2016-06-02T22:38:48.897201][LOG]: Processing node164_node164_ps.txt
+[2016-06-02T22:38:48.897325][LOG]: Processing node164_node164_sar.txt
+[2016-06-02T22:38:49.296862][LOG]: Processing node164_node164_strace_29669.txt
+[2016-06-02T22:38:49.297020][LOG]: Processing node164_node164_strace_29677.txt
+[2016-06-02T22:38:49.297166][LOG]: Processing node164_node164_strace_29840.txt
+[2016-06-02T22:38:49.297291][LOG]: Processing node164_node164_strace_29846.txt
+[2016-06-02T22:38:49.297415][LOG]: Processing node164_node164_strace_30005.txt
+[2016-06-02T22:38:49.297592][LOG]: Processing node164_node164_strace_30007.txt
+[2016-06-02T22:38:49.297724][LOG]: Processing node164_node164_top.txt
+[2016-06-02T22:38:49.297862][LOG]: Processing node164_node164_blktrace__dev_sdc1.log
+[2016-06-02T22:38:49.297988][LOG]: Processing node164_node164_blktrace__dev_sdc2.log
+[2016-06-02T22:38:49.298110][LOG]: Processing node164_node164_blktrace__dev_sdc3.log
+[2016-06-02T22:38:49.298244][LOG]: Processing node164_node164_blktrace__dev_sdd1.log
+[2016-06-02T22:38:49.298368][LOG]: Processing node164_node164_blktrace__dev_sde1.log
+[2016-06-02T22:38:49.298492][LOG]: Processing node164_node164_blktrace__dev_sdf1.log
+[2016-06-02T22:38:49.298659][LOG]: Processing node164_node164_journal__dev_sdc3.blktrace.0
+[2016-06-02T22:38:49.298784][LOG]: Processing node164_node164_journal__dev_sdc3.blktrace.1
+[2016-06-02T22:38:49.298932][LOG]: Processing node164_node164_journal__dev_sdc3.blktrace.2
+[2016-06-02T22:38:49.299060][LOG]: Processing node164_node164_journal__dev_sdc3.blktrace.3
+[2016-06-02T22:38:49.299183][LOG]: Processing node164_node164_journal__dev_sdc3.blktrace.4
+[2016-06-02T22:38:49.299305][LOG]: Processing node164_node164_journal__dev_sdc3.blktrace.5
+[2016-06-02T22:38:49.299426][LOG]: Processing node164_node164_journal__dev_sdc3.blktrace.6
+[2016-06-02T22:38:49.299584][LOG]: Processing node164_node164_journal__dev_sdc3.blktrace.7
+[2016-06-02T22:38:49.299718][LOG]: Processing node164_node164_osd__dev_sdd1.blktrace.0
+[2016-06-02T22:38:49.299856][LOG]: Processing node164_node164_osd__dev_sdd1.blktrace.1
+[2016-06-02T22:38:49.299980][LOG]: Processing node164_node164_osd__dev_sdd1.blktrace.2
+[2016-06-02T22:38:49.300102][LOG]: Processing node164_node164_osd__dev_sdd1.blktrace.3
+[2016-06-02T22:38:49.300223][LOG]: Processing node164_node164_osd__dev_sdd1.blktrace.4
+[2016-06-02T22:38:49.300344][LOG]: Processing node164_node164_osd__dev_sdd1.blktrace.5
+[2016-06-02T22:38:49.300465][LOG]: Processing node164_node164_osd__dev_sdd1.blktrace.6
+[2016-06-02T22:38:49.300863][LOG]: Processing node164_node164_osd__dev_sdd1.blktrace.7
+[2016-06-02T22:38:49.300996][LOG]: Processing node164_node164_osd__dev_sde1.blktrace.0
+[2016-06-02T22:38:49.301119][LOG]: Processing node164_node164_osd__dev_sde1.blktrace.1
+[2016-06-02T22:38:49.301242][LOG]: Processing node164_node164_osd__dev_sde1.blktrace.2
+[2016-06-02T22:38:49.301364][LOG]: Processing node164_node164_osd__dev_sde1.blktrace.3
+[2016-06-02T22:38:49.301487][LOG]: Processing node164_node164_osd__dev_sde1.blktrace.4
+[2016-06-02T22:38:49.301653][LOG]: Processing node164_node164_osd__dev_sde1.blktrace.5
+[2016-06-02T22:38:49.301779][LOG]: Processing node164_node164_osd__dev_sde1.blktrace.6
+[2016-06-02T22:38:49.301918][LOG]: Processing node164_node164_osd__dev_sde1.blktrace.7
+[2016-06-02T22:38:49.302042][LOG]: Processing node164_node164_osd__dev_sdf1.blktrace.0
+[2016-06-02T22:38:49.302165][LOG]: Processing node164_node164_osd__dev_sdf1.blktrace.1
+[2016-06-02T22:38:49.302288][LOG]: Processing node164_node164_osd__dev_sdf1.blktrace.2
+[2016-06-02T22:38:49.302412][LOG]: Processing node164_node164_osd__dev_sdf1.blktrace.3
+[2016-06-02T22:38:49.302587][LOG]: Processing node164_node164_osd__dev_sdf1.blktrace.4
+[2016-06-02T22:38:49.302723][LOG]: Processing node164_node164_osd__dev_sdf1.blktrace.5
+[2016-06-02T22:38:49.302862][LOG]: Processing node164_node164_osd__dev_sdf1.blktrace.6
+[2016-06-02T22:38:49.302988][LOG]: Processing node164_node164_osd__dev_sdf1.blktrace.7
+[2016-06-02T22:38:49.303435][LOG]: Processing node165_node165_ceph_health.txt
+[2016-06-02T22:38:49.303601][LOG]: Processing node165_node165_ceph-osd.2.asok.txt
+[2016-06-02T22:38:49.303751][LOG]: loading //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd/raw/node165/node165_ceph-osd.2.asok.txt
+[2016-06-02T22:38:49.691343][LOG]: Processing node165_node165_ceph-osd.3.asok.txt
+[2016-06-02T22:38:49.691709][LOG]: loading //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd/raw/node165/node165_ceph-osd.3.asok.txt
+[2016-06-02T22:38:50.070978][LOG]: Processing node165_node165_fatrace.txt
+[2016-06-02T22:38:50.071154][LOG]: Processing node165_node165_interrupts_end.txt
+[2016-06-02T22:38:50.071281][LOG]: Processing node165_node165_interrupts_start.txt
+[2016-06-02T22:38:50.071408][LOG]: Processing node165_node165_iostat.txt
+[2016-06-02T22:38:50.131486][LOG]: Processing node165_node165_mpstat.txt
+[2016-06-02T22:38:50.131702][LOG]: Processing node165_node165_process_log.txt
+[2016-06-02T22:38:50.132038][LOG]: Processing node165_node165_ps.txt
+[2016-06-02T22:38:50.132170][LOG]: Processing node165_node165_sar.txt
+[2016-06-02T22:38:50.538302][LOG]: Processing node165_node165_strace_21691.txt
+[2016-06-02T22:38:50.538464][LOG]: Processing node165_node165_strace_21699.txt
+[2016-06-02T22:38:50.538650][LOG]: Processing node165_node165_strace_22497.txt
+[2016-06-02T22:38:50.538801][LOG]: Processing node165_node165_strace_22499.txt
+[2016-06-02T22:38:50.538933][LOG]: Processing node165_node165_strace_3585.txt
+[2016-06-02T22:38:50.539064][LOG]: Processing node165_node165_strace_3598.txt
+[2016-06-02T22:38:50.539192][LOG]: Processing node165_node165_top.txt
+[2016-06-02T22:38:50.539322][LOG]: Processing node165_node165_blktrace__dev_sdc1.log
+[2016-06-02T22:38:50.539451][LOG]: Processing node165_node165_blktrace__dev_sdc2.log
+[2016-06-02T22:38:50.539621][LOG]: Processing node165_node165_blktrace__dev_sdd1.log
+[2016-06-02T22:38:50.539767][LOG]: Processing node165_node165_blktrace__dev_sde1.log
+[2016-06-02T22:38:50.539898][LOG]: Processing node165_node165_journal__dev_sdc1.blktrace.0
+[2016-06-02T22:38:50.540024][LOG]: Processing node165_node165_journal__dev_sdc1.blktrace.1
+[2016-06-02T22:38:50.540148][LOG]: Processing node165_node165_journal__dev_sdc1.blktrace.2
+[2016-06-02T22:38:50.540276][LOG]: Processing node165_node165_journal__dev_sdc1.blktrace.3
+[2016-06-02T22:38:50.540402][LOG]: Processing node165_node165_journal__dev_sdc1.blktrace.4
+[2016-06-02T22:38:50.540569][LOG]: Processing node165_node165_journal__dev_sdc1.blktrace.5
+[2016-06-02T22:38:50.540707][LOG]: Processing node165_node165_journal__dev_sdc1.blktrace.6
+[2016-06-02T22:38:50.540854][LOG]: Processing node165_node165_journal__dev_sdc1.blktrace.7
+[2016-06-02T22:38:50.540985][LOG]: Processing node165_node165_osd__dev_sdd1.blktrace.0
+[2016-06-02T22:38:50.541111][LOG]: Processing node165_node165_osd__dev_sdd1.blktrace.1
+[2016-06-02T22:38:50.541236][LOG]: Processing node165_node165_osd__dev_sdd1.blktrace.2
+[2016-06-02T22:38:50.541362][LOG]: Processing node165_node165_osd__dev_sdd1.blktrace.3
+[2016-06-02T22:38:50.541493][LOG]: Processing node165_node165_osd__dev_sdd1.blktrace.4
+[2016-06-02T22:38:50.541708][LOG]: Processing node165_node165_osd__dev_sdd1.blktrace.5
+[2016-06-02T22:38:50.541854][LOG]: Processing node165_node165_osd__dev_sdd1.blktrace.6
+[2016-06-02T22:38:50.541985][LOG]: Processing node165_node165_osd__dev_sdd1.blktrace.7
+[2016-06-02T22:38:50.542116][LOG]: Processing node165_node165_osd__dev_sde1.blktrace.0
+[2016-06-02T22:38:50.542244][LOG]: Processing node165_node165_osd__dev_sde1.blktrace.1
+[2016-06-02T22:38:50.542373][LOG]: Processing node165_node165_osd__dev_sde1.blktrace.2
+[2016-06-02T22:38:50.542553][LOG]: Processing node165_node165_osd__dev_sde1.blktrace.3
+[2016-06-02T22:38:50.542702][LOG]: Processing node165_node165_osd__dev_sde1.blktrace.4
+[2016-06-02T22:38:50.542850][LOG]: Processing node165_node165_osd__dev_sde1.blktrace.5
+[2016-06-02T22:38:50.542979][LOG]: Processing node165_node165_osd__dev_sde1.blktrace.6
+[2016-06-02T22:38:50.543104][LOG]: Processing node165_node165_osd__dev_sde1.blktrace.7
+[2016-06-02T22:38:50.543546][LOG]: Processing node166_node166_ceph_health.txt
+[2016-06-02T22:38:50.543714][LOG]: Processing node166_node166_ceph-osd.4.asok.txt
+[2016-06-02T22:38:50.543886][LOG]: loading //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd/raw/node166/node166_ceph-osd.4.asok.txt
+[2016-06-02T22:38:52.333989][LOG]: Processing node166_node166_ceph-osd.5.asok.txt
+[2016-06-02T22:38:52.334164][LOG]: loading //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd/raw/node166/node166_ceph-osd.5.asok.txt
+[2016-06-02T22:38:54.108624][LOG]: Processing node166_node166_fatrace.txt
+[2016-06-02T22:38:54.108830][LOG]: Processing node166_node166_interrupts_end.txt
+[2016-06-02T22:38:54.108959][LOG]: Processing node166_node166_interrupts_start.txt
+[2016-06-02T22:38:54.109083][LOG]: Processing node166_node166_iostat.txt
+[2016-06-02T22:38:54.208780][LOG]: Processing node166_node166_mpstat.txt
+[2016-06-02T22:38:54.208973][LOG]: Processing node166_node166_process_log.txt
+[2016-06-02T22:38:54.209297][LOG]: Processing node166_node166_ps.txt
+[2016-06-02T22:38:54.209426][LOG]: Processing node166_node166_sar.txt
+[2016-06-02T22:38:54.627727][LOG]: Processing node166_node166_strace_15751.txt
+[2016-06-02T22:38:54.627903][LOG]: Processing node166_node166_strace_15755.txt
+[2016-06-02T22:38:54.628032][LOG]: Processing node166_node166_strace_17030.txt
+[2016-06-02T22:38:54.628162][LOG]: Processing node166_node166_strace_17033.txt
+[2016-06-02T22:38:54.628287][LOG]: Processing node166_node166_strace_31864.txt
+[2016-06-02T22:38:54.628415][LOG]: Processing node166_node166_strace_31878.txt
+[2016-06-02T22:38:54.628592][LOG]: Processing node166_node166_top.txt
+[2016-06-02T22:38:54.628730][LOG]: Processing node166_node166_blktrace__dev_sdc1.log
+[2016-06-02T22:38:54.628875][LOG]: Processing node166_node166_blktrace__dev_sdc2.log
+[2016-06-02T22:38:54.629220][LOG]: Processing node166_node166_blktrace__dev_sdd1.log
+[2016-06-02T22:38:54.629366][LOG]: Processing node166_node166_blktrace__dev_sde1.log
+[2016-06-02T22:38:54.629522][LOG]: Processing node166_node166_journal__dev_sdc2.blktrace.0
+[2016-06-02T22:38:54.629672][LOG]: Processing node166_node166_journal__dev_sdc2.blktrace.1
+[2016-06-02T22:38:54.629814][LOG]: Processing node166_node166_journal__dev_sdc2.blktrace.2
+[2016-06-02T22:38:54.629944][LOG]: Processing node166_node166_journal__dev_sdc2.blktrace.3
+[2016-06-02T22:38:54.630070][LOG]: Processing node166_node166_journal__dev_sdc2.blktrace.4
+[2016-06-02T22:38:54.630198][LOG]: Processing node166_node166_journal__dev_sdc2.blktrace.5
+[2016-06-02T22:38:54.630324][LOG]: Processing node166_node166_journal__dev_sdc2.blktrace.6
+[2016-06-02T22:38:54.630448][LOG]: Processing node166_node166_journal__dev_sdc2.blktrace.7
+[2016-06-02T22:38:54.630609][LOG]: Processing node166_node166_osd__dev_sdd1.blktrace.0
+[2016-06-02T22:38:54.630741][LOG]: Processing node166_node166_osd__dev_sdd1.blktrace.1
+[2016-06-02T22:38:54.630896][LOG]: Processing node166_node166_osd__dev_sdd1.blktrace.2
+[2016-06-02T22:38:54.631025][LOG]: Processing node166_node166_osd__dev_sdd1.blktrace.3
+[2016-06-02T22:38:54.631151][LOG]: Processing node166_node166_osd__dev_sdd1.blktrace.4
+[2016-06-02T22:38:54.631275][LOG]: Processing node166_node166_osd__dev_sdd1.blktrace.5
+[2016-06-02T22:38:54.631398][LOG]: Processing node166_node166_osd__dev_sdd1.blktrace.6
+[2016-06-02T22:38:54.631588][LOG]: Processing node166_node166_osd__dev_sdd1.blktrace.7
+[2016-06-02T22:38:54.631743][LOG]: Processing node166_node166_osd__dev_sde1.blktrace.0
+[2016-06-02T22:38:54.631890][LOG]: Processing node166_node166_osd__dev_sde1.blktrace.1
+[2016-06-02T22:38:54.632020][LOG]: Processing node166_node166_osd__dev_sde1.blktrace.2
+[2016-06-02T22:38:54.632146][LOG]: Processing node166_node166_osd__dev_sde1.blktrace.3
+[2016-06-02T22:38:54.632274][LOG]: Processing node166_node166_osd__dev_sde1.blktrace.4
+[2016-06-02T22:38:54.632404][LOG]: Processing node166_node166_osd__dev_sde1.blktrace.5
+[2016-06-02T22:38:54.632583][LOG]: Processing node166_node166_osd__dev_sde1.blktrace.6
+[2016-06-02T22:38:54.632719][LOG]: Processing node166_node166_osd__dev_sde1.blktrace.7
+[2016-06-02T22:38:54.633137][LOG]: Processing node152_node152_ceph_health.txt
+[2016-06-02T22:38:54.633268][LOG]: Processing node152_node152_interrupts_end.txt
+[2016-06-02T22:38:54.633394][LOG]: Processing node152_node152_interrupts_start.txt
+[2016-06-02T22:38:54.633555][LOG]: Processing node152_node152_iostat.txt
+[2016-06-02T22:38:54.647354][LOG]: Processing node152_node152_mpstat.txt
+[2016-06-02T22:38:54.647702][LOG]: Processing node152_node152_process_log.txt
+[2016-06-02T22:38:54.648068][LOG]: Processing node152_node152_sar.txt
+[2016-06-02T22:38:54.890972][LOG]: Processing node152_node152_top.txt
+[2016-06-02T22:38:54.891141][LOG]: Processing node152_node152_volume-1bfdf8cb-b58c-48c5-bff0-fa62ed51509b_fio_errorlog.txt
+[2016-06-02T22:38:54.891277][LOG]: Processing node152_node152_volume-1bfdf8cb-b58c-48c5-bff0-fa62ed51509b_fio.txt
+[2016-06-02T22:38:55.077988][LOG]: Write analyzed results into result.json
+[2016-06-02T22:38:55.418198][LOG]: Generating summary view
+[2016-06-02T22:38:55.439264][LOG]: generate summary line chart
+[2016-06-02T22:38:55.460473][LOG]: generate summary line chart
+[2016-06-02T22:38:55.460764][LOG]: Generating workload view
+[2016-06-02T22:38:55.481315][LOG]: generate workload line chart
+[2016-06-02T22:38:55.481623][LOG]: Generating ceph view
+[2016-06-02T22:38:55.506954][LOG]: generate ceph line chart
+[2016-06-02T22:38:58.358348][LOG]: generate ceph line chart
+[2016-06-02T22:39:01.739445][LOG]: generate ceph line chart
+[2016-06-02T22:39:04.306035][LOG]: generate ceph line chart
+[2016-06-02T22:39:06.121776][LOG]: generate ceph line chart
+[2016-06-02T22:39:09.538967][LOG]: generate ceph line chart
+[2016-06-02T22:39:16.659884][LOG]: generate ceph line chart
+[2016-06-02T22:39:39.875597][LOG]: Generating client view
+[2016-06-02T22:39:39.899131][LOG]: generate client line chart
+[2016-06-02T22:39:42.340111][LOG]: generate client line chart
+[2016-06-02T22:39:44.765369][LOG]: generate client line chart
+[2016-06-02T22:53:21.589237][LOG]: start to run performance test
+[2016-06-02T22:53:21.589404][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T22:54:46.663362][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T22:54:46.663590][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T22:54:46.663746][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T22:54:46.663874][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T22:54:46.664005][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T22:54:59.061297][LOG]: Creating rbd volume
+[2016-06-02T22:55:17.918830][LOG]: 1 RBD Image Created
+[2016-06-02T22:55:28.985073][WARNING]: 1 fio job still runing
+[2016-06-02T22:55:28.985313][LOG]: 1 FIO Jobs starts on node152
+[2016-06-02T22:55:28.985521][LOG]: Wait rbd initialization stop
+[2016-06-02T22:55:29.358935][WARNING]: 1 fio job still runing
+[2016-06-02T22:55:34.680781][WARNING]: 1 fio job still runing
+[2016-06-02T22:55:40.009713][WARNING]: 1 fio job still runing
+[2016-06-02T22:55:45.391743][WARNING]: 1 fio job still runing
+[2016-06-02T22:55:50.758907][WARNING]: 1 fio job still runing
+[2016-06-02T22:55:56.076155][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:01.425984][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:06.751186][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:12.066373][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:17.460005][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:22.793780][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:28.289194][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:33.701123][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:39.011283][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:44.402426][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:49.751653][WARNING]: 1 fio job still runing
+[2016-06-02T22:56:55.079679][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:00.444988][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:05.844703][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:11.272177][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:16.604202][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:21.957273][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:27.305529][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:32.711965][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:38.021981][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:43.490654][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:48.808321][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:54.202180][WARNING]: 1 fio job still runing
+[2016-06-02T22:57:59.589894][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:04.933616][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:10.312216][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:15.656159][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:21.021055][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:26.370691][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:31.724872][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:37.125644][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:42.482879][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:47.833615][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:53.170024][WARNING]: 1 fio job still runing
+[2016-06-02T22:58:58.517529][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:03.860733][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:09.192714][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:14.521113][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:19.911804][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:25.249561][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:30.624078][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:35.961861][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:41.297486][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:46.633481][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:51.978290][WARNING]: 1 fio job still runing
+[2016-06-02T22:59:57.333745][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:02.650263][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:07.976473][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:13.315934][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:18.650609][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:23.992419][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:29.352470][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:34.689340][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:40.118065][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:45.462037][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:50.771468][WARNING]: 1 fio job still runing
+[2016-06-02T23:00:56.111565][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:01.520529][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:06.852679][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:12.194890][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:17.573651][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:22.933676][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:28.278104][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:33.637309][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:38.943218][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:44.292901][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:49.623084][WARNING]: 1 fio job still runing
+[2016-06-02T23:01:55.027361][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:00.367502][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:05.831392][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:11.169079][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:16.583113][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:21.931250][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:27.275155][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:32.598413][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:37.959297][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:43.307333][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:48.635460][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:53.949439][WARNING]: 1 fio job still runing
+[2016-06-02T23:02:59.302211][WARNING]: 1 fio job still runing
+[2016-06-02T23:03:04.690812][WARNING]: 1 fio job still runing
+[2016-06-02T23:03:10.053704][WARNING]: 1 fio job still runing
+[2016-06-02T23:03:15.420708][WARNING]: 1 fio job still runing
+[2016-06-02T23:03:20.748848][WARNING]: 1 fio job still runing
+[2016-06-02T23:03:26.031393][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-02T23:03:26.031591][LOG]: rbd initialization finished
+[2016-06-02T23:03:27.121963][LOG]: RUNID: 7, RESULT_DIR: //mnt/data//7-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-02T23:03:27.122258][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-02T23:03:32.636989][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-02T23:03:38.038214][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-02T23:03:43.431134][LOG]: Prerun_check: check if strace installed 
+[2016-06-02T23:03:48.820770][LOG]: Prerun_check: check if lttng installed 
+[2016-06-02T23:03:54.532799][LOG]: check if FIO rbd engine installed
+[2016-06-02T23:03:54.861349][LOG]: check if rbd volume fully initialized
+[2016-06-02T23:04:04.504367][WARNING]: Ceph cluster used data occupied: 41943040.0 KB, planned_space: 41943040.0 KB 
+[2016-06-02T23:05:00.177094][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-02T23:05:06.160331][LOG]: Cleaned original data under /opt/ 
+[2016-06-02T23:05:06.160517][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-02T23:05:06.160711][LOG]: This test will run 500 secs until finish.
+[2016-06-02T23:05:26.711435][LOG]: Start system data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:05:53.696589][LOG]: Start perfcounter data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:05:53.702057][LOG]: Start blktrace data collector under node164 
+[2016-06-02T23:05:53.822988][LOG]: Start blktrace data collector under node165 
+[2016-06-02T23:05:53.898123][LOG]: Start blktrace data collector under node166 
+[2016-06-02T23:05:53.941762][LOG]: Start fatrace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:05:59.488817][LOG]: Start strace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:05:59.493812][LOG]: Start lttng data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:06:22.667243][LOG]: Start system data collector under ['node152'] 
+[2016-06-02T23:06:24.158568][LOG]: Start perfcounter data collector under ['node152'] 
+[2016-06-02T23:06:31.312803][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-02T23:06:31.313019][ERROR]: Failed to start FIO process
+[2016-06-02T23:06:31.333720][WARNING]: Caught Signal to Cancel this run, killing Workload now, pls wait
+[2016-06-02T23:07:36.919304][LOG]: Waiting Workload to complete its work
+[2016-06-02T23:07:37.259645][LOG]: Workload completed
+[2016-06-02T23:08:44.499275][LOG]: Collecting Data, this will takes quite long time depends on the network
+[2016-06-02T23:09:01.162171][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-02T23:09:17.843342][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-02T23:09:34.037028][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-02T23:09:34.741139][WARNING]: scp: /opt//*.log: No such file or directory
+
+
+[2016-06-02T23:09:34.781879][LOG]: Post Process Result Data
+[2016-06-02T23:09:34.809557][ERROR]: analyzer failed, pls try cd analyzer; python analyzer.py --path //mnt/data//7-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd process_data 
+[2016-06-02T23:44:07.019743][LOG]: start to run performance test
+[2016-06-02T23:44:07.019909][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-02T23:45:32.080035][LOG]: Tuning [read_ahead_kb:2048] differs with current configuration, will apply
+[2016-06-02T23:45:32.080213][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T23:45:32.080360][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-02T23:45:32.080491][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-02T23:45:32.080679][LOG]: Tuning[disk] is not same with current configuration
+[2016-06-02T23:45:32.080817][LOG]: Tuning[global] is not same with current configuration
+[2016-06-02T23:45:32.080943][LOG]: Tuning[version] is not same with current configuration
+[2016-06-02T23:46:50.323834][LOG]: Creating rbd volume
+[2016-06-02T23:47:00.208032][LOG]: 1 RBD Image Created
+[2016-06-02T23:47:11.274991][WARNING]: 1 fio job still runing
+[2016-06-02T23:47:11.275165][LOG]: 1 FIO Jobs starts on node152
+[2016-06-02T23:47:11.275313][LOG]: Wait rbd initialization stop
+[2016-06-02T23:47:11.689297][WARNING]: 1 fio job still runing
+[2016-06-02T23:47:17.165671][WARNING]: 1 fio job still runing
+[2016-06-02T23:47:22.586137][WARNING]: 1 fio job still runing
+[2016-06-02T23:47:27.984865][WARNING]: 1 fio job still runing
+[2016-06-02T23:47:33.387193][WARNING]: 1 fio job still runing
+[2016-06-02T23:47:38.727850][WARNING]: 1 fio job still runing
+[2016-06-02T23:47:44.070005][WARNING]: 1 fio job still runing
+[2016-06-02T23:47:49.465702][WARNING]: 1 fio job still runing
+[2016-06-02T23:47:54.833946][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:00.193853][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:05.555430][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:11.048206][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:16.406407][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:21.822413][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:27.149348][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:32.539629][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:37.885664][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:43.236157][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:48.655273][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:54.018275][WARNING]: 1 fio job still runing
+[2016-06-02T23:48:59.391298][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:04.788128][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:10.180406][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:15.553947][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:20.928293][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:26.276715][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:31.669230][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:37.018180][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:42.380969][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:47.707726][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:53.060456][WARNING]: 1 fio job still runing
+[2016-06-02T23:49:58.401250][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:03.755207][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:09.094647][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:14.425697][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:19.780833][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:25.152666][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:30.511730][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:35.900185][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:41.296994][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:46.639116][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:51.977261][WARNING]: 1 fio job still runing
+[2016-06-02T23:50:57.303568][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:02.727664][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:08.055116][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:13.458522][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:18.825654][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:24.192123][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:29.591648][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:34.944263][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:40.302429][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:45.662123][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:51.089878][WARNING]: 1 fio job still runing
+[2016-06-02T23:51:56.463107][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:01.921946][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:07.256149][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:12.618397][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:17.980275][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:23.317974][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:28.735113][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:34.079678][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:39.428444][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:44.759299][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:50.166573][WARNING]: 1 fio job still runing
+[2016-06-02T23:52:55.516888][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:00.931884][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:06.261384][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:11.672609][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:17.016960][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:22.417703][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:27.782977][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:33.119712][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:38.441434][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:43.776722][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:49.133093][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:54.640904][WARNING]: 1 fio job still runing
+[2016-06-02T23:53:59.977339][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:05.325458][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:10.704850][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:16.098587][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:21.436003][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:26.877893][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:32.288951][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:37.679381][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:43.133059][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:48.503837][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:53.839006][WARNING]: 1 fio job still runing
+[2016-06-02T23:54:59.193205][WARNING]: 1 fio job still runing
+[2016-06-02T23:55:04.542750][WARNING]: 1 fio job still runing
+[2016-06-02T23:55:09.870280][WARNING]: 1 fio job still runing
+[2016-06-02T23:55:15.172016][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-02T23:55:15.172170][LOG]: rbd initialization finished
+[2016-06-02T23:55:16.270885][LOG]: RUNID: 8, RESULT_DIR: //mnt/data//8-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-02T23:55:16.271183][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-02T23:55:21.780844][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-02T23:55:27.174001][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-02T23:55:32.562838][LOG]: Prerun_check: check if strace installed 
+[2016-06-02T23:55:37.948789][LOG]: Prerun_check: check if lttng installed 
+[2016-06-02T23:55:43.698480][LOG]: check if FIO rbd engine installed
+[2016-06-02T23:55:44.036614][LOG]: check if rbd volume fully initialized
+[2016-06-02T23:55:53.728370][WARNING]: Ceph cluster used data occupied: 41943040.0 KB, planned_space: 41943040.0 KB 
+[2016-06-02T23:56:49.391125][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-02T23:56:55.374298][LOG]: Cleaned original data under /opt/ 
+[2016-06-02T23:56:55.374562][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-02T23:56:55.374792][LOG]: This test will run 500 secs until finish.
+[2016-06-02T23:57:16.157865][LOG]: Start system data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:57:43.165948][LOG]: Start perfcounter data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:57:43.173213][LOG]: Start blktrace data collector under node164 
+[2016-06-02T23:57:43.274850][LOG]: Start blktrace data collector under node165 
+[2016-06-02T23:57:43.349451][LOG]: Start blktrace data collector under node166 
+[2016-06-02T23:57:43.429268][LOG]: Start fatrace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:57:48.977327][LOG]: Start strace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:57:48.983735][LOG]: Start lttng data collector under ['node164', 'node165', 'node166'] 
+[2016-06-02T23:58:12.072351][LOG]: Start system data collector under ['node152'] 
+[2016-06-02T23:58:13.634878][LOG]: Start perfcounter data collector under ['node152'] 
+[2016-06-02T23:58:20.860126][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-02T23:58:20.860339][ERROR]: Failed to start FIO process
+[2016-06-02T23:58:20.883192][WARNING]: Caught Signal to Cancel this run, killing Workload now, pls wait
+[2016-06-02T23:59:26.416140][LOG]: Waiting Workload to complete its work
+[2016-06-02T23:59:26.717709][LOG]: Workload completed
+[2016-06-03T00:00:33.883455][LOG]: Collecting Data, this will takes quite long time depends on the network
+[2016-06-03T00:00:50.625488][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-03T00:01:07.219174][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-03T00:01:23.373863][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-03T00:01:24.046079][WARNING]: scp: /opt//*.log: No such file or directory
+
+
+[2016-06-03T00:01:24.093661][LOG]: Post Process Result Data
+[2016-06-03T00:01:24.123242][ERROR]: analyzer failed, pls try cd analyzer; python analyzer.py --path //mnt/data//8-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd process_data 
+[2016-06-03T01:25:05.000615][LOG]: start to run performance test
+[2016-06-03T01:25:05.000782][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-03T01:26:21.100306][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T01:26:21.100493][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T01:26:21.100684][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-03T01:26:21.100827][LOG]: Tuning[version] is not same with current configuration
+[2016-06-03T01:26:21.100952][LOG]: Tuning[global] is not same with current configuration
+[2016-06-03T01:26:25.832816][LOG]: RUNID: 9, RESULT_DIR: //mnt/data//9-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-03T01:26:25.833114][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-03T01:26:31.231363][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-03T01:26:36.626646][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-03T01:26:42.014381][LOG]: Prerun_check: check if strace installed 
+[2016-06-03T01:26:47.402996][LOG]: Prerun_check: check if lttng installed 
+[2016-06-03T01:26:53.122964][LOG]: check if FIO rbd engine installed
+[2016-06-03T01:26:53.451148][LOG]: check if rbd volume fully initialized
+[2016-06-03T01:26:54.203198][WARNING]: Ceph cluster used data occupied: 41943040.0 KB, planned_space: 41943040.0 KB 
+[2016-06-03T01:27:49.818485][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-03T01:27:55.791831][LOG]: Cleaned original data under /opt/ 
+[2016-06-03T01:27:55.791999][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-03T01:27:55.792191][LOG]: This test will run 500 secs until finish.
+[2016-06-03T01:28:12.735779][LOG]: Start system data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T01:28:39.726815][LOG]: Start perfcounter data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T01:28:39.735660][LOG]: Start blktrace data collector under node164 
+[2016-06-03T01:28:39.837608][LOG]: Start blktrace data collector under node165 
+[2016-06-03T01:28:39.907398][LOG]: Start blktrace data collector under node166 
+[2016-06-03T01:28:39.969546][LOG]: Start fatrace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T01:28:45.444863][LOG]: Start strace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T01:28:45.452135][LOG]: Start lttng data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T01:29:08.212117][LOG]: Start system data collector under ['node152'] 
+[2016-06-03T01:29:09.649250][LOG]: Start perfcounter data collector under ['node152'] 
+[2016-06-03T01:29:16.830848][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-03T01:29:16.831060][ERROR]: Failed to start FIO process
+[2016-06-03T01:29:16.847583][WARNING]: Caught Signal to Cancel this run, killing Workload now, pls wait
+[2016-06-03T01:30:22.350116][LOG]: Waiting Workload to complete its work
+[2016-06-03T01:30:22.669948][LOG]: Workload completed
+[2016-06-03T01:30:55.915046][WARNING]: Caught KeyboardInterrupt Interruption
+[2016-06-03T03:06:43.335030][LOG]: start to run performance test
+[2016-06-03T03:06:43.335197][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-03T03:08:08.423538][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T03:08:08.423768][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T03:08:08.423934][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-03T03:08:08.424060][LOG]: Tuning[version] is not same with current configuration
+[2016-06-03T03:08:08.424180][LOG]: Tuning[global] is not same with current configuration
+[2016-06-03T03:08:21.902746][LOG]: RUNID: 10, RESULT_DIR: //mnt/data//10-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-03T03:08:21.903057][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-03T03:08:27.308375][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-03T03:08:32.698657][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-03T03:08:38.081855][LOG]: Prerun_check: check if strace installed 
+[2016-06-03T03:08:43.471695][LOG]: Prerun_check: check if lttng installed 
+[2016-06-03T03:08:49.198615][LOG]: check if FIO rbd engine installed
+[2016-06-03T03:08:49.545196][LOG]: check if rbd volume fully initialized
+[2016-06-03T03:08:59.211104][WARNING]: Ceph cluster used data occupied: 41943040.0 KB, planned_space: 4194304.0 KB 
+[2016-06-03T03:09:55.364035][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-03T03:10:01.439078][LOG]: Cleaned original data under /opt/ 
+[2016-06-03T03:10:01.439248][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-03T03:10:01.439452][LOG]: This test will run 500 secs until finish.
+[2016-06-03T03:10:18.614800][LOG]: Start system data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:10:45.635218][LOG]: Start perfcounter data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:10:45.642842][LOG]: Start blktrace data collector under node164 
+[2016-06-03T03:10:45.742006][LOG]: Start blktrace data collector under node165 
+[2016-06-03T03:10:45.820805][LOG]: Start blktrace data collector under node166 
+[2016-06-03T03:10:45.872006][LOG]: Start fatrace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:10:51.536692][LOG]: Start strace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:10:51.544091][LOG]: Start lttng data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:11:14.661786][LOG]: Start system data collector under ['node152'] 
+[2016-06-03T03:11:16.076398][LOG]: Start perfcounter data collector under ['node152'] 
+[2016-06-03T03:11:23.240723][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-03T03:11:23.240952][ERROR]: Failed to start FIO process
+[2016-06-03T03:11:23.263977][WARNING]: Caught Signal to Cancel this run, killing Workload now, pls wait
+[2016-06-03T03:11:43.184635][WARNING]: Caught KeyboardInterrupt Interruption
+[2016-06-03T03:19:35.863399][LOG]: start to run performance test
+[2016-06-03T03:19:35.863603][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-03T03:21:05.760695][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T03:21:05.760897][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T03:21:05.761047][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-03T03:21:05.761174][LOG]: Tuning[version] is not same with current configuration
+[2016-06-03T03:21:05.761297][LOG]: Tuning[global] is not same with current configuration
+[2016-06-03T03:21:19.410559][LOG]: RUNID: 11, RESULT_DIR: //mnt/data//11-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-03T03:21:19.410915][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-03T03:21:25.201593][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-03T03:21:30.956242][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-03T03:21:36.718759][LOG]: Prerun_check: check if strace installed 
+[2016-06-03T03:21:42.451366][LOG]: Prerun_check: check if lttng installed 
+[2016-06-03T03:21:48.491979][LOG]: check if FIO rbd engine installed
+[2016-06-03T03:21:48.817055][LOG]: check if rbd volume fully initialized
+[2016-06-03T03:21:58.510400][WARNING]: Ceph cluster used data occupied: 41943040.0 KB, planned_space: 4194304.0 KB 
+[2016-06-03T03:22:58.042694][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-03T03:23:04.053669][LOG]: Cleaned original data under /opt/ 
+[2016-06-03T03:23:04.053850][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-03T03:23:04.054025][LOG]: This test will run 500 secs until finish.
+[2016-06-03T03:23:21.889859][LOG]: Start system data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:23:48.896812][LOG]: Start perfcounter data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:23:48.903944][LOG]: Start blktrace data collector under node164 
+[2016-06-03T03:23:49.033177][LOG]: Start blktrace data collector under node165 
+[2016-06-03T03:23:49.090834][LOG]: Start blktrace data collector under node166 
+[2016-06-03T03:23:49.166123][LOG]: Start fatrace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:23:54.842601][LOG]: Start strace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:23:54.849038][LOG]: Start lttng data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T03:24:18.064048][LOG]: Start system data collector under ['node152'] 
+[2016-06-03T03:24:19.573544][LOG]: Start perfcounter data collector under ['node152'] 
+[2016-06-03T03:24:26.811184][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-03T03:24:26.811397][ERROR]: Failed to start FIO process
+[2016-06-03T03:24:26.834878][WARNING]: Caught Signal to Cancel this run, killing Workload now, pls wait
+[2016-06-03T03:25:32.480688][LOG]: Waiting Workload to complete its work
+[2016-06-03T03:25:32.764252][LOG]: Workload completed
+[2016-06-03T03:26:39.852988][LOG]: Collecting Data, this will takes quite long time depends on the network
+[2016-06-03T03:26:56.482276][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-03T03:27:12.999229][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-03T03:27:29.149118][WARNING]: scp: /opt//lttng-traces: No such file or directory
+
+
+[2016-06-03T03:27:30.178219][WARNING]: scp: /opt//*.log: No such file or directory
+
+
+[2016-06-03T03:27:30.218978][LOG]: Post Process Result Data
+[2016-06-03T03:27:30.246364][ERROR]: analyzer failed, pls try cd analyzer; python analyzer.py --path //mnt/data//11-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd process_data 
+[2016-06-03T05:07:35.174270][LOG]: start to run performance test
+[2016-06-03T05:07:35.174438][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-03T05:09:00.295585][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T05:09:00.295797][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T05:09:00.295947][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-03T05:09:00.296076][LOG]: Tuning[version] is not same with current configuration
+[2016-06-03T05:09:00.296201][LOG]: Tuning[global] is not same with current configuration
+[2016-06-03T05:09:13.864282][LOG]: RUNID: 12, RESULT_DIR: //mnt/data//12-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-03T05:09:13.864623][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-03T05:09:19.267199][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-03T05:09:24.662875][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-03T05:09:30.057135][LOG]: Prerun_check: check if strace installed 
+[2016-06-03T05:09:35.440141][LOG]: Prerun_check: check if lttng installed 
+[2016-06-03T05:09:41.165142][LOG]: check if FIO rbd engine installed
+[2016-06-03T05:09:41.497340][LOG]: check if rbd volume fully initialized
+[2016-06-03T05:09:51.163399][WARNING]: Ceph cluster used data occupied: 41943040.0 KB, planned_space: 4194304.0 KB 
+[2016-06-03T05:10:46.728584][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-03T05:10:52.687697][LOG]: Cleaned original data under /opt/ 
+[2016-06-03T05:10:52.687916][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-03T05:10:52.688094][LOG]: This test will run 500 secs until finish.
+[2016-06-03T05:11:09.743600][LOG]: Start system data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:11:36.748054][LOG]: Start perfcounter data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:11:36.754587][LOG]: Start blktrace data collector under node164 
+[2016-06-03T05:11:36.848754][LOG]: Start blktrace data collector under node165 
+[2016-06-03T05:11:36.926081][LOG]: Start blktrace data collector under node166 
+[2016-06-03T05:11:36.999643][LOG]: Start fatrace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:11:42.600006][LOG]: Start strace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:11:42.606159][LOG]: Start lttng data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:12:05.721074][LOG]: Start system data collector under ['node152'] 
+[2016-06-03T05:12:07.171911][LOG]: Start perfcounter data collector under ['node152'] 
+[2016-06-03T05:12:14.344818][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
+[2016-06-03T05:12:14.345035][ERROR]: Failed to start FIO process
+[2016-06-03T05:12:14.368925][WARNING]: Caught Signal to Cancel this run, killing Workload now, pls wait
+[2016-06-03T05:12:39.781779][WARNING]: Caught KeyboardInterrupt Interruption
+[2016-06-03T05:22:38.836073][LOG]: start to run performance test
+[2016-06-03T05:22:38.836243][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-03T05:24:08.790278][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T05:24:08.790485][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T05:24:08.790688][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-03T05:24:08.790830][LOG]: Tuning[version] is not same with current configuration
+[2016-06-03T05:24:08.790954][LOG]: Tuning[global] is not same with current configuration
+[2016-06-03T05:24:13.505246][LOG]: RUNID: 13, RESULT_DIR: //mnt/data//13-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-03T05:24:13.505598][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-03T05:24:19.228810][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-03T05:24:25.000087][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-03T05:24:30.725482][LOG]: Prerun_check: check if strace installed 
+[2016-06-03T05:24:36.472261][LOG]: Prerun_check: check if lttng installed 
+[2016-06-03T05:24:42.263572][WARNING]: Caught KeyboardInterrupt Interruption
+[2016-06-03T05:28:50.314281][LOG]: start to run performance test
+[2016-06-03T05:28:50.314445][LOG]: Calculate Difference between Current Ceph Cluster Configuration with tuning
+[2016-06-03T05:30:20.061593][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T05:30:20.061794][LOG]: Tuning [mon_pg_warn_max_per_osd:1000] differs with current configuration, will apply
+[2016-06-03T05:30:20.061945][LOG]: Tuning[analyzer] is not same with current configuration
+[2016-06-03T05:30:20.062070][LOG]: Tuning[version] is not same with current configuration
+[2016-06-03T05:30:20.062190][LOG]: Tuning[global] is not same with current configuration
+[2016-06-03T05:30:24.658293][LOG]: RUNID: 14, RESULT_DIR: //mnt/data//14-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-03T05:30:24.658608][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-03T05:30:30.406682][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-03T05:30:36.160084][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-03T05:30:41.926789][LOG]: Prerun_check: check if strace installed 
+[2016-06-03T05:30:47.657783][LOG]: Prerun_check: check if lttng installed 
+[2016-06-03T05:30:53.727874][LOG]: check if FIO rbd engine installed
+[2016-06-03T05:30:54.071958][LOG]: check if rbd volume fully initialized
+[2016-06-03T05:31:03.822831][WARNING]: Ceph cluster used data occupied: 41943040.0 KB, planned_space: 4194304.0 KB 
+[2016-06-03T05:32:03.288548][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-03T05:32:09.288815][LOG]: Cleaned original data under /opt/ 
+[2016-06-03T05:32:09.288986][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-03T05:32:09.289162][LOG]: This test will run 500 secs until finish.
+[2016-06-03T05:32:26.530147][LOG]: Start system data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:32:53.501053][LOG]: Start perfcounter data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:32:53.507090][LOG]: Start blktrace data collector under node164 
+[2016-06-03T05:32:53.604457][LOG]: Start blktrace data collector under node165 
+[2016-06-03T05:32:53.661415][LOG]: Start blktrace data collector under node166 
+[2016-06-03T05:32:53.745687][LOG]: Start fatrace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:32:59.441688][LOG]: Start strace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:32:59.449061][LOG]: Start lttng data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:33:22.618214][LOG]: Start system data collector under ['node152'] 
+[2016-06-03T05:33:24.133208][LOG]: Start perfcounter data collector under ['node152'] 
+[2016-06-03T05:33:31.301464][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:31.301681][LOG]: 1 FIO Jobs starts on ['node152']
+[2016-06-03T05:33:31.586854][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:36.882684][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:42.209380][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:47.493906][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:52.787435][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:58.116191][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:03.405534][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:08.694035][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:13.989734][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:19.282717][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:24.592747][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:29.908756][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:35.214022][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:40.533700][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:45.819567][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:51.129898][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:56.435353][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:01.745457][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:07.046846][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:12.365027][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:17.656948][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:22.973688][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:28.262658][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:33.599448][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:38.891133][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:44.216296][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:49.530580][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:54.858360][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:00.171233][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:05.488074][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:10.789373][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:16.089530][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:21.381371][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:26.690988][WARNING]: 1 fio job still runing

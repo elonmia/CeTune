@@ -35,6 +35,8 @@ class FioRbd(Benchmark):
         for client in self.cluster["testjob_distribution"]:
             common.scp(user, client, "../conf/fio_init.conf", dest_dir)
             rbdlist = ' '.join(self.cluster["testjob_distribution"][client])
+            print "prepare_image rbdlist"#by longxing
+            print rbdlist#by longxing
             res = common.pdsh(user, [client], "for rbdname in %s; do POOLNAME=%s RBDNAME=${rbdname} fio --section init-write %s/fio_init.conf  & done" % (rbdlist, 'rbd', dest_dir), option = "force")         
             fio_job_num_total += len(self.cluster["testjob_distribution"][client])
         time.sleep(1)
@@ -93,6 +95,8 @@ class FioRbd(Benchmark):
         fio_job_num_total = 0
         for client in self.benchmark["distribution"]:
             rbdlist = ' '.join(self.benchmark["distribution"][client])
+            print "run rbdlist"#by longxing
+            print rbdlist#by longxing
             res = common.pdsh(user, [client], "for rbdname in %s; do POOLNAME=%s RBDNAME=${rbdname} fio --output %s/`hostname`_${rbdname}_fio.txt --write_bw_log=%s/`hostname`_${rbdname}_fio --write_lat_log=%s/`hostname`_${rbdname}_fio --write_iops_log=%s/`hostname`_${rbdname}_fio --section %s %s/fio.conf 2>%s/`hostname`_${rbdname}_fio_errorlog.txt & done" % (rbdlist, 'rbd', dest_dir, dest_dir, dest_dir, dest_dir, self.benchmark["section_name"], dest_dir, dest_dir), option = "force")
             fio_job_num_total += len(self.benchmark["distribution"][client])
         self.chkpoint_to_log("fio start")
@@ -172,7 +176,8 @@ class FioRbd(Benchmark):
         fio_template.append("    ramp_time=%s" % warmup_time)
         fio_template.append("    runtime=%s" % runtime)
         fio_template.append("    ioengine=rbd")
-        fio_template.append("    clientname=${RBDNAME}")
+        #fio_template.append("    clientname=${RBDNAME}")
+        fio_template.append("    clientname=admin")#changed by longxing for cephx
         fio_template.append("    pool=${POOLNAME}")
         fio_template.append("    rbdname=${RBDNAME}")
         if io_pattern in ["randread", "randwrite", "randrw"]:

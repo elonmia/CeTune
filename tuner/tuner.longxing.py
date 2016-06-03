@@ -40,6 +40,7 @@ class Tuner:
                     self.cluster[osd].append( osd_journal[1] )
 
 		print self.cluster[osd]#print osd data
+	self.cluster["rgw_enable"]="false"#added by longxing
 
 
 
@@ -175,7 +176,7 @@ class Tuner:
         user = self.cluster["user"]
         controller = self.cluster["head"]
 
-        stdout, stderr = common.pdsh(user, [controller], 'timeout 5 ceph osd dump | grep pool', option="check_return")
+        stdout, stderr = common.pdsh(user, [controller], 'timeout 30 ceph osd dump | grep pool', option="check_return")
         res = common.format_pdsh_return(stdout)
         pool_config = {}
         for node in res:
@@ -247,7 +248,8 @@ class Tuner:
             version_match = False
         if not version_match:
             common.printout("LOG","Current ceph version not match testjob version, need reinstall")
-            run_deploy.main(['install_binary', '--version', planed_version])
+            #run_deploy.main(['install_binary', '--version', planed_version])# not redeploy by longxing
+            pass
 
     def check_tuning(self, jobname):
         if not self.cur_tuning:
@@ -333,22 +335,28 @@ class Tuner:
                 if section_name in ["version","workstages","pool","benchmark_engine"]:
                     continue
                 tuning[section_name] = section
-            common.printout("LOG","Apply osd and mon tuning to ceph.conf")
+            #common.printout("LOG","Apply osd and mon tuning to ceph.conf")
             if with_rgw:
-                run_deploy.main(['--config', json.dumps(tuning), '--with_rgw',  'gen_cephconf'])
+                #run_deploy.main(['--config', json.dumps(tuning), '--with_rgw',  'gen_cephconf'])#not deploy
+		pass#for if
             else:
-                run_deploy.main(['--config', json.dumps(tuning), 'gen_cephconf'])
-            common.printout("LOG","Distribute ceph.conf")
+                #run_deploy.main(['--config', json.dumps(tuning), 'gen_cephconf'])#not deploy by longxing
+		pass#for if
+            #common.printout("LOG","Distribute ceph.conf")
             if with_rgw:
-                run_deploy.main(['--with_rgw','distribute_conf'])
+                #run_deploy.main(['--with_rgw','distribute_conf'])#not deploy by longxing
+		pass#for if
             else:
-                run_deploy.main(['distribute_conf'])
+                #run_deploy.main(['distribute_conf'])#not deploy by longxing
+		pass#for if
             if not no_check:
-                common.printout("LOG","Restart ceph cluster")
+                #common.printout("LOG","Restart ceph cluster")
                 if with_rgw:
-                    run_deploy.main(['--with_rgw','restart'])
+                    #run_deploy.main(['--with_rgw','restart'])#not deploy by longxing
+                    pass#for if
                 else:
-                    run_deploy.main(['restart'])
+                    #run_deploy.main(['restart'])#not deploy by longxing
+                    pass#for if
         if 'disk' in tmp_tuning_diff:
             param = {}
             for param_name, param_data in self.worksheet[jobname]['disk'].items():

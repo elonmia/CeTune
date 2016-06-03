@@ -1,2245 +1,387 @@
-[2016-06-01T04:42:35.018444]['bash', '-c', 'rm -f /root/longxingCeTune/conf/../conf/cetune_error.log']
-[2016-06-01T04:42:35.027958]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'rbd ls -p rbd']
-[2016-06-01T04:42:35.390440]node153: foo
-
-[2016-06-01T04:42:35.395646]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'test -d //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd']
-[2016-06-01T04:42:35.545854]pdsh@node153: node153: ssh exited with exit code 1
-
-[2016-06-01T04:42:35.546962][ERROR]: pdsh@node153: node153: ssh exited with exit code 1
-
-[2016-06-01T04:42:35.547093]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'mkdir -p //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd']
-[2016-06-01T04:42:35.697654]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'mkdir -p //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/conf/']
-[2016-06-01T04:42:35.844543]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'mkdir -p //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd/raw/']
-[2016-06-01T04:42:36.000449][LOG]: RUNID: 6, RESULT_DIR: //mnt/data//6-140-fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd
-[2016-06-01T04:42:36.000853][LOG]: Prerun_check: check if sysstat installed 
-[2016-06-01T04:42:36.001025]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'mpstat']
-[2016-06-01T04:42:36.338956]node153: Linux 3.10.0-327.el7.x86_64 (node153) 	06/01/2016 	_x86_64_	(2 CPU)
-node153: 
-node153: 04:42:36 AM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
-node153: 04:42:36 AM  all    1.40    0.00    0.77    1.31    0.00    0.02    0.07    0.00    0.00   96.43
-node154: Linux 3.10.0-327.el7.x86_64 (node154) 	06/01/2016 	_x86_64_	(2 CPU)
-node154: 
-node154: 04:42:35 AM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
-node154: 04:42:35 AM  all    9.90    0.02    9.59    0.36    0.00    0.12    0.35    0.00    0.00   79.66
-
-[2016-06-01T04:42:36.339148][LOG]: Prerun_check: check if fatrace installed 
-[2016-06-01T04:42:36.339341]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'fatrace -h']
-[2016-06-01T04:42:36.686925]node153: Usage: fatrace [options...] 
-node153: 
-node153: Options:
-node153:   -c, --current-mount		Only record events on partition/mount of current directory.
-node153:   -o FILE, --output=FILE	Write events to a file instead of standard output.
-node153:   -s SECONDS, --seconds=SECONDS	Stop after the given number of seconds.
-node153:   -t, --timestamp		Add timestamp to events. Give twice for seconds since the epoch.
-node153:   -p PID, --ignore-pid PID	Ignore events for this process ID. Can be specified multiple times.
-node153:   -f TYPES, --filter=TYPES	Show only the given event types; choose from C, R, O, or W, e. g. --filter=OC.
-node153:   -C COMM, --command=COMM	Show only events for this command.
-node153:   -h, --help			Show help.
-node154: Usage: fatrace [options...] 
-node154: 
-node154: Options:
-node154:   -c, --current-mount		Only record events on partition/mount of current directory.
-node154:   -o FILE, --output=FILE	Write events to a file instead of standard output.
-node154:   -s SECONDS, --seconds=SECONDS	Stop after the given number of seconds.
-node154:   -t, --timestamp		Add timestamp to events. Give twice for seconds since the epoch.
-node154:   -p PID, --ignore-pid PID	Ignore events for this process ID. Can be specified multiple times.
-node154:   -f TYPES, --filter=TYPES	Show only the given event types; choose from C, R, O, or W, e. g. --filter=OC.
-node154:   -C COMM, --command=COMM	Show only events for this command.
-node154:   -h, --help			Show help.
-
-[2016-06-01T04:42:36.687157][LOG]: Prerun_check: check if blktrace installed 
-[2016-06-01T04:42:36.687366]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'blktrace -v']
-[2016-06-01T04:42:37.013047]node153: blktrace version 2.0.0
-node154: blktrace version 2.0.0
-
-[2016-06-01T04:42:37.013273][LOG]: Prerun_check: check if strace installed 
-[2016-06-01T04:42:37.013476]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'strace -V']
-[2016-06-01T04:42:37.342566]node153: strace -- version 4.8
-node154: strace -- version 4.8
-
-[2016-06-01T04:42:37.342832][LOG]: Prerun_check: check if lttng installed 
-[2016-06-01T04:42:37.343040]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'lttng -V']
-[2016-06-01T04:42:37.681544]node153: lttng (LTTng Trace Control) 2.4.1 - Époque Opaque
-node154: lttng (LTTng Trace Control) 2.4.1 - Époque Opaque
-
-[2016-06-01T04:42:37.681806]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'fio -v']
-[2016-06-01T04:42:37.886539]node153: fio-2.1.10
-
-[2016-06-01T04:42:37.886761][LOG]: check if FIO rbd engine installed
-[2016-06-01T04:42:37.886972]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'fio -enghelp | grep rbd']
-[2016-06-01T04:42:38.094868]node153: 	rbd
-
-[2016-06-01T04:42:38.095100][LOG]: check if rbd volume fully initialized
-[2016-06-01T04:42:38.095318]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "ceph df | grep rbd | awk '{print $3}'"]
-[2016-06-01T04:42:38.729015]node153: 128M
-
-[2016-06-01T04:42:38.730375][WARNING]: Ceph cluster used data occupied: 131072.0 KB, planned_space: 41943040.0 KB 
-[2016-06-01T04:42:38.730632][WARNING]: rbd volume initialization has not be done
-[2016-06-01T04:42:38.730851][LOG]: Creating rbd volume
-[2016-06-01T04:42:38.731043]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'rbd ls -p rbd']
-[2016-06-01T04:42:39.001003]node153: foo
-
-[2016-06-01T04:42:39.001391]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'rbd ls -p rbd']
-[2016-06-01T04:42:39.268495]node153: foo
-
-[2016-06-01T04:42:39.268952]['scp', '-oConnectTimeout=15', '-r', '../conf/fio_init.conf', 'root@node153:/opt/']
-[2016-06-01T04:42:39.420866]
-[2016-06-01T04:42:39.421026]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'for rbdname in foo; do POOLNAME=rbd RBDNAME=${rbdname} fio --section init-write /opt//fio_init.conf  & done']
-[2016-06-01T04:42:40.432865]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:42:40.611721]node153: 23871
-
-[2016-06-01T04:42:40.612082][WARNING]: 1 fio job still runing
-[2016-06-01T04:42:40.612295][LOG]: 1 FIO Jobs starts on node153
-[2016-06-01T04:42:40.612446][LOG]: Wait rbd initialization stop
-[2016-06-01T04:42:40.612653]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:42:40.858989]node153: 23871
-
-[2016-06-01T04:42:40.859418][WARNING]: 1 fio job still runing
-[2016-06-01T04:42:45.865032]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:42:46.034312]pdsh@node153: node153: ssh exited with exit code 1
-
-[2016-06-01T04:42:46.034650][ERROR]: pdsh@node153: node153: ssh exited with exit code 1
-
-[2016-06-01T04:42:46.034826][WARNING]: Expecting 1 nodes run fio, detect 0 node runing
-[2016-06-01T04:42:46.035037][LOG]: rbd initialization finished
-[2016-06-01T04:42:46.035293]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'export HOME=/opt/; lttng stop; lttng destroy;']
-[2016-06-01T04:42:46.385366]node153: Did you create a session? (lttng create <my_session>)
-node153: Did you create a session? (lttng create <my_session>)
-node154: Did you create a session? (lttng create <my_session>)
-node154: Did you create a session? (lttng create <my_session>)
-
-[2016-06-01T04:42:46.385522]node153: Error: Can't find valid lttng config /opt//.lttngrc
-node153: Error: Command error
-node153: Error: Can't find valid lttng config /opt//.lttngrc
-node153: Error: Command error
-pdsh@node153: node153: ssh exited with exit code 1
-node154: Error: Can't find valid lttng config /opt//.lttngrc
-node154: Error: Command error
-node154: Error: Can't find valid lttng config /opt//.lttngrc
-node154: Error: Command error
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:46.385859][ERROR]: node153: Error: Can't find valid lttng config /opt//.lttngrc
-node153: Error: Command error
-node153: Error: Can't find valid lttng config /opt//.lttngrc
-node153: Error: Command error
-pdsh@node153: node153: ssh exited with exit code 1
-node154: Error: Can't find valid lttng config /opt//.lttngrc
-node154: Error: Command error
-node154: Error: Can't find valid lttng config /opt//.lttngrc
-node154: Error: Command error
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:46.386042]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "echo `date +%s`' perfcounter stop' >> /opt//`hostname`_process_log.txt; ps aux | grep asok |awk '{print $2}'| while read pid;do kill $pid;done"]
-[2016-06-01T04:42:46.565354]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 top; echo `date +%s`' top stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:51.228484]node154: top: no process found
-node153: top: no process found
-
-[2016-06-01T04:42:51.228780]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 sar; echo `date +%s`' sar stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:51.589838]node153: sar: no process found
-node154: sar: no process found
-
-[2016-06-01T04:42:51.590101]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 iostat; echo `date +%s`' iostat stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:51.956309]node153: iostat: no process found
-node154: iostat: no process found
-
-[2016-06-01T04:42:51.956577]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 mpstat; echo `date +%s`' mpstat stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:52.323027]node153: mpstat: no process found
-node154: mpstat: no process found
-
-[2016-06-01T04:42:52.323278]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'killall -9 fatrace;']
-[2016-06-01T04:42:52.675392]node153: fatrace: no process found
-pdsh@node153: node153: ssh exited with exit code 1
-node154: fatrace: no process found
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:52.675813][ERROR]: node153: fatrace: no process found
-pdsh@node153: node153: ssh exited with exit code 1
-node154: fatrace: no process found
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:52.675951]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "cat /proc/interrupts > /opt//`hostname`_interrupts_end.txt; echo `date +%s`' interrupt stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:53.035616]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'killall -9 blktrace;']
-[2016-06-01T04:42:53.390021]node153: blktrace: no process found
-pdsh@node153: node153: ssh exited with exit code 1
-node154: blktrace: no process found
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:53.390323][ERROR]: node153: blktrace: no process found
-pdsh@node153: node153: ssh exited with exit code 1
-node154: blktrace: no process found
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:53.390445]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'killall -9 strace;']
-[2016-06-01T04:42:53.743847]node153: strace: no process found
-pdsh@node153: node153: ssh exited with exit code 1
-node154: strace: no process found
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:53.744142][ERROR]: node153: strace: no process found
-pdsh@node153: node153: ssh exited with exit code 1
-node154: strace: no process found
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:53.744283]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 top; echo `date +%s`' top stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:53.898508]node153: top: no process found
-
-[2016-06-01T04:42:53.898946]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 sar; echo `date +%s`' sar stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:54.059406]node153: sar: no process found
-
-[2016-06-01T04:42:54.059655]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 iostat; echo `date +%s`' iostat stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:54.213199]node153: iostat: no process found
-
-[2016-06-01T04:42:54.213413]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 mpstat; echo `date +%s`' mpstat stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:54.371484]node153: mpstat: no process found
-
-[2016-06-01T04:42:54.371738]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "cat /proc/interrupts > /opt//`hostname`_interrupts_end.txt; echo `date +%s`' interrupt stop' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:54.538337][LOG]: Prepare_run: distribute fio.conf to all clients
-[2016-06-01T04:42:54.538626]['scp', '-oConnectTimeout=15', '-r', '../conf/fio.conf', 'root@node153:/opt/']
-[2016-06-01T04:42:54.695131]
-[2016-06-01T04:42:54.695318]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'rm -rf /opt//*.txt; rm -rf /opt//*.log; rm /opt//*blktrace*; rm -rf /opt//lttng-traces/*']
-[2016-06-01T04:42:55.045397]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'rm -rf /opt//*.txt; rm -rf /opt//*.log']
-[2016-06-01T04:42:55.189345][LOG]: Cleaned original data under /opt/ 
-[2016-06-01T04:42:55.189645][LOG]: Run Benchmark Status: collect system metrics and run benchmark
-[2016-06-01T04:42:55.189892][LOG]: This test will run 500 secs until finish.
-[2016-06-01T04:42:55.190072]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "echo '1' > /proc/sys/vm/drop_caches && sync"]
-[2016-06-01T04:42:56.004167]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'for i in `seq 1 601`;do echo `date "+%Y_%m_%d %H:%M:%S"` `ceph health` >> /opt//`hostname`_ceph_health.txt; sleep 1;done']
-[2016-06-01T04:42:56.012357]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "ps aux | grep ceph-osd | grep -v 'grep' > /opt//`hostname`_ps.txt"]
-[2016-06-01T04:42:57.388065]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'date > /opt//`hostname`_process_log.txt']
-[2016-06-01T04:42:57.749384][LOG]: Start system data collector under ['node153', 'node154'] 
-[2016-06-01T04:42:57.749718]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "cat /proc/interrupts > /opt//`hostname`_interrupts_start.txt; echo `date +%s`' interrupt start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:58.132356]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "top -c -b -d 1 > /opt//`hostname`_top.txt & echo `date +%s`' top start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:58.476027]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "mpstat -P ALL 1 > /opt//`hostname`_mpstat.txt & echo `date +%s`' mpstat start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:58.833208]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "iostat -p ALL -dxm 1 > /opt//`hostname`_iostat.txt & echo `date +%s`' iostat start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:59.173224]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "sar -A 1 > /opt//`hostname`_sar.txt & echo `date +%s`' sar start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:42:59.540065][LOG]: Start perfcounter data collector under ['node153', 'node154'] 
-[2016-06-01T04:42:59.540402]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "echo `date +%s`' perfcounter start' >> /opt//`hostname`_process_log.txt; for i in `seq 1 600`; do find /var/run/ceph -name '*osd*asok' | while read path; do filename=`echo $path | awk -F/ '{print $NF}'`;res_file=/opt//`hostname`_${filename}.txt; echo `ceph --admin-daemon $path perf dump`, >> ${res_file} & done; sleep 1; done; echo `date +%s`' perfcounter stop' >> /opt//`hostname`_process_log.txt;"]
-[2016-06-01T04:42:59.550000][LOG]: Start blktrace data collector under node153 
-[2016-06-01T04:42:59.550302]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdb2 -o `hostname`_osd__dev_vdb2 2>&1 > /opt//`hostname`_blktrace__dev_vdb2.log']
-[2016-06-01T04:42:59.563525]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdc2 -o `hostname`_osd__dev_vdc2 2>&1 > /opt//`hostname`_blktrace__dev_vdc2.log']
-[2016-06-01T04:42:59.573126]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdd2 -o `hostname`_osd__dev_vdd2 2>&1 > /opt//`hostname`_blktrace__dev_vdd2.log']
-[2016-06-01T04:42:59.602223]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdb1 -o `hostname`_journal__dev_vdb1 2>&1 > /opt//`hostname`_blktrace__dev_vdb1.log']
-[2016-06-01T04:42:59.639031]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdc1 -o `hostname`_journal__dev_vdc1 2>&1 > /opt//`hostname`_blktrace__dev_vdc1.log']
-[2016-06-01T04:42:59.688292]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdd1 -o `hostname`_journal__dev_vdd1 2>&1 > /opt//`hostname`_blktrace__dev_vdd1.log']
-[2016-06-01T04:42:59.739238][LOG]: Start blktrace data collector under node154 
-[2016-06-01T04:42:59.739561]['pdsh', '-R', 'exec', '-w', 'root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdb2 -o `hostname`_osd__dev_vdb2 2>&1 > /opt//`hostname`_blktrace__dev_vdb2.log']
-[2016-06-01T04:42:59.808690]['pdsh', '-R', 'exec', '-w', 'root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdc2 -o `hostname`_osd__dev_vdc2 2>&1 > /opt//`hostname`_blktrace__dev_vdc2.log']
-[2016-06-01T04:42:59.828041]['pdsh', '-R', 'exec', '-w', 'root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdd2 -o `hostname`_osd__dev_vdd2 2>&1 > /opt//`hostname`_blktrace__dev_vdd2.log']
-[2016-06-01T04:42:59.898918]['pdsh', '-R', 'exec', '-w', 'root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdb1 -o `hostname`_journal__dev_vdb1 2>&1 > /opt//`hostname`_blktrace__dev_vdb1.log']
-[2016-06-01T04:42:59.951067]['pdsh', '-R', 'exec', '-w', 'root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdc1 -o `hostname`_journal__dev_vdc1 2>&1 > /opt//`hostname`_blktrace__dev_vdc1.log']
-[2016-06-01T04:43:00.006642]['pdsh', '-R', 'exec', '-w', 'root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/vdd1 -o `hostname`_journal__dev_vdd1 2>&1 > /opt//`hostname`_blktrace__dev_vdd1.log']
-[2016-06-01T04:43:00.048994][LOG]: Start fatrace data collector under ['node153', 'node154'] 
-[2016-06-01T04:43:00.049256]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', 'fatrace -o /opt//`hostname`_fatrace.txt &']
-[2016-06-01T04:43:01.263196][LOG]: Start strace data collector under ['node153', 'node154'] 
-[2016-06-01T04:43:01.263433]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "ps aux | grep ceph-osd | grep -v 'grep' | awk '{print $2}' | while read pid;do strace -ttt -T -e trace=desc -p ${pid} -o /opt//`hostname`_strace_${pid}.txt 2>&1 > /opt//`hostname`_strace_${pid}.log & done"]
-[2016-06-01T04:43:01.293303][LOG]: Start lttng data collector under ['node153', 'node154'] 
-[2016-06-01T04:43:01.293530]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154', 'ssh', '%h', '-oConnectTimeout=15', "export HOME='/opt/'; lttng destroy 2>/dev/null; lttng create zipkin; lttng enable-channel channel0 -u --buffers-pid; lttng enable-event -c channel0 --userspace zipkin:*; lttng start;"]
-[2016-06-01T04:43:03.187144]node153: Did you create a session? (lttng create <my_session>)
-node153: Session zipkin created.
-node153: Traces will be written in /opt//lttng-traces/zipkin-20160601-044301
-node153: UST channel channel0 enabled for session zipkin
-node153: UST event zipkin:* created in channel channel0
-node153: Tracing started for session zipkin
-node154: Did you create a session? (lttng create <my_session>)
-node154: Session zipkin created.
-node154: Traces will be written in /opt//lttng-traces/zipkin-20160601-044302
-node154: UST channel channel0 enabled for session zipkin
-node154: UST event zipkin:* created in channel channel0
-node154: Tracing started for session zipkin
-
-[2016-06-01T04:43:03.187471]['scp', '-oConnectTimeout=15', '-r', '../conf/nvme-pack/', 'root@node153:/opt/']
-[2016-06-01T04:43:10.904848]
-[2016-06-01T04:43:10.905014]['scp', '-oConnectTimeout=15', '-r', '../conf/nvme-pack/', 'root@node154:/opt/']
-[2016-06-01T04:43:12.794704]
-[2016-06-01T04:43:12.794923]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'for i in `seq 1 601`;do echo `date "+%Y_%m_%d %H:%M:%S"` `ceph health` >> /opt//`hostname`_ceph_health.txt; sleep 1;done']
-[2016-06-01T04:43:12.829340]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'date > /opt//`hostname`_process_log.txt']
-[2016-06-01T04:43:13.448188][LOG]: Start system data collector under ['node153'] 
-[2016-06-01T04:43:13.448466]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "cat /proc/interrupts > /opt//`hostname`_interrupts_start.txt; echo `date +%s`' interrupt start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:43:14.352342]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "top -c -b -d 1 > /opt//`hostname`_top.txt & echo `date +%s`' top start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:43:14.931973]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "mpstat -P ALL 1 > /opt//`hostname`_mpstat.txt & echo `date +%s`' mpstat start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:43:15.632472]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "iostat -p -dxm 1 > /opt//`hostname`_iostat.txt & echo `date +%s`' iostat start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:43:16.106756]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "sar -A 1 > /opt//`hostname`_sar.txt & echo `date +%s`' sar start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:43:16.848220][LOG]: Start perfcounter data collector under ['node153'] 
-[2016-06-01T04:43:16.848528]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', "echo `date +%s`' perfcounter start' >> /opt//`hostname`_process_log.txt; for i in `seq 1 600`; do find /var/run/ceph -name '*client*asok' | while read path; do filename=`echo $path | awk -F/ '{print $NF}'`;res_file=/opt//`hostname`_${filename}.txt; echo `ceph --admin-daemon $path perf dump`, >> ${res_file} & done; sleep 1; done; echo `date +%s`' perfcounter stop' >> /opt//`hostname`_process_log.txt;"]
-[2016-06-01T04:43:16.885267]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'for rbdname in foo; do POOLNAME=rbd RBDNAME=${rbdname} fio --output /opt//`hostname`_${rbdname}_fio.txt --write_bw_log=/opt//`hostname`_${rbdname}_fio --write_lat_log=/opt//`hostname`_${rbdname}_fio --write_iops_log=/opt//`hostname`_${rbdname}_fio --section fiorbd-randwrite-4k-qd64-1g-100-400-fiorbd /opt//fio.conf 2>/opt//`hostname`_${rbdname}_fio_errorlog.txt & done']
-[2016-06-01T04:43:16.927435]['pdsh', '-R', 'exec', '-w', 'root@node153,root@node154,root@node153', 'ssh', '%h', '-oConnectTimeout=15', "echo `date +%s`' fio start' >> /opt//`hostname`_process_log.txt"]
-[2016-06-01T04:43:19.307745]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:43:21.101528]node153: 25562
-
-[2016-06-01T04:43:21.101917][WARNING]: 1 fio job still runing
-[2016-06-01T04:43:21.102130][LOG]: 1 FIO Jobs starts on ['node153']
-[2016-06-01T04:43:21.102279]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:43:21.649456]node153: 25562
-
-[2016-06-01T04:43:21.649831][WARNING]: 1 fio job still runing
-[2016-06-01T04:43:26.660920]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:43:27.212526]node153: 25562
-
-[2016-06-01T04:43:27.212990][WARNING]: 1 fio job still runing
-[2016-06-01T04:43:32.217797]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:43:32.808056]node153: 25562
-
-[2016-06-01T04:43:32.808366][WARNING]: 1 fio job still runing
-[2016-06-01T04:43:37.813820]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:43:38.233105]node153: 25562
-
-[2016-06-01T04:43:38.233394][WARNING]: 1 fio job still runing
-[2016-06-01T04:43:43.240124]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:43:43.765720]node153: 25562
-
-[2016-06-01T04:43:43.766071][WARNING]: 1 fio job still runing
-[2016-06-01T04:43:48.775011]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:43:49.294044]node153: 25562
-
-[2016-06-01T04:43:49.294355][WARNING]: 1 fio job still runing
-[2016-06-01T04:43:54.308773]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:43:54.887518]node153: 25562
-
-[2016-06-01T04:43:54.887939][WARNING]: 1 fio job still runing
-[2016-06-01T04:43:59.895772]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:00.378776]node153: 25562
-
-[2016-06-01T04:44:00.379103][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:05.385284]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:05.869907]node153: 25562
-
-[2016-06-01T04:44:05.870250][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:10.885754]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:11.405214]node153: 25562
-
-[2016-06-01T04:44:11.405533][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:16.412811]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:17.094215]node153: 25562
-
-[2016-06-01T04:44:17.094570][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:22.102744]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:22.643799]node153: 25562
-
-[2016-06-01T04:44:22.644116][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:27.648760]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:28.185262]node153: 25562
-
-[2016-06-01T04:44:28.185647][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:33.194031]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:33.661633]node153: 25562
-
-[2016-06-01T04:44:33.661956][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:38.674279]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:39.268756]node153: 25562
-
-[2016-06-01T04:44:39.269132][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:44.276754]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:44.933087]node153: 25562
-
-[2016-06-01T04:44:44.933427][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:49.955043]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:50.722778]node153: 25562
-
-[2016-06-01T04:44:50.723089][WARNING]: 1 fio job still runing
-[2016-06-01T04:44:55.737747]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:44:56.246139]node153: 25562
-
-[2016-06-01T04:44:56.246467][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:01.260794]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:01.685002]node153: 25562
-
-[2016-06-01T04:45:01.685334][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:06.693745]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:07.293033]node153: 25562
-
-[2016-06-01T04:45:07.293375][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:12.303806]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:12.898446]node153: 25562
-
-[2016-06-01T04:45:12.898786][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:17.912146]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:18.547438]node153: 25562
-
-[2016-06-01T04:45:18.547834][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:23.557830]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:24.008920]node153: 25562
-
-[2016-06-01T04:45:24.009252][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:29.014797]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:29.448172]node153: 25562
-
-[2016-06-01T04:45:29.448499][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:34.456015]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:35.067817]node153: 25562
-
-[2016-06-01T04:45:35.068240][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:40.080832]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:40.667251]node153: 25562
-
-[2016-06-01T04:45:40.667567][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:45.679756]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:46.143130]node153: 25562
-
-[2016-06-01T04:45:46.143449][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:51.156837]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:51.648431]node153: 25562
-
-[2016-06-01T04:45:51.648828][WARNING]: 1 fio job still runing
-[2016-06-01T04:45:56.654574]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:45:57.051306]node153: 25562
-
-[2016-06-01T04:45:57.051666][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:02.057097]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:02.715050]node153: 25562
-
-[2016-06-01T04:46:02.715434][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:07.728779]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:08.178038]node153: 25562
-
-[2016-06-01T04:46:08.178337][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:13.189824]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:13.748182]node153: 25562
-
-[2016-06-01T04:46:13.748553][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:18.753756]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:19.315786]node153: 25562
-
-[2016-06-01T04:46:19.316127][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:24.330763]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:25.011333]node153: 25562
-
-[2016-06-01T04:46:25.011728][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:30.018206]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:30.546454]node153: 25562
-
-[2016-06-01T04:46:30.546795][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:35.551812]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:36.058219]node153: 25562
-
-[2016-06-01T04:46:36.058555][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:41.065819]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:41.507268]node153: 25562
-
-[2016-06-01T04:46:41.507564][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:46.520750]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:46.932167]node153: 25562
-
-[2016-06-01T04:46:46.932500][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:51.947738]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:52.462070]node153: 25562
-
-[2016-06-01T04:46:52.462409][WARNING]: 1 fio job still runing
-[2016-06-01T04:46:57.472144]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:46:58.162354]node153: 25562
-
-[2016-06-01T04:46:58.162738][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:03.168996]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:03.716828]node153: 25562
-
-[2016-06-01T04:47:03.717129][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:08.723863]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:09.387715]node153: 25562
-
-[2016-06-01T04:47:09.388084][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:14.392781]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:14.875250]node153: 25562
-
-[2016-06-01T04:47:14.875537][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:19.884820]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:20.418940]node153: 25562
-
-[2016-06-01T04:47:20.419310][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:25.431781]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:25.874282]node153: 25562
-
-[2016-06-01T04:47:25.874629][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:30.879761]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:31.420855]node153: 25562
-
-[2016-06-01T04:47:31.421247][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:36.429759]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:36.990308]node153: 25562
-
-[2016-06-01T04:47:36.990653][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:41.999797]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:42.555993]node153: 25562
-
-[2016-06-01T04:47:42.556377][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:47.567835]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:47.952165]node153: 25562
-
-[2016-06-01T04:47:47.952466][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:52.966486]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:53.551524]node153: 25562
-
-[2016-06-01T04:47:53.551974][WARNING]: 1 fio job still runing
-[2016-06-01T04:47:58.556759]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:47:59.083108]node153: 25562
-
-[2016-06-01T04:47:59.083442][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:04.094792]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:04.779870]node153: 25562
-
-[2016-06-01T04:48:04.780240][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:09.800816]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:10.255320]node153: 25562
-
-[2016-06-01T04:48:10.255660][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:15.268777]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:15.857156]node153: 25562
-
-[2016-06-01T04:48:15.857504][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:20.865848]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:21.392185]node153: 25562
-
-[2016-06-01T04:48:21.392494][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:26.401307]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:27.019155]node153: 25562
-
-[2016-06-01T04:48:27.019495][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:32.025876]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:32.673356]node153: 25562
-
-[2016-06-01T04:48:32.673758][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:37.680008]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:38.198337]node153: 25562
-
-[2016-06-01T04:48:38.198769][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:43.203784]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:43.767720]node153: 25562
-
-[2016-06-01T04:48:43.768025][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:48.779351]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:49.378567]node153: 25562
-
-[2016-06-01T04:48:49.379028][WARNING]: 1 fio job still runing
-[2016-06-01T04:48:54.392074]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:48:55.008381]node153: 25562
-
-[2016-06-01T04:48:55.008728][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:00.015773]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:00.548314]node153: 25562
-
-[2016-06-01T04:49:00.548654][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:05.561810]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:06.142913]node153: 25562
-
-[2016-06-01T04:49:06.143219][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:11.154766]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:11.765855]node153: 25562
-
-[2016-06-01T04:49:11.766195][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:16.776784]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:17.419129]node153: 25562
-
-[2016-06-01T04:49:17.419495][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:22.429780]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:23.012128]node153: 25562
-
-[2016-06-01T04:49:23.012451][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:28.024776]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:28.654843]node153: 25562
-
-[2016-06-01T04:49:28.655134][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:33.668803]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:34.201190]node153: 25562
-
-[2016-06-01T04:49:34.201501][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:39.209757]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:39.694227]node153: 25562
-
-[2016-06-01T04:49:39.694542][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:44.699739]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:45.251879]node153: 25562
-
-[2016-06-01T04:49:45.252190][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:50.264724]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:50.925918]node153: 25562
-
-[2016-06-01T04:49:50.926327][WARNING]: 1 fio job still runing
-[2016-06-01T04:49:55.932733]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:49:56.434318]node153: 25562
-
-[2016-06-01T04:49:56.434658][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:01.439774]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:01.961055]node153: 25562
-
-[2016-06-01T04:50:01.961415][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:06.966739]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:07.418800]node153: 25562
-
-[2016-06-01T04:50:07.419133][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:12.432801]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:13.019269]node153: 25562
-
-[2016-06-01T04:50:13.019584][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:18.028745]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:18.558016]node153: 25562
-
-[2016-06-01T04:50:18.558328][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:23.563827]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:24.315349]node153: 25562
-
-[2016-06-01T04:50:24.315760][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:29.320754]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:29.888856]node153: 25562
-
-[2016-06-01T04:50:29.889196][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:34.893860]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:35.510399]node153: 25562
-
-[2016-06-01T04:50:35.510720][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:40.519830]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:40.984343]node153: 25562
-
-[2016-06-01T04:50:40.984711][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:45.993767]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:46.619984]node153: 25562
-
-[2016-06-01T04:50:46.620302][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:51.633754]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:52.140257]node153: 25562
-
-[2016-06-01T04:50:52.140644][WARNING]: 1 fio job still runing
-[2016-06-01T04:50:57.153715]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:50:57.730634]node153: 25562
-
-[2016-06-01T04:50:57.731019][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:02.735856]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:03.300545]node153: 25562
-
-[2016-06-01T04:51:03.300989][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:08.315955]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:08.900478]node153: 25562
-
-[2016-06-01T04:51:08.900828][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:13.914783]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:14.387885]node153: 25562
-
-[2016-06-01T04:51:14.388224][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:19.398496]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:19.919852]node153: 25562
-
-[2016-06-01T04:51:19.920200][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:24.924797]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:25.449060]node153: 25562
-
-[2016-06-01T04:51:25.449373][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:30.453729]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:30.966721]node153: 25562
-
-[2016-06-01T04:51:30.967054][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:35.976832]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:36.561858]node153: 25562
-
-[2016-06-01T04:51:36.562194][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:41.571844]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:42.099402]node153: 25562
-
-[2016-06-01T04:51:42.099794][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:47.105315]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:47.749173]node153: 25562
-
-[2016-06-01T04:51:47.749490][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:52.755722]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:53.279955]node153: 25562
-
-[2016-06-01T04:51:53.280277][WARNING]: 1 fio job still runing
-[2016-06-01T04:51:58.289883]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:51:58.958060]node153: 25562
-
-[2016-06-01T04:51:58.958398][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:03.969761]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:04.411193]node153: 25562
-
-[2016-06-01T04:52:04.411507][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:09.416860]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:09.924491]node153: 25562
-
-[2016-06-01T04:52:09.924892][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:14.937111]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:15.444965]node153: 25562
-
-[2016-06-01T04:52:15.445290][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:20.457727]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:21.077103]node153: 25562
-
-[2016-06-01T04:52:21.077424][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:26.084860]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:26.691847]node153: 25562
-
-[2016-06-01T04:52:26.692182][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:31.701771]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:32.260047]node153: 25562
-
-[2016-06-01T04:52:32.260410][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:37.268929]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:37.778838]node153: 25562
-
-[2016-06-01T04:52:37.779165][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:42.784750]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:43.326329]node153: 25562
-
-[2016-06-01T04:52:43.326737][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:48.335827]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:48.790748]node153: 25562
-
-[2016-06-01T04:52:48.791079][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:53.797207]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:54.344315]node153: 25562
-
-[2016-06-01T04:52:54.344688][WARNING]: 1 fio job still runing
-[2016-06-01T04:52:59.350760]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:52:59.867038]node153: 25562
-
-[2016-06-01T04:52:59.867375][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:04.871751]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:05.511612]node153: 25562
-
-[2016-06-01T04:53:05.511936][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:10.523929]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:11.007776]node153: 25562
-
-[2016-06-01T04:53:11.008116][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:16.016781]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:16.549824]node153: 25562
-
-[2016-06-01T04:53:16.550199][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:21.554863]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:22.192381]node153: 25562
-
-[2016-06-01T04:53:22.192744][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:27.207735]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:27.785783]node153: 25562
-
-[2016-06-01T04:53:27.786098][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:32.794885]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:33.264918]node153: 25562
-
-[2016-06-01T04:53:33.265305][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:38.274793]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:38.770315]node153: 25562
-
-[2016-06-01T04:53:38.770668][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:43.776293]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:44.331306]node153: 25562
-
-[2016-06-01T04:53:44.331724][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:49.341925]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:49.886099]node153: 25562
-
-[2016-06-01T04:53:49.886454][WARNING]: 1 fio job still runing
-[2016-06-01T04:53:54.898754]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:53:55.476302]node153: 25562
-
-[2016-06-01T04:53:55.476645][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:00.484745]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:01.082188]node153: 25562
-
-[2016-06-01T04:54:01.082547][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:06.088752]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:06.562001]node153: 25562
-
-[2016-06-01T04:54:06.562320][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:11.576789]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:12.097955]node153: 25562
-
-[2016-06-01T04:54:12.098311][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:17.107230]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:17.783803]node153: 25562
-
-[2016-06-01T04:54:17.784261][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:22.789217]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:23.391659]node153: 25562
-
-[2016-06-01T04:54:23.391998][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:28.396744]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:28.955400]node153: 25562
-
-[2016-06-01T04:54:28.955780][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:33.970009]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:34.592851]node153: 25562
-
-[2016-06-01T04:54:34.593158][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:39.605816]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:40.149393]node153: 25562
-
-[2016-06-01T04:54:40.149787][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:45.160852]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:45.712106]node153: 25562
-
-[2016-06-01T04:54:45.712420][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:50.721833]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:51.260543]node153: 25562
-
-[2016-06-01T04:54:51.260953][WARNING]: 1 fio job still runing
-[2016-06-01T04:54:56.272741]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:54:56.771841]node153: 25562
-
-[2016-06-01T04:54:56.772172][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:01.786807]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:02.389129]node153: 25562
-
-[2016-06-01T04:55:02.389501][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:07.404753]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:07.842781]node153: 25562
-
-[2016-06-01T04:55:07.843092][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:12.854726]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:13.361827]node153: 25562
-
-[2016-06-01T04:55:13.362136][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:18.369942]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:18.805792]node153: 25562
-
-[2016-06-01T04:55:18.806118][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:23.819830]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:24.426730]node153: 25562
-
-[2016-06-01T04:55:24.427062][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:29.440754]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:29.920691]node153: 25562
-
-[2016-06-01T04:55:29.921000][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:34.927968]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:35.536991]node153: 25562
-
-[2016-06-01T04:55:35.537349][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:40.541974]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:41.068259]node153: 25562
-
-[2016-06-01T04:55:41.068549][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:46.083795]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:46.675618]node153: 25562
-
-[2016-06-01T04:55:46.675973][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:51.687256]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:52.138982]node153: 25562
-
-[2016-06-01T04:55:52.139307][WARNING]: 1 fio job still runing
-[2016-06-01T04:55:57.152766]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:55:57.751213]node153: 25562
-
-[2016-06-01T04:55:57.751538][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:02.762751]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:03.304700]node153: 25562
-
-[2016-06-01T04:56:03.305071][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:08.318909]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:08.867070]node153: 25562
-
-[2016-06-01T04:56:08.867406][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:13.873891]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:14.329796]node153: 25562
-
-[2016-06-01T04:56:14.330144][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:19.342334]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:19.935517]node153: 25562
-
-[2016-06-01T04:56:19.935942][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:24.953037]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:25.493874]node153: 25562
-
-[2016-06-01T04:56:25.494260][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:30.503526]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:30.981215]node153: 25562
-
-[2016-06-01T04:56:30.981548][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:35.989836]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:36.446362]node153: 25562
-
-[2016-06-01T04:56:36.446685][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:41.463762]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:41.980688]node153: 25562
-
-[2016-06-01T04:56:41.981031][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:46.987947]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:47.626423]node153: 25562
-
-[2016-06-01T04:56:47.626816][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:52.636741]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:53.146326]node153: 25562
-
-[2016-06-01T04:56:53.146782][WARNING]: 1 fio job still runing
-[2016-06-01T04:56:58.158811]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:56:58.722090]node153: 25562
-
-[2016-06-01T04:56:58.722456][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:03.735796]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:04.220462]node153: 25562
-
-[2016-06-01T04:57:04.220843][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:09.226751]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:09.706572]node153: 25562
-
-[2016-06-01T04:57:09.706908][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:14.712799]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:15.334847]node153: 25562
-
-[2016-06-01T04:57:15.335186][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:20.339767]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:21.077248]node153: 25562
-
-[2016-06-01T04:57:21.077568][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:26.087762]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:26.636156]node153: 25562
-
-[2016-06-01T04:57:26.636479][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:31.649827]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:32.137153]node153: 25562
-
-[2016-06-01T04:57:32.137537][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:37.145790]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:37.599718]node153: 25562
-
-[2016-06-01T04:57:37.600042][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:42.613831]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:43.127746]node153: 25562
-
-[2016-06-01T04:57:43.128114][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:48.132805]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:48.712953]node153: 25562
-
-[2016-06-01T04:57:48.713300][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:53.717867]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:54.264931]node153: 25562
-
-[2016-06-01T04:57:54.265274][WARNING]: 1 fio job still runing
-[2016-06-01T04:57:59.277775]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:57:59.761177]node153: 25562
-
-[2016-06-01T04:57:59.761514][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:04.770888]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:05.405701]node153: 25562
-
-[2016-06-01T04:58:05.406076][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:10.415848]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:10.932306]node153: 25562
-
-[2016-06-01T04:58:10.932674][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:15.951376]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:16.446659]node153: 25562
-
-[2016-06-01T04:58:16.446984][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:21.456778]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:21.936377]node153: 25562
-
-[2016-06-01T04:58:21.936730][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:26.943852]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:27.427555]node153: 25562
-
-[2016-06-01T04:58:27.427923][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:32.433794]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:32.811052]node153: 25562
-
-[2016-06-01T04:58:32.811366][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:37.815814]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:38.339929]node153: 25562
-
-[2016-06-01T04:58:38.340309][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:43.352877]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:43.845923]node153: 25562
-
-[2016-06-01T04:58:43.846243][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:48.853193]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:49.447830]node153: 25562
-
-[2016-06-01T04:58:49.448200][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:54.462762]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:58:54.855041]node153: 25562
-
-[2016-06-01T04:58:54.855356][WARNING]: 1 fio job still runing
-[2016-06-01T04:58:59.859875]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:00.270619]node153: 25562
-
-[2016-06-01T04:59:00.270984][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:05.278824]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:05.692560]node153: 25562
-
-[2016-06-01T04:59:05.692928][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:10.706859]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:11.250220]node153: 25562
-
-[2016-06-01T04:59:11.250580][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:16.263786]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:16.701976]node153: 25562
-
-[2016-06-01T04:59:16.702284][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:21.713734]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:22.207240]node153: 25562
-
-[2016-06-01T04:59:22.207565][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:27.222777]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:27.749634]node153: 25562
-
-[2016-06-01T04:59:27.749966][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:32.763519]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:33.245576]node153: 25562
-
-[2016-06-01T04:59:33.245928][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:38.253762]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:38.696720]node153: 25562
-
-[2016-06-01T04:59:38.697038][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:43.708775]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:44.139708]node153: 25562
-
-[2016-06-01T04:59:44.140015][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:49.153743]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:49.744432]node153: 25562
-
-[2016-06-01T04:59:49.744755][WARNING]: 1 fio job still runing
-[2016-06-01T04:59:54.749725]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T04:59:55.254195]node153: 25562
-
-[2016-06-01T04:59:55.254550][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:00.263717]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:00.741495]node153: 25562
-
-[2016-06-01T05:00:00.741830][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:05.756745]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:06.361898]node153: 25562
-
-[2016-06-01T05:00:06.362231][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:11.375760]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:12.034118]node153: 25562
-
-[2016-06-01T05:00:12.034467][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:17.048707]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:17.459911]node153: 25562
-
-[2016-06-01T05:00:17.460269][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:17.879244]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:20.287291]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:20.475999]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:22.466323]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:22.593012]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:22.629067]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:23.008506]node153: 25562
-
-[2016-06-01T05:00:23.008964][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:25.087904]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:25.104525]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:27.540501]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:27.626152]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:28.015934]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:28.494992]node153: 25562
-
-[2016-06-01T05:00:28.495323][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:29.829849]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:29.849191]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:31.931722]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:31.954849]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:33.500273]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:34.085852]node153: 25562
-
-[2016-06-01T05:00:34.086239][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:34.327017]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:34.347977]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:36.708706]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:36.936229]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:39.097600]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:39.272569]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:39.664084]node153: 25562
-
-[2016-06-01T05:00:39.664439][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:42.516274]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:44.618980]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:44.684832]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:45.226855]node153: 25562
-
-[2016-06-01T05:00:45.227824][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:45.508602]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:47.726652]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:48.512605]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:50.237600]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:50.742793]node153: 25562
-
-[2016-06-01T05:00:50.743115][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:50.908781]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:51.506774]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:53.717102]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:54.511038]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:55.757772]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:00:56.305850]node153: 25562
-
-[2016-06-01T05:00:56.306194][WARNING]: 1 fio job still runing
-[2016-06-01T05:00:56.875488]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:00:57.512837]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:00:59.997128]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:00.516150]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:01.313848]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:01.795249]node153: 25562
-
-[2016-06-01T05:01:01.795671][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:02.878154]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:03.523707]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:05.742714]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:06.519813]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:06.803058]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:07.374476]node153: 25562
-
-[2016-06-01T05:01:07.374868][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:08.764670]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:09.530436]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:12.135478]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:12.384721]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:12.513160]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:12.958824]node153: 25562
-
-[2016-06-01T05:01:12.959113][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:14.548915]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:15.516029]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:17.875261]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:17.973779]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:18.437834]node153: 25562
-
-[2016-06-01T05:01:18.438158][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:18.517702]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:21.038246]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:21.530997]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:23.444941]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:23.966900]node153: 25562
-
-[2016-06-01T05:01:23.966900][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:24.054777]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:24.537606]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:26.735053]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:27.543090]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:28.972801]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:29.520428]node153: 25562
-
-[2016-06-01T05:01:29.520762][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:29.982082]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:30.534434]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:32.958136]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:33.551032]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:34.532590]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:34.974427]node153: 25562
-
-[2016-06-01T05:01:34.974752][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:35.930944]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:36.539760]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:38.876608]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:39.555152]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:39.989738]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:40.557186]node153: 25562
-
-[2016-06-01T05:01:40.557286][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:41.984015]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:42.546083]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:44.804996]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:45.537812]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:45.572266]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:46.020106]node153: 25562
-
-[2016-06-01T05:01:46.020391][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:47.692729]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:48.544570]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:50.910003]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:51.029727]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:51.504604]node153: 25562
-
-[2016-06-01T05:01:51.505000][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:51.540880]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:53.834906]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:01:54.531102]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:01:56.517753]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:01:56.988789]node153: 25562
-
-[2016-06-01T05:01:56.989079][WARNING]: 1 fio job still runing
-[2016-06-01T05:01:58.023877]pdsh@node153: node153: ssh exited with exit code 124
-
-[2016-06-01T05:01:58.024148][ERROR]: pdsh@node153: node153: ssh exited with exit code 124
-
-[2016-06-01T05:01:58.045994]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:01.577114]pdsh@node153: node153: ssh exited with exit code 124
-
-[2016-06-01T05:02:01.577368][ERROR]: pdsh@node153: node153: ssh exited with exit code 124
-
-[2016-06-01T05:02:01.599386]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:01.993707]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:02.481814]node153: 25562
-
-[2016-06-01T05:02:02.482124][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:03.663123]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:03.680681]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:05.955191]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:06.533201]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:07.486725]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:07.955327]node153: 25562
-
-[2016-06-01T05:02:07.955627][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:08.784805]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:09.538173]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:11.901199]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:12.538679]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:12.960714]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:13.430189]node153: 25562
-
-[2016-06-01T05:02:13.430483][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:14.852686]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:15.563235]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:17.999918]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:18.445739]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:18.544819]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:19.016051]node153: 25562
-
-[2016-06-01T05:02:19.016373][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:20.878417]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:21.573501]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:24.033611]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:24.052200]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:24.480806]node153: 25562
-
-[2016-06-01T05:02:24.481143][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:24.587572]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:26.979035]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:27.575028]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:29.487757]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:30.018599]node153: 25562
-
-[2016-06-01T05:02:30.018789][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:31.101063]pdsh@node153: node153: ssh exited with exit code 124
-
-[2016-06-01T05:02:31.101370][ERROR]: pdsh@node153: node153: ssh exited with exit code 124
-
-[2016-06-01T05:02:31.125196]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:33.530948]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:33.560640]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:35.027795]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:35.626108]node153: 25562
-
-[2016-06-01T05:02:35.626518][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:35.819802]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:36.571897]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:38.815968]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:39.570884]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:40.635753]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:41.094833]node153: 25562
-
-[2016-06-01T05:02:41.095090][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:41.820871]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:42.586411]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:44.995057]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             too few PGs per OSD (21 < min 30)
-node153:             5/6 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e33: 6 osds: 1 up, 6 in
-node153:       pgmap v437: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             495 MB used, 103 GB / 104 GB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:45.570968]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:46.103437]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:46.727082]node153: 25562
-
-[2016-06-01T05:02:46.727357][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:47.971103]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             29 pgs stuck stale
-node153:             2/3 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e34: 6 osds: 1 up, 3 in
-node153:       pgmap v438: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             257 MB used, 50897 MB / 51155 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:48.577636]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:50.795128]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             29 pgs stuck stale
-node153:             2/3 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e34: 6 osds: 1 up, 3 in
-node153:       pgmap v438: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             257 MB used, 50897 MB / 51155 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:51.577013]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:51.739757]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:52.264166]node153: 25562
-
-[2016-06-01T05:02:52.264166][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:53.914041]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             29 pgs stuck stale
-node153:             2/3 in osds are down
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e34: 6 osds: 1 up, 3 in
-node153:       pgmap v438: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             257 MB used, 50897 MB / 51155 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:54.573819]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:57.278781]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:02:57.323877]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:02:57.576094]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:02:57.868955]node153: 25562
-
-[2016-06-01T05:02:57.869320][WARNING]: 1 fio job still runing
-[2016-06-01T05:02:59.817052]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:00.582798]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:02.716986]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:02.874779]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:03.341993]node153: 25562
-
-[2016-06-01T05:03:03.342351][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:03.582153]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:05.840781]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:06.578695]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:08.356733]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:08.726377]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:08.867031]node153: 25562
-
-[2016-06-01T05:03:08.867338][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:09.584859]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:11.733150]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:12.583704]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:13.877532]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:14.366372]node153: 25562
-
-[2016-06-01T05:03:14.366824][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:14.928871]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:15.575027]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:17.937635]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:18.582469]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:19.379682]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:19.985475]node153: 25562
-
-[2016-06-01T05:03:19.985885][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:20.722567]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:21.576823]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:23.773294]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:24.596179]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:25.000767]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:25.567548]node153: 25562
-
-[2016-06-01T05:03:25.567936][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:26.944212]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:27.578793]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:29.785458]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:30.579782]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:30.583436]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:31.207827]node153: 25562
-
-[2016-06-01T05:03:31.208151][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:32.908914]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:33.575305]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:35.827912]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:36.226757]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:36.580313]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:36.775976]node153: 25562
-
-[2016-06-01T05:03:36.776309][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:38.914509]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:39.599783]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:41.781124]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:42.164233]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:42.317348]node153: 25562
-
-[2016-06-01T05:03:42.317704][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:42.607094]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:44.751152]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:45.576857]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:47.325728]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:47.808445]node153: 25562
-
-[2016-06-01T05:03:47.808783][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:47.988321]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:48.589508]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:50.864500]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:51.579910]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:52.817751]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:53.371470]node153: 25562
-
-[2016-06-01T05:03:53.371857][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:53.907231]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:54.581138]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:56.736515]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:03:57.581109]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:03:58.380792]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:03:58.839399]node153: 25562
-
-[2016-06-01T05:03:58.839796][WARNING]: 1 fio job still runing
-[2016-06-01T05:03:59.950929]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:04:00.585023]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:04:02.982409]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:04:03.589122]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:04:03.853838]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:04:04.489933]node153: 25562
-
-[2016-06-01T05:04:04.490266][WARNING]: 1 fio job still runing
-[2016-06-01T05:04:06.205348]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:04:06.572029]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:04:08.576693]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:04:09.502793]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:04:09.578254]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:04:09.966131]node153: 25562
-
-[2016-06-01T05:04:09.966440][WARNING]: 1 fio job still runing
-[2016-06-01T05:04:12.046299]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:04:12.581808]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
-[2016-06-01T05:04:14.751833]node153:     cluster 38f7cba8-27ce-11e6-b3e7-525400903ea3
-node153:      health HEALTH_WARN
-node153:             54 pgs stale
-node153:             54 pgs stuck stale
-node153:      monmap e1: 1 mons at {node153=172.28.217.153:6789/0}
-node153:             election epoch 2, quorum 0 node153
-node153:      osdmap e35: 6 osds: 1 up, 1 in
-node153:       pgmap v439: 64 pgs, 1 pools, 128 MB data, 34 objects
-node153:             97808 kB used, 19885 MB / 19981 MB avail
-node153:                   54 stale+active+clean
-node153:                   10 active+clean
-
-[2016-06-01T05:04:14.973850]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
-[2016-06-01T05:04:15.489174]node153: 25562
-
-[2016-06-01T05:04:15.489509][WARNING]: 1 fio job still runing
-[2016-06-01T05:04:15.583210]['pdsh', '-R', 'exec', '-w', 'root@node153', 'ssh', '%h', '-oConnectTimeout=15', 'timeout 3 ceph -s']
+[2016-06-03T05:30:23.078457]['bash', '-c', 'rm -f /root/CeTune/conf/../conf/cetune_error.log']
+[2016-06-03T05:30:23.087798]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'rbd ls -p rbd']
+[2016-06-03T05:30:23.560836]node152: volume-999febe4-d243-4e00-98a7-e8228af9636a
+
+[2016-06-03T05:30:23.561872]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'test -d //mnt/data//14-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd']
+[2016-06-03T05:30:23.825080]pdsh@node152: node152: ssh exited with exit code 1
+
+[2016-06-03T05:30:23.826206][ERROR]: pdsh@node152: node152: ssh exited with exit code 1
+
+[2016-06-03T05:30:23.826318]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'mkdir -p //mnt/data//14-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd']
+[2016-06-03T05:30:24.111609]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'mkdir -p //mnt/data//14-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd/conf/']
+[2016-06-03T05:30:24.387590]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'mkdir -p //mnt/data//14-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd/raw/']
+[2016-06-03T05:30:24.657990][LOG]: RUNID: 14, RESULT_DIR: //mnt/data//14-140-fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd
+[2016-06-03T05:30:24.658542][LOG]: Prerun_check: check if sysstat installed 
+[2016-06-03T05:30:24.658756]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'mpstat']
+[2016-06-03T05:30:30.406378]node166: Linux 3.10.0-327.el7.x86_64 (node166) 	06/03/2016 	_x86_64_	(8 CPU)
+node166: 
+node166: 06:28:24 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+node166: 06:28:24 PM  all    4.27    0.00    7.94    0.31    0.00    0.03    0.00    0.00    0.00   87.46
+node165: Linux 3.10.0-327.el7.x86_64 (node165) 	06/03/2016 	_x86_64_	(8 CPU)
+node165: 
+node165: 06:21:42 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+node165: 06:21:42 PM  all    1.72    0.00    0.95    0.12    0.00    0.01    0.00    0.00    0.00   97.20
+node164: Linux 3.10.0-327.el7.x86_64 (node164) 	06/03/2016 	_x86_64_	(8 CPU)
+node164: 
+node164: 06:21:29 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+node164: 06:21:29 PM  all    1.83    0.00    0.97    0.17    0.00    0.01    0.00    0.00    0.00   97.02
+
+[2016-06-03T05:30:30.406614][LOG]: Prerun_check: check if fatrace installed 
+[2016-06-03T05:30:30.406806]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'fatrace -h']
+[2016-06-03T05:30:36.159834]node166: Usage: fatrace [options...] 
+node166: 
+node166: Options:
+node166:   -c, --current-mount		Only record events on partition/mount of current directory.
+node166:   -o FILE, --output=FILE	Write events to a file instead of standard output.
+node166:   -s SECONDS, --seconds=SECONDS	Stop after the given number of seconds.
+node166:   -t, --timestamp		Add timestamp to events. Give twice for seconds since the epoch.
+node166:   -p PID, --ignore-pid PID	Ignore events for this process ID. Can be specified multiple times.
+node166:   -f TYPES, --filter=TYPES	Show only the given event types; choose from C, R, O, or W, e. g. --filter=OC.
+node166:   -C COMM, --command=COMM	Show only events for this command.
+node166:   -h, --help			Show help.
+node164: Usage: fatrace [options...] 
+node164: 
+node164: Options:
+node164:   -c, --current-mount		Only record events on partition/mount of current directory.
+node164:   -o FILE, --output=FILE	Write events to a file instead of standard output.
+node164:   -s SECONDS, --seconds=SECONDS	Stop after the given number of seconds.
+node164:   -t, --timestamp		Add timestamp to events. Give twice for seconds since the epoch.
+node164:   -p PID, --ignore-pid PID	Ignore events for this process ID. Can be specified multiple times.
+node164:   -f TYPES, --filter=TYPES	Show only the given event types; choose from C, R, O, or W, e. g. --filter=OC.
+node164:   -C COMM, --command=COMM	Show only events for this command.
+node164:   -h, --help			Show help.
+node165: Usage: fatrace [options...] 
+node165: 
+node165: Options:
+node165:   -c, --current-mount		Only record events on partition/mount of current directory.
+node165:   -o FILE, --output=FILE	Write events to a file instead of standard output.
+node165:   -s SECONDS, --seconds=SECONDS	Stop after the given number of seconds.
+node165:   -t, --timestamp		Add timestamp to events. Give twice for seconds since the epoch.
+node165:   -p PID, --ignore-pid PID	Ignore events for this process ID. Can be specified multiple times.
+node165:   -f TYPES, --filter=TYPES	Show only the given event types; choose from C, R, O, or W, e. g. --filter=OC.
+node165:   -C COMM, --command=COMM	Show only events for this command.
+node165:   -h, --help			Show help.
+
+[2016-06-03T05:30:36.160022][LOG]: Prerun_check: check if blktrace installed 
+[2016-06-03T05:30:36.160187]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'blktrace -v']
+[2016-06-03T05:30:41.926325]node166: blktrace version 2.0.0
+node164: blktrace version 2.0.0
+node165: blktrace version 2.0.0
+
+[2016-06-03T05:30:41.926588][LOG]: Prerun_check: check if strace installed 
+[2016-06-03T05:30:41.926899]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'strace -V']
+[2016-06-03T05:30:47.657529]node166: strace -- version 4.8
+node165: strace -- version 4.8
+node164: strace -- version 4.8
+
+[2016-06-03T05:30:47.657707][LOG]: Prerun_check: check if lttng installed 
+[2016-06-03T05:30:47.657888]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'lttng -V']
+[2016-06-03T05:30:53.399537]node166: lttng (LTTng Trace Control) 2.4.1 - Époque Opaque
+node164: lttng (LTTng Trace Control) 2.4.1 - Époque Opaque
+node165: lttng (LTTng Trace Control) 2.4.1 - Époque Opaque
+
+[2016-06-03T05:30:53.399720]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'fio -v']
+[2016-06-03T05:30:53.727285]node152: fio-2.1.10
+
+[2016-06-03T05:30:53.727639][LOG]: check if FIO rbd engine installed
+[2016-06-03T05:30:53.727982]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'fio -enghelp | grep rbd']
+[2016-06-03T05:30:54.071635]node152: 	rbd
+
+[2016-06-03T05:30:54.071892][LOG]: check if rbd volume fully initialized
+[2016-06-03T05:30:54.072102]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "ceph df | grep rbd | awk '{print $3}'"]
+[2016-06-03T05:31:03.821733]node152: 40960M
+
+[2016-06-03T05:31:03.822752][WARNING]: Ceph cluster used data occupied: 41943040.0 KB, planned_space: 4194304.0 KB 
+[2016-06-03T05:31:03.822984]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'export HOME=/opt/; lttng stop; lttng destroy;']
+[2016-06-03T05:31:09.637439]node166: Did you create a session? (lttng create <my_session>)
+node166: Did you create a session? (lttng create <my_session>)
+node165: Did you create a session? (lttng create <my_session>)
+node164: Did you create a session? (lttng create <my_session>)
+node165: Did you create a session? (lttng create <my_session>)
+node164: Did you create a session? (lttng create <my_session>)
+
+[2016-06-03T05:31:09.637587]node166: Error: Can't find valid lttng config /opt//.lttngrc
+node166: Error: Command error
+node166: Error: Can't find valid lttng config /opt//.lttngrc
+node166: Error: Command error
+pdsh@node152: node166: ssh exited with exit code 1
+node165: Error: Can't find valid lttng config /opt//.lttngrc
+node165: Error: Command error
+node164: Error: Can't find valid lttng config /opt//.lttngrc
+node164: Error: Command error
+node165: Error: Can't find valid lttng config /opt//.lttngrc
+node165: Error: Command error
+pdsh@node152: node165: ssh exited with exit code 1
+node164: Error: Can't find valid lttng config /opt//.lttngrc
+node164: Error: Command error
+pdsh@node152: node164: ssh exited with exit code 1
+
+[2016-06-03T05:31:09.637831][ERROR]: node166: Error: Can't find valid lttng config /opt//.lttngrc
+node166: Error: Command error
+node166: Error: Can't find valid lttng config /opt//.lttngrc
+node166: Error: Command error
+pdsh@node152: node166: ssh exited with exit code 1
+node165: Error: Can't find valid lttng config /opt//.lttngrc
+node165: Error: Command error
+node164: Error: Can't find valid lttng config /opt//.lttngrc
+node164: Error: Command error
+node165: Error: Can't find valid lttng config /opt//.lttngrc
+node165: Error: Command error
+pdsh@node152: node165: ssh exited with exit code 1
+node164: Error: Can't find valid lttng config /opt//.lttngrc
+node164: Error: Command error
+pdsh@node152: node164: ssh exited with exit code 1
+
+[2016-06-03T05:31:09.637951]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "echo `date +%s`' perfcounter stop' >> /opt//`hostname`_process_log.txt; ps aux | grep asok |awk '{print $2}'| while read pid;do kill $pid;done"]
+[2016-06-03T05:31:15.543376]node166: bash: line 0: kill: (5854) - No such process
+pdsh@node152: node166: ssh exited with exit code 255
+pdsh@node152: node164: ssh exited with exit code 255
+node165: bash: line 0: kill: (30423) - No such process
+pdsh@node152: node165: ssh exited with exit code 255
+
+[2016-06-03T05:31:15.543690][ERROR]: node166: bash: line 0: kill: (5854) - No such process
+node165: bash: line 0: kill: (30423) - No such process
+
+[2016-06-03T05:31:15.543810]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 top; echo `date +%s`' top stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:31:21.389244]node166: top: no process found
+node165: top: no process found
+node164: top: no process found
+
+[2016-06-03T05:31:21.389450]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 sar; echo `date +%s`' sar stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:31:27.240677]node166: sar: no process found
+node165: sar: no process found
+node164: sar: no process found
+
+[2016-06-03T05:31:27.240911]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 iostat; echo `date +%s`' iostat stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:31:33.111844]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 mpstat; echo `date +%s`' mpstat stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:31:38.939447]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'killall -9 fatrace;']
+[2016-06-03T05:31:44.694383]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "cat /proc/interrupts > /opt//`hostname`_interrupts_end.txt; echo `date +%s`' interrupt stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:31:50.532371]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'killall -9 blktrace;']
+[2016-06-03T05:31:56.276015]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'killall -9 strace;']
+[2016-06-03T05:32:01.750016]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 top; echo `date +%s`' top stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:02.060691]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 sar; echo `date +%s`' sar stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:02.372706]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 iostat; echo `date +%s`' iostat stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:02.693199]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "killall -9 mpstat; echo `date +%s`' mpstat stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:03.003108]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "cat /proc/interrupts > /opt//`hostname`_interrupts_end.txt; echo `date +%s`' interrupt stop' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:03.288409][LOG]: Prepare_run: distribute fio.conf to all clients
+[2016-06-03T05:32:03.288661]['scp', '-oConnectTimeout=15', '-r', '../conf/fio.conf', 'root@node152:/opt/']
+[2016-06-03T05:32:03.557406]
+[2016-06-03T05:32:03.557824]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'rm -rf /opt//*.txt; rm -rf /opt//*.log; rm /opt//*blktrace*; rm -rf /opt//lttng-traces/*']
+[2016-06-03T05:32:08.995945]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'rm -rf /opt//*.txt; rm -rf /opt//*.log']
+[2016-06-03T05:32:09.288538][LOG]: Cleaned original data under /opt/ 
+[2016-06-03T05:32:09.288927][LOG]: Run Benchmark Status: collect system metrics and run benchmark
+[2016-06-03T05:32:09.289106][LOG]: This test will run 500 secs until finish.
+[2016-06-03T05:32:09.289255]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "echo '1' > /proc/sys/vm/drop_caches && sync"]
+[2016-06-03T05:32:14.878452]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'for i in `seq 1 601`;do echo `date "+%Y_%m_%d %H:%M:%S"` `ceph health` >> /opt//`hostname`_ceph_health.txt; sleep 1;done']
+[2016-06-03T05:32:14.884890]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "ps aux | grep ceph-osd | grep -v 'grep' > /opt//`hostname`_ps.txt"]
+[2016-06-03T05:32:21.116982]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'date > /opt//`hostname`_process_log.txt']
+[2016-06-03T05:32:26.530016][LOG]: Start system data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:32:26.530260]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "cat /proc/interrupts > /opt//`hostname`_interrupts_start.txt; echo `date +%s`' interrupt start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:31.935984]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "top -c -b -d 1 > /opt//`hostname`_top.txt & echo `date +%s`' top start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:37.324434]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "mpstat -P ALL 1 > /opt//`hostname`_mpstat.txt & echo `date +%s`' mpstat start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:42.716105]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "iostat -p ALL -dxm 1 > /opt//`hostname`_iostat.txt & echo `date +%s`' iostat start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:48.112793]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "sar -A 1 > /opt//`hostname`_sar.txt & echo `date +%s`' sar start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:32:53.500914][LOG]: Start perfcounter data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:32:53.501179]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "echo `date +%s`' perfcounter start' >> /opt//`hostname`_process_log.txt; for i in `seq 1 600`; do find /var/run/ceph -name '*osd*asok' | while read path; do filename=`echo $path | awk -F/ '{print $NF}'`;res_file=/opt//`hostname`_${filename}.txt; echo `ceph --admin-daemon $path perf dump`, >> ${res_file} & done; sleep 1; done; echo `date +%s`' perfcounter stop' >> /opt//`hostname`_process_log.txt;"]
+[2016-06-03T05:32:53.506963][LOG]: Start blktrace data collector under node164 
+[2016-06-03T05:32:53.507211]['pdsh', '-R', 'exec', '-w', 'root@node164', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdd1 -o `hostname`_osd__dev_sdd1 2>&1 > /opt//`hostname`_blktrace__dev_sdd1.log']
+[2016-06-03T05:32:53.519963]['pdsh', '-R', 'exec', '-w', 'root@node164', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sde1 -o `hostname`_osd__dev_sde1 2>&1 > /opt//`hostname`_blktrace__dev_sde1.log']
+[2016-06-03T05:32:53.528372]['pdsh', '-R', 'exec', '-w', 'root@node164', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdf1 -o `hostname`_osd__dev_sdf1 2>&1 > /opt//`hostname`_blktrace__dev_sdf1.log']
+[2016-06-03T05:32:53.546168]['pdsh', '-R', 'exec', '-w', 'root@node164', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdc1 -o `hostname`_journal__dev_sdc1 2>&1 > /opt//`hostname`_blktrace__dev_sdc1.log']
+[2016-06-03T05:32:53.554589]['pdsh', '-R', 'exec', '-w', 'root@node164', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdc2 -o `hostname`_journal__dev_sdc2 2>&1 > /opt//`hostname`_blktrace__dev_sdc2.log']
+[2016-06-03T05:32:53.594401]['pdsh', '-R', 'exec', '-w', 'root@node164', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdc3 -o `hostname`_journal__dev_sdc3 2>&1 > /opt//`hostname`_blktrace__dev_sdc3.log']
+[2016-06-03T05:32:53.604345][LOG]: Start blktrace data collector under node165 
+[2016-06-03T05:32:53.604608]['pdsh', '-R', 'exec', '-w', 'root@node165', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdd1 -o `hostname`_osd__dev_sdd1 2>&1 > /opt//`hostname`_blktrace__dev_sdd1.log']
+[2016-06-03T05:32:53.627258]['pdsh', '-R', 'exec', '-w', 'root@node165', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sde1 -o `hostname`_osd__dev_sde1 2>&1 > /opt//`hostname`_blktrace__dev_sde1.log']
+[2016-06-03T05:32:53.634816]['pdsh', '-R', 'exec', '-w', 'root@node165', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdc1 -o `hostname`_journal__dev_sdc1 2>&1 > /opt//`hostname`_blktrace__dev_sdc1.log']
+[2016-06-03T05:32:53.642518]['pdsh', '-R', 'exec', '-w', 'root@node165', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdc2 -o `hostname`_journal__dev_sdc2 2>&1 > /opt//`hostname`_blktrace__dev_sdc2.log']
+[2016-06-03T05:32:53.661301][LOG]: Start blktrace data collector under node166 
+[2016-06-03T05:32:53.661572]['pdsh', '-R', 'exec', '-w', 'root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdd1 -o `hostname`_osd__dev_sdd1 2>&1 > /opt//`hostname`_blktrace__dev_sdd1.log']
+[2016-06-03T05:32:53.687727]['pdsh', '-R', 'exec', '-w', 'root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sde1 -o `hostname`_osd__dev_sde1 2>&1 > /opt//`hostname`_blktrace__dev_sde1.log']
+[2016-06-03T05:32:53.713676]['pdsh', '-R', 'exec', '-w', 'root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdc1 -o `hostname`_journal__dev_sdc1 2>&1 > /opt//`hostname`_blktrace__dev_sdc1.log']
+[2016-06-03T05:32:53.734232]['pdsh', '-R', 'exec', '-w', 'root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'cd /opt/; blktrace -d /dev/sdc2 -o `hostname`_journal__dev_sdc2 2>&1 > /opt//`hostname`_blktrace__dev_sdc2.log']
+[2016-06-03T05:32:53.745571][LOG]: Start fatrace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:32:53.745813]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', 'fatrace -o /opt//`hostname`_fatrace.txt &']
+[2016-06-03T05:32:59.441563][LOG]: Start strace data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:32:59.441811]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "ps aux | grep ceph-osd | grep -v 'grep' | awk '{print $2}' | while read pid;do strace -ttt -T -e trace=desc -p ${pid} -o /opt//`hostname`_strace_${pid}.txt 2>&1 > /opt//`hostname`_strace_${pid}.log & done"]
+[2016-06-03T05:32:59.448939][LOG]: Start lttng data collector under ['node164', 'node165', 'node166'] 
+[2016-06-03T05:32:59.449171]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166', 'ssh', '%h', '-oConnectTimeout=15', "export HOME='/opt/'; lttng destroy 2>/dev/null; lttng create zipkin; lttng enable-channel channel0 -u --buffers-pid; lttng enable-event -c channel0 --userspace zipkin:*; lttng start;"]
+[2016-06-03T05:33:05.290395]node166: Did you create a session? (lttng create <my_session>)
+node166: Session zipkin created.
+node166: Traces will be written in /opt//lttng-traces/zipkin-20160603-183059
+node166: UST channel channel0 enabled for session zipkin
+node166: UST event zipkin:* created in channel channel0
+node166: Tracing started for session zipkin
+node164: Did you create a session? (lttng create <my_session>)
+node164: Session zipkin created.
+node164: Traces will be written in /opt//lttng-traces/zipkin-20160603-182403
+node164: UST channel channel0 enabled for session zipkin
+node165: Did you create a session? (lttng create <my_session>)
+node164: UST event zipkin:* created in channel channel0
+node165: Session zipkin created.
+node165: Traces will be written in /opt//lttng-traces/zipkin-20160603-182416
+node164: Tracing started for session zipkin
+node165: UST channel channel0 enabled for session zipkin
+node165: UST event zipkin:* created in channel channel0
+node165: Tracing started for session zipkin
+
+[2016-06-03T05:33:05.290811]['scp', '-oConnectTimeout=15', '-r', '../conf/nvme-pack/', 'root@node164:/opt/']
+[2016-06-03T05:33:11.065810]
+[2016-06-03T05:33:11.065980]['scp', '-oConnectTimeout=15', '-r', '../conf/nvme-pack/', 'root@node165:/opt/']
+[2016-06-03T05:33:16.830052]
+[2016-06-03T05:33:16.830220]['scp', '-oConnectTimeout=15', '-r', '../conf/nvme-pack/', 'root@node166:/opt/']
+[2016-06-03T05:33:22.305889]
+[2016-06-03T05:33:22.306101]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'for i in `seq 1 601`;do echo `date "+%Y_%m_%d %H:%M:%S"` `ceph health` >> /opt//`hostname`_ceph_health.txt; sleep 1;done']
+[2016-06-03T05:33:22.312489]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'date > /opt//`hostname`_process_log.txt']
+[2016-06-03T05:33:22.618020][LOG]: Start system data collector under ['node152'] 
+[2016-06-03T05:33:22.618327]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "cat /proc/interrupts > /opt//`hostname`_interrupts_start.txt; echo `date +%s`' interrupt start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:33:22.930893]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "top -c -b -d 1 > /opt//`hostname`_top.txt & echo `date +%s`' top start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:33:23.260663]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "mpstat -P ALL 1 > /opt//`hostname`_mpstat.txt & echo `date +%s`' mpstat start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:33:23.536152]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "iostat -p -dxm 1 > /opt//`hostname`_iostat.txt & echo `date +%s`' iostat start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:33:23.819801]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "sar -A 1 > /opt//`hostname`_sar.txt & echo `date +%s`' sar start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:33:24.133114][LOG]: Start perfcounter data collector under ['node152'] 
+[2016-06-03T05:33:24.133327]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', "echo `date +%s`' perfcounter start' >> /opt//`hostname`_process_log.txt; for i in `seq 1 600`; do find /var/run/ceph -name '*client*asok' | while read path; do filename=`echo $path | awk -F/ '{print $NF}'`;res_file=/opt//`hostname`_${filename}.txt; echo `ceph --admin-daemon $path perf dump`, >> ${res_file} & done; sleep 1; done; echo `date +%s`' perfcounter stop' >> /opt//`hostname`_process_log.txt;"]
+[2016-06-03T05:33:24.152189]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'for rbdname in volume-999febe4-d243-4e00-98a7-e8228af9636a; do POOLNAME=rbd RBDNAME=${rbdname} fio --output /opt//`hostname`_${rbdname}_fio.txt --write_bw_log=/opt//`hostname`_${rbdname}_fio --write_lat_log=/opt//`hostname`_${rbdname}_fio --write_iops_log=/opt//`hostname`_${rbdname}_fio --section fiorbd-randwrite-4k-qd64-1G-100-400-fiorbd /opt//fio.conf 2>/opt//`hostname`_${rbdname}_fio_errorlog.txt & done']
+[2016-06-03T05:33:24.169818]['pdsh', '-R', 'exec', '-w', 'root@node164,root@node165,root@node166,root@node152', 'ssh', '%h', '-oConnectTimeout=15', "echo `date +%s`' fio start' >> /opt//`hostname`_process_log.txt"]
+[2016-06-03T05:33:31.017610]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:33:31.300933]node152: 26197
+
+[2016-06-03T05:33:31.301403][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:31.301618][LOG]: 1 FIO Jobs starts on ['node152']
+[2016-06-03T05:33:31.301780]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:33:31.586309]node152: 26197
+
+[2016-06-03T05:33:31.586775][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:36.592269]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:33:36.882287]node152: 26197
+
+[2016-06-03T05:33:36.882616][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:41.888132]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:33:42.208952]node152: 26197
+
+[2016-06-03T05:33:42.209318][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:47.214751]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:33:47.493411]node152: 26197
+
+[2016-06-03T05:33:47.493844][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:52.499275]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:33:52.787074]node152: 26197
+
+[2016-06-03T05:33:52.787373][WARNING]: 1 fio job still runing
+[2016-06-03T05:33:57.792874]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:33:58.115679]node152: 26197
+
+[2016-06-03T05:33:58.116128][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:03.121684]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:03.405056]node152: 26197
+
+[2016-06-03T05:34:03.405444][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:08.410988]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:08.693541]node152: 26197
+
+[2016-06-03T05:34:08.693972][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:13.699737]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:13.989201]node152: 26197
+
+[2016-06-03T05:34:13.989666][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:18.995166]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:19.282158]node152: 26197
+
+[2016-06-03T05:34:19.282648][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:24.288198]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:24.592255]node152: 26197
+
+[2016-06-03T05:34:24.592663][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:29.598306]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:29.908358]node152: 26197
+
+[2016-06-03T05:34:29.908686][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:34.909733]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:35.213631]node152: 26197
+
+[2016-06-03T05:34:35.213960][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:40.219481]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:40.533089]node152: 26197
+
+[2016-06-03T05:34:40.533630][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:45.539156]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:45.819039]node152: 26197
+
+[2016-06-03T05:34:45.819473][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:50.825824]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:51.129224]node152: 26197
+
+[2016-06-03T05:34:51.129833][WARNING]: 1 fio job still runing
+[2016-06-03T05:34:56.135670]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:34:56.435003]node152: 26197
+
+[2016-06-03T05:34:56.435292][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:01.440724]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:01.744781]node152: 26197
+
+[2016-06-03T05:35:01.745382][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:06.750926]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:07.046207]node152: 26197
+
+[2016-06-03T05:35:07.046737][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:12.052344]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:12.364384]node152: 26197
+
+[2016-06-03T05:35:12.364964][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:17.370345]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:17.656563]node152: 26197
+
+[2016-06-03T05:35:17.656886][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:22.658733]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:22.973031]node152: 26197
+
+[2016-06-03T05:35:22.973618][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:27.977737]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:28.262000]node152: 26197
+
+[2016-06-03T05:35:28.262588][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:33.268009]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:33.599040]node152: 26197
+
+[2016-06-03T05:35:33.599385][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:38.604870]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:38.890772]node152: 26197
+
+[2016-06-03T05:35:38.891071][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:43.896601]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:44.215827]node152: 26197
+
+[2016-06-03T05:35:44.216233][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:49.218036]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:49.530061]node152: 26197
+
+[2016-06-03T05:35:49.530485][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:54.535888]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:35:54.857832]node152: 26197
+
+[2016-06-03T05:35:54.858298][WARNING]: 1 fio job still runing
+[2016-06-03T05:35:59.859349]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:36:00.170843]node152: 26197
+
+[2016-06-03T05:36:00.171170][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:05.176740]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:36:05.487549]node152: 26197
+
+[2016-06-03T05:36:05.488010][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:10.493456]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:36:10.788848]node152: 26197
+
+[2016-06-03T05:36:10.789311][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:15.794848]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:36:16.088931]node152: 26197
+
+[2016-06-03T05:36:16.089433][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:21.091694]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:36:21.380999]node152: 26197
+
+[2016-06-03T05:36:21.381297][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:26.386762]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']
+[2016-06-03T05:36:26.690395]node152: 26197
+
+[2016-06-03T05:36:26.690922][WARNING]: 1 fio job still runing
+[2016-06-03T05:36:31.691771]['pdsh', '-R', 'exec', '-w', 'root@node152', 'ssh', '%h', '-oConnectTimeout=15', 'pgrep fio']

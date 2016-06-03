@@ -1,36 +1,21 @@
-[2016-06-01T04:42:35.546851][ERROR]: pdsh@node153: node153: ssh exited with exit code 1
+[2016-06-03T05:30:23.826109][ERROR]: pdsh@node152: node152: ssh exited with exit code 1
 
-[2016-06-01T04:42:46.034539][ERROR]: pdsh@node153: node153: ssh exited with exit code 1
+[2016-06-03T05:31:09.637749][ERROR]: node166: Error: Can't find valid lttng config /opt//.lttngrc
+node166: Error: Command error
+node166: Error: Can't find valid lttng config /opt//.lttngrc
+node166: Error: Command error
+pdsh@node152: node166: ssh exited with exit code 1
+node165: Error: Can't find valid lttng config /opt//.lttngrc
+node165: Error: Command error
+node164: Error: Can't find valid lttng config /opt//.lttngrc
+node164: Error: Command error
+node165: Error: Can't find valid lttng config /opt//.lttngrc
+node165: Error: Command error
+pdsh@node152: node165: ssh exited with exit code 1
+node164: Error: Can't find valid lttng config /opt//.lttngrc
+node164: Error: Command error
+pdsh@node152: node164: ssh exited with exit code 1
 
-[2016-06-01T04:42:46.385758][ERROR]: node153: Error: Can't find valid lttng config /opt//.lttngrc
-node153: Error: Command error
-node153: Error: Can't find valid lttng config /opt//.lttngrc
-node153: Error: Command error
-pdsh@node153: node153: ssh exited with exit code 1
-node154: Error: Can't find valid lttng config /opt//.lttngrc
-node154: Error: Command error
-node154: Error: Can't find valid lttng config /opt//.lttngrc
-node154: Error: Command error
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:52.675713][ERROR]: node153: fatrace: no process found
-pdsh@node153: node153: ssh exited with exit code 1
-node154: fatrace: no process found
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:53.390240][ERROR]: node153: blktrace: no process found
-pdsh@node153: node153: ssh exited with exit code 1
-node154: blktrace: no process found
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T04:42:53.744065][ERROR]: node153: strace: no process found
-pdsh@node153: node153: ssh exited with exit code 1
-node154: strace: no process found
-pdsh@node153: node154: ssh exited with exit code 1
-
-[2016-06-01T05:01:58.024077][ERROR]: pdsh@node153: node153: ssh exited with exit code 124
-
-[2016-06-01T05:02:01.577300][ERROR]: pdsh@node153: node153: ssh exited with exit code 124
-
-[2016-06-01T05:02:31.101248][ERROR]: pdsh@node153: node153: ssh exited with exit code 124
+[2016-06-03T05:31:15.543619][ERROR]: node166: bash: line 0: kill: (5854) - No such process
+node165: bash: line 0: kill: (30423) - No such process
 

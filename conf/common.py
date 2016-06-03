@@ -485,7 +485,7 @@ def add_to_hosts( nodes ):
             bash("echo %s %s >> /etc/hosts" % (str(ip), node))
 
 def check_ceph_running(user, node):
-    stdout, stderr = pdsh(user, [node], "timeout 3 ceph -s 2>/dev/null 1>/dev/null; echo $?", option = "check_return")
+    stdout, stderr = pdsh(user, [node], "timeout 30 ceph -s 2>/dev/null 1>/dev/null; echo $?", option = "check_return")
     res = format_pdsh_return(stdout)
     ceph_is_up = False
     if node in res:
@@ -509,7 +509,7 @@ def eval_args( obj, function_name, args ):
 def get_ceph_health(user, node):
     check_count = 0
     output = {}
-    stdout, stderr = pdsh(user, [node], "timeout 3 ceph -s", option = "check_return")
+    stdout, stderr = pdsh(user, [node], "timeout 30 ceph -s", option = "check_return")
     res = format_pdsh_return(stdout)
     if len(res):
         stdout = res[node]
@@ -546,8 +546,7 @@ def parse_nvme( dev_name ):
     return dev_name
 
 def parse_device_name(dev_name):
-#    sata_pattern = re.compile(r'sd\D*')
-    sata_pattern = re.compile(r'vd\D*')#debug_by longxing_for vda device
+    sata_pattern = re.compile(r'sd\D*')
     nvme_pattern = re.compile(r'nvme\dn\d*')
     res = sata_pattern.search(dev_name)
     if res:
