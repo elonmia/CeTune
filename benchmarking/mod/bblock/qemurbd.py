@@ -7,7 +7,8 @@ class QemuRbd(Benchmark):
         super(self.__class__, self).load_parameter()
         self.cluster["vclient"] = self.all_conf_data.get_list("list_vclient")
 
-        disk_num_per_client = self.cluster["disk_num_per_client"]
+        #disk_num_per_client = self.cluster["disk_num_per_client"]
+	disk_num_per_client = self.cluster["disk_num_per_client_for_VM"]
         self.volume_size = self.all_conf_data.get("volume_size")
         self.instance_list = self.cluster["vclient"]
         self.testjob_distribution(disk_num_per_client, self.instance_list)

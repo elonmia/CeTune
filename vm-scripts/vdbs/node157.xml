@@ -1,0 +1,10 @@
+<disk type='network' device='disk'>
+    <driver name='qemu' type='raw' cache='none'/>
+    <auth username='admin'>
+        <secret type='ceph' uuid='6f19c17d-a54d-4e37-9e49-0f42a040fab5'/>
+    </auth>
+    <source protocol='rbd' name='rbd/vm2' />
+    <target dev='vdb' bus='virtio'/>
+    <serial>009ad738-1a2e-4d9c-bf22-1993c8c67ade</serial>
+    <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x0'/>
+</disk>

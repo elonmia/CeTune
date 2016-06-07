@@ -397,6 +397,7 @@ class Benchmark(object):
                 self.cluster[node]["osds"].append(osd_journal[0])
                 self.cluster[node]["journals"].append(osd_journal[1])
         self.cluster["disk_num_per_client"] = self.all_conf_data.get_list("disk_num_per_client")
+        self.cluster["disk_num_per_client_for_VM"] = self.all_conf_data.get_list("disk_num_per_client_for_VM")#Added for VM by longxing
         self.cluster["cache_drop_level"] = self.all_conf_data.get("cache_drop_level")
         self.cluster["monitoring_interval"] = self.all_conf_data.get("monitoring_interval")
         self.cluster["run_time_extend"] = 100
