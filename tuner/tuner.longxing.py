@@ -314,7 +314,7 @@ class Tuner:
                 else:
                     if self.cur_tuning['pool'][cur_tuning_poolname]['pg_num'] != new_pool_pg_num:
 #                        self.handle_pool(option = 'delete', param = {'name':cur_tuning_poolname})
-                    continue
+                        continue
                     else:
                         pool_exist = True
             if not pool_exist:
